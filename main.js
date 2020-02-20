@@ -22,6 +22,12 @@ export function main() {
       false
     );
   }
+  for (const element of $$("[data-inject-example]")) {
+    const name = element.dataset.injectExample;
+    const example = examples[name];
+    // TODO: Insert as HTML
+    // TODO: Insert as code snippet
+  }
 }
 
 function setThemeColors(color0, color1) {
