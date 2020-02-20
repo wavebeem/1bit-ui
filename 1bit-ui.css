@@ -3,17 +3,32 @@
   --bit-color-0: #222323;
   --bit-font-monospace: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas",
     monospace;
-  scrollbar-color: var(--bit-color-0) var(--bit-color-1);
+  --bit-font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 html {
   background: var(--bit-color-1);
   color: var(--bit-color-0);
-  font-family: var(--bit-font-monospace);
+  font-family: var(--bit-font-ui);
+  font-size: 18px;
   line-height: 1.5;
   padding: 2rem;
-  max-width: 60rem;
+  max-width: 50rem;
   margin: 0 auto;
+}
+
+.bit-scrollbar {
+  scrollbar-color: var(--bit-color-0) var(--bit-color-1);
+}
+
+.bit-code {
+  font-family: var(--bit-font-monospace);
+  font-size: inherit;
+  background: var(--bit-color-0);
+  color: var(--bit-color-1);
+  padding: 2px;
 }
 
 .bit-pre {
@@ -35,12 +50,12 @@ html {
   box-shadow: inset 0 -2px 0 var(--bit-color-0);
 }
 
-.bit-button:hover:not(:focus) {
+.bit-button:hover {
   box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
 .bit-button:active {
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 
 .bit-button:focus {
@@ -63,7 +78,7 @@ html {
     inset -2px 0 0 0 var(--bit-color-0), inset 2px 0 0 0 var(--bit-color-0);
 }
 
-.bit-select:hover:not(:focus) {
+.bit-select:hover {
   box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
@@ -87,7 +102,7 @@ html {
   text-decoration-thickness: 2px;
 }
 
-.bit-link:hover:not(:focus) {
+.bit-link:hover {
   text-decoration: none;
   box-shadow: 0 0 0 2px var(--bit-color-1), 0 0 0 4px var(--bit-color-0);
 }
@@ -108,7 +123,7 @@ html {
   box-shadow: inset 0 2px 0 var(--bit-color-0);
 }
 
-.bit-input:hover:not(:focus) {
+.bit-input:hover {
   box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
