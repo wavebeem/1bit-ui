@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1bit-ui.css</title>
     <link rel="stylesheet" href="1bit-ui.css" />
+    <style>
+      [data-theme-switcher] {
+        margin-top: 1rem;
+      }
+
+      [data-theme-switcher]:last-of-type {
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
     <h1>1bit-ui.css</h1>
@@ -152,21 +161,38 @@
       Pixel Ink (Dark)
     </button>
 
+    <pre id="theme-example" class="bit-pre"></pre>
+
     <h2>Text</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dui
-      felis. Nunc tortor nisi, posuere et risus ut, posuere imperdiet nulla.
-      Praesent cursus ultrices leo, eu dapibus ligula faucibus nec. Proin vel
-      mauris venenatis, pellentesque velit aliquam, facilisis magna. Ut in leo
-      eget mi mattis luctus tincidunt ut nunc. Pellentesque porttitor faucibus
-      placerat. Pellentesque habitant morbi tristique senectus et netus et
-      malesuada fames ac turpis egestas. Nunc pulvinar eleifend tincidunt.
-      Maecenas sed tellus ut nunc imperdiet scelerisque. Ut pretium tincidunt
-      augue, vitae suscipit dui viverra eget.
+      Leverage agile frameworks to provide a robust synopsis for high level
+      overviews. Iterative approaches to corporate strategy foster collaborative
+      thinking to further the overall value proposition. Organically grow the
+      holistic world view of disruptive innovation via workplace diversity and
+      empowerment.
+    </p>
+    <p>
+      Bring to the table win-win survival strategies to ensure proactive
+      domination. At the end of the day, going forward, a new normal that has
+      evolved from generation X is on the runway heading towards a streamlined
+      cloud solution. User generated content in real-time will have multiple
+      touchpoints for offshoring.
+    </p>
+    <p>
+      Capitalize on low hanging fruit to identify a ballpark value added
+      activity to beta test. Override the digital divide with additional
+      clickthroughs from DevOps. Nanotechnology immersion along the information
+      highway will close the loop on focusing solely on the bottom line.
     </p>
 
     <h2>Links</h2>
-    This is an <a href="#" class="bit-link">example</a> link within a sentence.
+    <p>
+      This is an <a href="#" class="bit-link">example</a> link within a
+      sentence.
+    </p>
+    <pre class="bit-pre">
+&lt;a href="#" class="bit-link"&gt;example&lt;/a&gt;</pre
+    >
 
     <h2>Selects</h2>
     <select class="bit-select">
@@ -180,7 +206,9 @@
     <button class="bit-button">Save</button>
 
     <h2>Inputs</h2>
-    <input id="Input1" class="bit-input" placeholder="..." />
+    <input class="bit-input" placeholder="input" />
+    <textarea class="bit-input" placeholder="textarea"></textarea>
+
     <script type="module" src="main.js"></script>
   </body>
 </html>

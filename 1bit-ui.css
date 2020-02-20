@@ -1,57 +1,95 @@
 :root {
   --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
-  --bit-color-fg: var(--bit-color-0);
-  --bit-color-bg: var(--bit-color-1);
+  --bit-font-monospace: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas",
+    monospace;
   scrollbar-color: var(--bit-color-0) var(--bit-color-1);
 }
 
 html {
-  background: var(--bit-color-bg);
-  color: var(--bit-color-fg);
-  font-family: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas", monospace;
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
+  font-family: var(--bit-font-monospace);
   line-height: 1.5;
   padding: 2rem;
   max-width: 60rem;
   margin: 0 auto;
 }
 
+.bit-pre {
+  font-family: var(--bit-font-monospace);
+  font-size: inherit;
+  background: var(--bit-color-0);
+  color: var(--bit-color-1);
+  scrollbar-color: var(--bit-color-1) var(--bit-color-0);
+  overflow-x: auto;
+  padding: 1rem;
+}
+
 .bit-button {
-  background: var(--bit-color-bg);
-  color: var(--bit-color-fg);
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
   padding: 0.5em 1em;
   font: inherit;
   border: 2px solid;
+
+  /* Simple 3D */
+  box-shadow: inset 0 -2px 0 var(--bit-color-0);
+
+  /* Medium 3D */
+  /* box-shadow: 4px 4px 0 var(--bit-color-0); */
+
+  /* Strong 3D */
+  /* box-shadow: 2px 2px 0 var(--bit-color-0), 4px 4px 0 var(--bit-color-0); */
 }
 
 .bit-button:hover:not(:focus) {
-  box-shadow: inset 0 0 0 2px var(--bit-color-fg);
+  box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
 .bit-button:active {
   transform: translateY(2px);
 }
 
+.bit-button:focus {
+  outline: none;
+  border-color: var(--bit-color-1);
+  box-shadow: inset 0 0 0 2px var(--bit-color-0), 0 0 0 2px var(--bit-color-0),
+    inset 0 -4px 0 var(--bit-color-0);
+}
+
 .bit-select {
   -webkit-appearance: none;
   position: relative;
   border-radius: 0;
-  background: var(--bit-color-bg);
-  color: var(--bit-color-fg);
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
   padding: 0.5em 1em;
   font: inherit;
   border: 2px solid;
-  box-shadow: inset -0px 0 0 0 var(--bit-color-bg),
-    inset -2px 0 0 0 var(--bit-color-fg);
+  box-shadow: inset -0px 0 0 0 var(--bit-color-1),
+    inset -2px 0 0 0 var(--bit-color-0), inset 2px 0 0 0 var(--bit-color-0);
 }
 
 .bit-select:hover:not(:focus) {
-  box-shadow: inset 0 0 0 2px var(--bit-color-fg);
+  box-shadow: inset 0 0 0 2px var(--bit-color-0);
+}
+
+.bit-select:focus {
+  outline: none;
+  border-color: var(--bit-color-1);
+  box-shadow: inset 0 0 0 2px var(--bit-color-0), 0 0 0 2px var(--bit-color-0),
+    inset 4px 0 0 0 var(--bit-color-0), inset -4px 0 0 0 var(--bit-color-0);
+}
+
+.bit-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--bit-color-0);
 }
 
 .bit-link {
-  background: var(--bit-color-bg);
-  color: var(--bit-color-fg);
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
   font-weight: bold;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -59,26 +97,42 @@ html {
 
 .bit-link:hover:not(:focus) {
   text-decoration: none;
-  box-shadow: 0 0 0 2px var(--bit-color-bg), 0 0 0 4px var(--bit-color-fg);
+  box-shadow: 0 0 0 2px var(--bit-color-1), 0 0 0 4px var(--bit-color-0);
+}
+
+.bit-link:focus {
+  background: var(--bit-color-0);
+  color: var(--bit-color-1);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bit-color-0);
 }
 
 .bit-input {
-  background: var(--bit-color-bg);
-  color: var(--bit-color-fg);
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
   font: inherit;
   padding: 0.5em 1em;
-  border: 2px solid var(--bit-color-fg);
+  border: 2px solid var(--bit-color-0);
 }
 
 .bit-input:hover:not(:focus) {
-  box-shadow: inset 0 0 0 2px var(--bit-color-fg);
+  box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
-:focus {
-  --bit-color-fg: var(--bit-color-1);
-  --bit-color-bg: var(--bit-color-0);
+.bit-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--bit-color-bg), 0 0 0 4px var(--bit-color-fg);
+  border-color: var(--bit-color-1);
+  box-shadow: inset 0 0 0 2px var(--bit-color-0), 0 0 0 2px var(--bit-color-0);
+}
+
+.bit-input::placeholder {
+  color: var(--bit-color-0);
+  opacity: 0.5;
+}
+
+.bit-input::selection {
+  background: var(--bit-color-0);
+  color: var(--bit-color-1);
 }
 
 ::-moz-focus-inner {
