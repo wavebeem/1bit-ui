@@ -25,10 +25,13 @@ export function main() {
   for (const element of $$("[data-inject-example]")) {
     const name = element.dataset.injectExample;
     const example = examples[name];
+    console.log("TODO: [example]", name, example);
     // TODO: Insert as HTML
     // TODO: Insert as code snippet
   }
 }
+
+const examples = {};
 
 function setThemeColors(color0, color1) {
   const root = $(":root");

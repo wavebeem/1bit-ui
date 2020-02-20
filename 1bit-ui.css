@@ -25,7 +25,6 @@ html {
 
 .bit-code {
   font-family: var(--bit-font-monospace);
-  font-size: inherit;
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   padding: 2px;
@@ -33,7 +32,6 @@ html {
 
 .bit-pre {
   font-family: var(--bit-font-monospace);
-  font-size: inherit;
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   scrollbar-color: var(--bit-color-1) var(--bit-color-0);
