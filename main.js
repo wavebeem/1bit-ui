@@ -151,11 +151,11 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
 };
 
 function setThemeColors(color0, color1) {
-  const root = $(":root");
+  const root = $(".bit-root");
   root.style.setProperty("--bit-color-0", color0);
   root.style.setProperty("--bit-color-1", color1);
   $("#theme-example").textContent = `\
-:root {
+.bit-root {
   --bit-color-0: ${color0};
   --bit-color-1: ${color1};
 }`;

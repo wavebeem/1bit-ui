@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="1bit-ui.css" />
     <style>
       :root {
-        --site-font-monospace: "JetBrains Mono", "Cascadia Code", "Menlo",
-          "Consolas", monospace;
-        --site-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
         font-size: 18px;
         line-height: 1.5;
         padding: 2rem;
@@ -21,21 +16,24 @@
 
       .site-columns-auto {
         --grid-gap: 1rem;
-        --grid-min: 20rem;
+        --grid-min: 10rem;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
         grid-gap: var(--grid-gap);
       }
 
       body {
-        font-family: var(--site-font-sans);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
       }
 
       pre,
       code,
       kbd,
       samp {
-        font-family: var(--site-font-monospace);
+        font-family: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas",
+          monospace;
       }
     </style>
   </head>
@@ -61,92 +59,51 @@
     <div class="site-columns-auto">
       <button
         data-theme-switcher
-        data-bit-theme-0="brown"
-        data-bit-theme-1="blanchedalmond"
+        data-bit-theme-0="#000000"
+        data-bit-theme-1="#ffffff"
         class="bit-button"
       >
-        Warm
+        White
       </button>
       <button
         data-theme-switcher
-        data-bit-theme-0="darkblue"
-        data-bit-theme-1="lightblue"
-        class="bit-button"
-      >
-        Cool
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="black"
-        data-bit-theme-1="white"
-        class="bit-button"
-      >
-        Black & White
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="white"
-        data-bit-theme-1="black"
-        class="bit-button"
-      >
-        White & Black
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="#777"
-        data-bit-theme-1="#000"
-        class="bit-button"
-      >
-        Night Mode
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="#ccc"
-        data-bit-theme-1="#333"
-        class="bit-button"
-      >
-        Dark
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="#00f500"
-        data-bit-theme-1="#004200"
-        class="bit-button"
-      >
-        Matrix
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="#ffa42e"
-        data-bit-theme-1="#3e2607"
-        class="bit-button"
-      >
-        Amber
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="#666"
-        data-bit-theme-1="#eee"
+        data-bit-theme-0="#666666"
+        data-bit-theme-1="#eeeeee"
         class="bit-button"
       >
         Ghost
       </button>
       <button
         data-theme-switcher
-        data-bit-theme-0="#3c222a"
-        data-bit-theme-1="#ffcbdb"
+        data-bit-theme-0="#a52a2a"
+        data-bit-theme-1="#ffebcd"
         class="bit-button"
       >
-        Pink
+        Warm
       </button>
       <button
-        <button
         data-theme-switcher
-        data-bit-theme-0="#0b1000"
-        data-bit-theme-1="#a4b26f"
+        data-bit-theme-0="#ffffff"
+        data-bit-theme-1="#000000"
         class="bit-button"
       >
-        Gato Roboto: Tamagato
+        Black
+      </button>
+      <button
+        data-theme-switcher
+        data-bit-theme-0="#777777"
+        data-bit-theme-1="#000000"
+        class="bit-button"
+      >
+        Night
+      </button>
+      <button
+        data-theme-switcher
+        data-bit-theme-0="#cccccc"
+        data-bit-theme-1="#333333"
+        class="bit-button"
+      >
+        Dark
       </button>
       <button
         data-theme-switcher
@@ -154,7 +111,7 @@
         data-bit-theme-1="#2d2020"
         class="bit-button"
       >
-        Gato Roboto: Bark
+        Bark
       </button>
       <button
         data-theme-switcher
@@ -162,15 +119,7 @@
         data-bit-theme-1="#0a2e44"
         class="bit-button"
       >
-        Gato Roboto: Starboard
-      </button>
-      <button
-        data-theme-switcher
-        data-bit-theme-0="#ff8e42"
-        data-bit-theme-1="#10368f"
-        class="bit-button"
-      >
-        Gato Roboto: Port
+        Starboard
       </button>
       <button
         data-theme-switcher
@@ -178,7 +127,7 @@
         data-bit-theme-1="#edf6d6"
         class="bit-button"
       >
-        Pixel Ink (Light)
+        Pixel Ink
       </button>
       <button
         data-theme-switcher
@@ -186,7 +135,7 @@
         data-bit-theme-1="#3e232c"
         class="bit-button"
       >
-        Pixel Ink (Dark)
+        Pixel Ink
       </button>
       <button
         data-theme-switcher
@@ -194,7 +143,7 @@
         data-bit-theme-1="#f0f6f0"
         class="bit-button"
       >
-        1bit Monitor Glow (Light)
+        1bit Monitor Glow
       </button>
       <button
         data-theme-switcher
@@ -202,7 +151,7 @@
         data-bit-theme-1="#222323"
         class="bit-button"
       >
-        1bit Monitor Glow (Dark)
+        1bit Monitor Glow
       </button>
     </div>
 

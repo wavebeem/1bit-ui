@@ -8,6 +8,10 @@
   color: var(--bit-color-0);
 }
 
+.bit-table {
+  border-collapse: collapse;
+}
+
 .bit-scrollbar {
   scrollbar-color: var(--bit-color-0) var(--bit-color-1);
 }
