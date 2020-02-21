@@ -44,9 +44,26 @@ export function main() {
 
 const examples = {
   inputs: `\
-<input class="bit-input" placeholder="input" />
-<textarea class="bit-input" placeholder="textarea"></textarea>
-`,
+<style>
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+<div class="site-columns-auto">
+  <div class="flex-column">
+    <label for="input1">Input 1</label>
+    <input class="bit-input" placeholder="input" id="input1" />
+  </div>
+  <div class="flex-column">
+    <label for="textarea1">Textarea 1</label>
+    <textarea
+      class="bit-input"
+      placeholder="textarea"
+      id="textarea1"
+    ></textarea>
+  </div>
+</div>`,
   link: `\
 This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
   inlineTags: `\
