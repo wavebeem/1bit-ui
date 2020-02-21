@@ -147,7 +147,117 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
 
   inlineSVG: `\
 <svg class="bit-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M16,10c-.41,7.68-12,7.75-12,0s11.59-7.69,12,0c.1,1.92,3.1,1.93,3,0-.26-4.88-3.91-9-9-9a9.1,9.1,0,0,0-9,9,9.08,9.08,0,0,0,8.59,9c5.25.23,9.14-3.93,9.41-9C19.1,8.07,16.1,8.08,16,10Z"/><path d="M14.44,16.56l5,5a1.5,1.5,0,0,0,2.12-2.12l-5-5a1.5,1.5,0,0,0-2.12,2.12Z"/></svg>
-<svg class="bit-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm2.94,16.56L12,14.25,9.06,17.56c-1.28,1.45-3.4-.68-2.12-2.12L10,12,6.94,8.56C5.66,7.12,7.78,5,9.06,6.44L12,9.75l2.94-3.31c1.28-1.45,3.4.68,2.12,2.12L14,12l3.06,3.44C18.34,16.88,16.23,19,14.94,17.56Z"/></svg>`
+<svg class="bit-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm2.94,16.56L12,14.25,9.06,17.56c-1.28,1.45-3.4-.68-2.12-2.12L10,12,6.94,8.56C5.66,7.12,7.78,5,9.06,6.44L12,9.75l2.94-3.31c1.28-1.45,3.4.68,2.12,2.12L14,12l3.06,3.44C18.34,16.88,16.23,19,14.94,17.56Z"/></svg>`,
+
+  tableBasic: `\
+<table class="bit-table" style="width: 100%;">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Time</th>
+      <th>Rating</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Pretelethal</td>
+      <td>3:21</td>
+      <td>&starf;&starf;&starf;&starf;&star;</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Key Entity Extraction V: Sentry the Defiant</td>
+      <td>5:45</td>
+      <td>&starf;&starf;&starf;&starf;&starf;</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>The Hard Sell</td>
+      <td>5:10</td>
+      <td>&starf;&starf;&star;&star;&star;</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Number City</td>
+      <td>3:49</td>
+      <td>&starf;&starf;&starf;&star;&star;</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Gravity's Union</td>
+      <td>6:46</td>
+      <td>&starf;&starf;&starf;&starf;&starf;</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  tableRowHeaders: `\
+<table class="bit-table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Rock</th>
+      <th>Paper</th>
+      <th>Scissors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Rock vs...</th>
+      <td>=</td>
+      <td>&minus;</td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <th>Paper vs...</th>
+      <td>+</td>
+      <td>=</td>
+      <td>&minus;</td>
+    </tr>
+    <tr>
+      <th>Scissors vs...</th>
+      <td>-</td>
+      <td>+</td>
+      <td>&minus;</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  tableTfoot: `\
+<table class="bit-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sandwich</td>
+      <td>1</td>
+      <td>$9.00</td>
+    </tr>
+    <tr>
+      <td>Iced Tea</td>
+      <td>1</td>
+      <td>$2.00</td>
+    </tr>
+    <tr>
+      <td>French Fries</td>
+      <td>1</td>
+      <td>$4.00</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2">Total</th>
+      <td>$100.00</td>
+    </tr>
+  </tfoot>
+</table>
+`
 };
 
 function setThemeColors(color0, color1) {

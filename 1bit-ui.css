@@ -1,15 +1,36 @@
-:root {
+.bit-root {
   --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
-}
-
-.bit-root {
   background: var(--bit-color-1);
   color: var(--bit-color-0);
 }
 
 .bit-table {
   border-collapse: collapse;
+}
+
+.bit-table th {
+  padding: 0.5rem 0;
+  text-align: left;
+}
+
+.bit-table tbody tr {
+  border-top: 1px solid var(--bit-color-0);
+}
+
+.bit-table th,
+.bit-table td {
+  padding: 0.5rem;
+}
+
+.bit-table thead {
+  border-top: 0;
+  border-bottom: 2px solid var(--bit-color-0);
+}
+
+.bit-table tfoot {
+  border-top: 2px solid var(--bit-color-0);
+  border-bottom: 0;
 }
 
 .bit-scrollbar {
