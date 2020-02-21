@@ -74,6 +74,7 @@
 .bit-radio:disabled {
   opacity: 0.5;
   border-style: dotted;
+  box-shadow: none;
 }
 
 .bit-card {
