@@ -53,21 +53,21 @@ function bindThemeSwitchers() {
 const examples = {
   inputs: `\
 <style>
-  .flex-column {
+  .site-flex-column {
     display: flex;
     flex-direction: column;
   }
 </style>
 <div class="site-columns-auto">
-  <div class="flex-column">
+  <div class="site-flex-column">
     <label for="field-name">Name</label>
     <input class="bit-input" id="field-name" />
   </div>
-  <div class="flex-column">
+  <div class="site-flex-column">
     <label for="field-url">URL</label>
     <input class="bit-input" placeholder="https://example.com" id="field-url" />
   </div>
-  <div class="flex-column">
+  <div class="site-flex-column">
     <label for="field-description">Description</label>
     <textarea
       rows="4"
@@ -102,26 +102,26 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
 
   getCreative: `\
 <style>
-  .theme-white {
+  .site-theme-white {
     --bit-color-0: black;
     --bit-color-1: white;
   }
 
-  .theme-blue {
+  .site-theme-blue {
     --bit-color-0: hsl(200, 100%, 20%);
     --bit-color-1: hsl(200, 100%, 90%);
   }
 
-  .theme-red {
+  .site-theme-red {
     --bit-color-0: hsl(0, 100%, 20%);
     --bit-color-1: hsl(0, 100%, 90%);
   }
 </style>
-<div class="bit-card site-columns-auto theme-white">
-  <button type="button" class="bit-button theme-blue">
+<div class="bit-card site-columns-auto site-theme-white">
+  <button type="button" class="bit-button site-theme-blue">
     Blue
   </button>
-  <button type="button" class="bit-button theme-red">
+  <button type="button" class="bit-button site-theme-red">
     Red
   </button>
   <button type="button"

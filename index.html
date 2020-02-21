@@ -43,19 +43,15 @@
 
     <h2>TODO: Overview</h2>
     <h2>TODO: Installation</h2>
+    <h2>TODO: STORE LAST THEME</h2>
 
     <h2>Theme Selector</h2>
     <p>
-      By setting the CSS properties
-      <code class="bit-code">--bit-color-0</code> and
-      <code class="bit-code">--bit-color-1</code> on the
-      <code class="bit-code">&lt;html&gt;</code> element, you can apply a custom
-      color theme to the entire page.
+      You will need to add the following CSS to your page to use a custom theme:
     </p>
     <pre id="theme-example" class="bit-pre"></pre>
     <p>
-      Click any of the buttons below to select a theme. Scroll down to see a CSS
-      snippet showing how to apply the theme to your page.
+      Click any of the buttons below to select a theme:
     </p>
     <div class="site-columns-auto">
       <button
@@ -156,12 +152,6 @@
       </button>
     </div>
 
-    <p>
-      Tip: Haven't heard of <code class="bit-code">:root</code> before? It's
-      basically the same thing as writing <code class="bit-code">html</code> as
-      your CSS selector, it just has slightly higher specificity.
-    </p>
-
     <h2>Basics</h2>
     <p>
       All CSS classes from 1-bit UI start with
@@ -173,7 +163,7 @@
     <h2>Link</h2>
     <div data-inject-example="link"></div>
 
-    <h2>Select</h2>
+    <h2>TODO: Can't theme the triangle: Select</h2>
     <div data-inject-example="select"></div>
 
     <h2>Button</h2>
@@ -182,6 +172,10 @@
 
     <h2>Inputs and Text Areas</h2>
     <div data-inject-example="inputs"></div>
+
+    <h2>Radios and Checkboxes</h2>
+    <div data-inject-example="radio"></div>
+    <div data-inject-example="checkbox"></div>
 
     <h2>Inline Tags</h2>
     <div data-inject-example="inlineTags"></div>
@@ -239,25 +233,25 @@
 
     <h2>Dark Mode</h2>
     <p>
-      You can use the prefers-color-scheme:dark CSS media query to set the
-      <code class="bit-code">--bit-color-0</code> and
-      <code class="bit-code">--bit-color-1</code> variables on your
-      <code class="bit-code">:root</code>
-      selector, allowing your users to automatically get Dark Mode with a single
-      block of CSS
+      You can use the
+      <code class="bit-code">prefers-color-scheme: dark</code> CSS media query
+      to set the <code class="bit-code">--bit-color-0</code> and
+      <code class="bit-code">--bit-color-1</code> variables, allowing your users
+      to automatically get Dark Mode with a single block of CSS
     </p>
     <pre class="bit-pre">
-:root {
-  <code class="bit-code">--bit-color-0</code>: white;
-  <code class="bit-code">--bit-color-1</code>: black;
+.bit-root {
+  --bit-color-0: white;
+  --bit-color-1: black;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    <code class="bit-code">--bit-color-0</code>: white;
-    <code class="bit-code">--bit-color-1</code>: black;
+  .bit-root {
+    --bit-color-0: white;
+    --bit-color-1: black;
   }
-}</pre>
+}</pre
+    >
 
     <footer>
       &copy;
