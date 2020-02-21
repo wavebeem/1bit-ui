@@ -43,6 +43,22 @@ export function main() {
 }
 
 const examples = {
+  inputs: `\
+<input class="bit-input" placeholder="input" />
+<textarea class="bit-input" placeholder="textarea"></textarea>
+`,
+  link: `\
+This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
+  inlineTags: `\
+<p>
+  Leverage <b>agile</b> frameworks to provide a robust synopsis for high level
+  overviews. <a href="#" class="bit-link">Iterative approaches</a> to corporate
+  strategy foster collaborative thinking to further the <i>overall</i> value
+  proposition. Organically grow the
+  <code class="bit-code">holistic world</code> view of disruptive innovation via
+  workplace diversity and empowerment.
+</p>`,
+
   select: `\
 <select class="bit-select">
   <option selected disabled>Choose an option...</option>
