@@ -60,16 +60,20 @@ const examples = {
 </style>
 <div class="site-columns-auto">
   <div class="flex-column">
-    <label for="input1">Input 1</label>
-    <input class="bit-input" placeholder="input" id="input1" />
+    <label for="field-name">Name</label>
+    <input class="bit-input" id="field-name" />
   </div>
   <div class="flex-column">
-    <label for="textarea1">Textarea 1</label>
+    <label for="field-url">URL</label>
+    <input class="bit-input" placeholder="https://example.com" id="field-url" />
+  </div>
+  <div class="flex-column">
+    <label for="field-description">Description</label>
     <textarea
+      rows="4"
       class="bit-input"
-      placeholder="textarea"
-      id="textarea1"
-    ></textarea>
+      id="field-description"
+    >A text-area is used for multi-line text input.</textarea>
   </div>
 </div>`,
   link: `\
@@ -86,7 +90,7 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
 
   select: `\
 <select class="bit-select">
-  <option selected disabled>Choose an option...</option>
+  <option selected disabled>Select...</option>
   <option>Option 1</option>
   <option>Option 2</option>
   <option>Option 3</option>
@@ -98,17 +102,9 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
 
   getCreative: `\
 <style>
-  .fancy-container {
+  .theme-white {
     --bit-color-0: black;
     --bit-color-1: white;
-    border: 6px double var(--bit-color-0);
-    background: var(--bit-color-1);
-    padding: 1rem;
-  }
-
-  .theme-orange {
-    --bit-color-0: hsl(30, 100%, 20%);
-    --bit-color-1: hsl(30, 100%, 90%);
   }
 
   .theme-blue {
@@ -116,28 +112,17 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
     --bit-color-1: hsl(200, 100%, 90%);
   }
 
-  .theme-green {
-    --bit-color-0: hsl(120, 100%, 20%);
-    --bit-color-1: hsl(120, 100%, 90%);
-  }
-
   .theme-red {
     --bit-color-0: hsl(0, 100%, 20%);
     --bit-color-1: hsl(0, 100%, 90%);
   }
 </style>
-<div class="site-columns-auto fancy-container">
+<div class="bit-card site-columns-auto theme-white">
   <button type="button" class="bit-button theme-blue">
     Blue
   </button>
-  <button type="button" class="bit-button theme-green">
-    Green
-  </button>
   <button type="button" class="bit-button theme-red">
     Red
-  </button>
-  <button type="button" class="bit-button theme-orange">
-    Orange
   </button>
   <button type="button"
     class="bit-button"
