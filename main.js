@@ -7,7 +7,9 @@ function $$(selector, element = document) {
 }
 
 export function main() {
-  setThemeColors("#222323", "#f0f6f0");
+  const userPalette = jsonStorageGet("user-palette", {});
+  const { color0 = "#222323", color1 = "#f0f6f0" } = userPalette;
+  setThemeColors(color0, color1);
   bindThemeSwitchers();
   injectExamples();
 }
@@ -283,6 +285,19 @@ function setThemeColors(color0, color1) {
   --bit-color-0: ${color0};
   --bit-color-1: ${color1};
 }`;
+  jsonStorageSet("user-palette", { color0, color1 });
+}
+
+function jsonStorageGet(key, fallback) {
+  const json = localStorage.getItem(key);
+  if (json === null) {
+    return fallback;
+  }
+  return JSON.parse(json);
+}
+
+function jsonStorageSet(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
 }
 
 main();
