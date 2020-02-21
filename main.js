@@ -8,6 +8,32 @@ function $$(selector, element = document) {
 
 export function main() {
   setThemeColors("#222323", "#f0f6f0");
+  bindThemeSwitchers();
+  injectExamples();
+}
+
+function injectExamples() {
+  for (const element of $$("[data-inject-example]")) {
+    const name = element.dataset.injectExample;
+    const example = examples[name];
+    if (!example) {
+      console.warn("TODO: [example]", name);
+    }
+    const div = document.createElement("div");
+    div.dataset.exampleName = name;
+    div.dataset.exampleType = "result";
+    div.innerHTML = example;
+    const pre = document.createElement("pre");
+    pre.className = "bit-pre";
+    pre.textContent = example;
+    pre.dataset.exampleName = name;
+    pre.dataset.exampleType = "html";
+    element.insertAdjacentElement("beforeend", div);
+    element.insertAdjacentElement("beforeend", pre);
+  }
+}
+
+function bindThemeSwitchers() {
   for (const element of $$("[data-theme-switcher]")) {
     element.style.setProperty("--bit-color-0", element.dataset["bitTheme-0"]);
     element.style.setProperty("--bit-color-1", element.dataset["bitTheme-1"]);
@@ -21,24 +47,6 @@ export function main() {
       },
       false
     );
-  }
-  for (const element of $$("[data-inject-example]")) {
-    const name = element.dataset.injectExample;
-    const example = examples[name];
-    if (!example) {
-      console.log("TODO: [example]", name);
-    }
-    const div = document.createElement("div");
-    div.dataset.exampleName = name;
-    div.dataset.exampleType = "result";
-    div.innerHTML = example;
-    const pre = document.createElement("pre");
-    pre.className = "bit-pre";
-    pre.textContent = example;
-    pre.dataset.exampleName = name;
-    pre.dataset.exampleType = "html";
-    element.insertAdjacentElement("beforeend", div);
-    element.insertAdjacentElement("beforeend", pre);
   }
 }
 
@@ -119,19 +127,19 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
   }
 </style>
 <div class="site-columns-auto fancy-container">
-  <button class="bit-button theme-blue">
+  <button type="button" class="bit-button theme-blue">
     Blue
   </button>
-  <button class="bit-button theme-green">
+  <button type="button" class="bit-button theme-green">
     Green
   </button>
-  <button class="bit-button theme-red">
+  <button type="button" class="bit-button theme-red">
     Red
   </button>
-  <button class="bit-button theme-orange">
+  <button type="button" class="bit-button theme-orange">
     Orange
   </button>
-  <button
+  <button type="button"
     class="bit-button"
     style="
       --bit-color-0: #222222;
@@ -140,7 +148,7 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
   >
     Inline Styles
   </button>
-  <button class="bit-button">
+  <button type="button" class="bit-button">
     Default
   </button>
 </div>`,
@@ -257,6 +265,27 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
     </tr>
   </tfoot>
 </table>
+`,
+
+  card: `\
+<div class="site-columns-auto">
+  <div class="bit-card">
+    This is a 1-bit UI Card. It has a 3D shadow effect,
+    as well as some padding on the inside.
+  </div>
+  <div class="bit-card">
+    This is a 1-bit UI Card. It has a 3D shadow effect,
+    as well as some padding on the inside.
+  </div>
+  <div class="bit-card">
+    This is a 1-bit UI Card. It has a 3D shadow effect,
+    as well as some padding on the inside.
+  </div>
+  <div class="bit-card">
+    This is a 1-bit UI Card. It has a 3D shadow effect,
+    as well as some padding on the inside.
+  </div>
+</div>
 `
 };
 

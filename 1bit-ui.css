@@ -7,6 +7,12 @@
   color: var(--bit-color-0);
 }
 
+.bit-card {
+  border: 2px solid var(--bit-color-0);
+  box-shadow: 4px 4px 0 var(--bit-color-0);
+  padding: 1rem;
+}
+
 .bit-table {
   border-collapse: collapse;
 }
