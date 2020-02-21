@@ -23,11 +23,21 @@ html {
   scrollbar-color: var(--bit-color-0) var(--bit-color-1);
 }
 
+.bit-svg {
+  fill: var(--bit-color-0);
+}
+
 .bit-code {
   font-family: var(--bit-font-monospace);
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   padding: 2px;
+}
+
+.bit-hr {
+  box-sizing: border-box;
+  border: 0;
+  border-top: 2px solid var(--bit-color-0);
 }
 
 .bit-pre {
@@ -40,6 +50,7 @@ html {
 }
 
 .bit-button {
+  box-sizing: border-box;
   background: var(--bit-color-1);
   color: var(--bit-color-0);
   padding: 0.5em 1em;
@@ -64,6 +75,7 @@ html {
 }
 
 .bit-select {
+  box-sizing: border-box;
   -webkit-appearance: none;
   position: relative;
   border-radius: 0;
@@ -113,6 +125,7 @@ html {
 }
 
 .bit-input {
+  box-sizing: border-box;
   background: var(--bit-color-1);
   color: var(--bit-color-0);
   font: inherit;
