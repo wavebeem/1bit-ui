@@ -3,8 +3,76 @@
   --bit-color-0: #222323;
   --bit-border-radius: 0px;
   /* TODO: Configurable padding via custom properties */
+  /* TODO: How much padding by default? */
+  /* TODO: Rename bit-field? */
+  /* TODO: Fix focus+hover styling */
   background: var(--bit-color-1);
   color: var(--bit-color-0);
+}
+
+.bit-field {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-template-columns: min-content 1fr;
+}
+
+.bit-field > .bit-radio:disabled + *,
+.bit-field > .bit-checkbox:disabled + * {
+  opacity: 0.5;
+}
+
+.bit-checkbox {
+  border-radius: var(--bit-border-radius);
+}
+
+.bit-radio {
+  border-radius: 9999px;
+}
+
+.bit-checkbox,
+.bit-radio {
+  -webkit-appearance: none;
+  width: 2em;
+  height: 2em;
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
+  border: 2px solid var(--bit-color-0);
+}
+
+.bit-checkbox:hover:not(:disabled),
+.bit-radio:hover:not(:disabled) {
+  box-shadow: inset 0 0 0 2px var(--bit-color-0);
+}
+
+.bit-checkbox:focus,
+.bit-radio:focus {
+  border-color: var(--bit-color-1);
+  box-shadow: 0 0 0 2px var(--bit-color-0), inset 0 0 0 2px var(--bit-color-0);
+}
+
+.bit-checkbox:checked,
+.bit-radio:checked {
+  background: var(--bit-color-0);
+  box-shadow: inset 0 0 0 4px var(--bit-color-1);
+}
+
+.bit-checkbox:checked:focus,
+.bit-radio:checked:focus {
+  border-color: var(--bit-color-1);
+  background: var(--bit-color-0);
+  box-shadow: 0 0 0 2px var(--bit-color-0), inset 0 0 0 2px var(--bit-color-0);
+}
+
+.bit-checkbox:checked:hover:not(:disabled),
+.bit-radio:checked:hover:not(:disabled) {
+  box-shadow: inset 0 0 0 2px var(--bit-color-0),
+    inset 0 0 0 6px var(--bit-color-1);
+}
+
+.bit-checkbox:disabled,
+.bit-radio:disabled {
+  opacity: 0.5;
+  border-style: dotted;
 }
 
 .bit-card {
@@ -88,7 +156,7 @@
   border-radius: var(--bit-border-radius);
 }
 
-.bit-button:hover {
+.bit-button:hover:not(:disabled) {
   box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
@@ -101,6 +169,12 @@
   border-color: var(--bit-color-1);
   box-shadow: inset 0 0 0 2px var(--bit-color-0), 0 0 0 2px var(--bit-color-0),
     inset 0 -4px 0 var(--bit-color-0);
+}
+
+.bit-button:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  border-style: dotted;
 }
 
 .bit-select {
@@ -122,7 +196,7 @@
     inset -22px 0 0 0 var(--bit-color-1);
 }
 
-.bit-select:hover {
+.bit-select:hover:not(:disabled) {
   /* prettier-ignore */
   box-shadow:
     inset 0 0 0 2px var(--bit-color-0),
@@ -150,6 +224,11 @@
 .bit-select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 var(--bit-color-0);
+}
+
+.bit-select:disabled {
+  opacity: 0.5;
+  border-style: dotted;
 }
 
 .bit-link {
@@ -184,7 +263,7 @@
   border-radius: var(--bit-border-radius);
 }
 
-.bit-input:hover {
+.bit-input:hover:not(:disabled) {
   box-shadow: inset 0 0 0 2px var(--bit-color-0);
 }
 
@@ -193,6 +272,12 @@
   border-color: var(--bit-color-1);
   box-shadow: inset 0 0 0 2px var(--bit-color-0), 0 0 0 2px var(--bit-color-0),
     inset 0 4px 0 var(--bit-color-0);
+}
+
+.bit-input:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  border-style: dotted;
 }
 
 .bit-input::placeholder {

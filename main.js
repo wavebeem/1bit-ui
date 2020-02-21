@@ -53,6 +53,103 @@ function bindThemeSwitchers() {
 }
 
 const examples = {
+  buttons: `\
+<button type="button" class="bit-button">Save</button>
+<button type="button" class="bit-button" disabled>Save</button>
+`,
+
+  checkboxes: `\
+<div class="site-flex-column">
+  <div class="bit-field">
+    <input
+      class="bit-checkbox"
+      type="checkbox"
+      id="toppings-pineapple"
+      name="toppings"
+      value="pineapple"
+      checked
+    />
+    <label for="toppings-pineapple">Pineapple</label>
+  </div>
+  <div class="bit-field">
+    <input
+      class="bit-checkbox"
+      type="checkbox"
+      id="toppings-mushrooms"
+      name="toppings"
+      value="mushrooms"
+    />
+    <label for="toppings-mushrooms">Mushrooms</label>
+  </div>
+  <div class="bit-field">
+    <input
+      class="bit-checkbox"
+      type="checkbox"
+      id="toppings-olives"
+      name="toppings"
+      value="olives"
+    />
+    <label for="toppings-olives">Olives</label>
+  </div>
+  <div class="bit-field">
+    <input
+      class="bit-checkbox"
+      type="checkbox"
+      id="toppings-disabled"
+      name="toppings"
+      value="disabled"
+      disabled
+    />
+    <label for="toppings-disabled">Disabled</label>
+  </div>
+</div>`,
+
+  radios: `\
+<div class="site-flex-column">
+  <div class="bit-field">
+    <input
+      class="bit-radio"
+      type="radio"
+      id="color-red"
+      name="color"
+      value="red"
+      checked
+    />
+    <label for="color-red">Red</label>
+  </div>
+  <div class="bit-field">
+    <input
+      class="bit-radio"
+      type="radio"
+      id="color-green"
+      name="color"
+      value="green"
+    />
+    <label for="color-green">Green</label>
+  </div>
+  <div class="bit-field">
+    <input
+      class="bit-radio"
+      type="radio"
+      id="color-blue"
+      name="color"
+      value="blue"
+    />
+    <label for="color-blue">Blue</label>
+  </div>
+  <div class="bit-field">
+    <input
+      class="bit-radio"
+      type="radio"
+      id="color-disabled"
+      name="color"
+      value="disabled"
+      disabled
+    />
+    <label for="color-disabled">Disabled</label>
+  </div>
+</div>`,
+
   inputs: `\
 <style>
   .site-flex-column {
@@ -70,12 +167,28 @@ const examples = {
     <input class="bit-input" placeholder="https://example.com" id="field-url" />
   </div>
   <div class="site-flex-column">
+    <label for="field-disabled-1">Disabled</label>
+    <input class="bit-input" id="field-disabled-1" disabled />
+  </div>
+</div>
+<br />
+<div class="site-columns-auto">
+  <div class="site-flex-column">
     <label for="field-description">Description</label>
     <textarea
       rows="4"
       class="bit-input"
       id="field-description"
     >A text-area is used for multi-line text input.</textarea>
+  </div>
+  <div class="site-flex-column">
+    <label for="field-disabled-2">Disabled</label>
+    <textarea
+      rows="4"
+      class="bit-input"
+      id="field-disabled-2"
+      disabled
+    >Disabled.</textarea>
   </div>
 </div>`,
   link: `\
@@ -96,7 +209,15 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
   <option>Option 1</option>
   <option>Option 2</option>
   <option>Option 3</option>
-</select>`,
+</select>
+
+<select class="bit-select" disabled>
+  <option selected disabled>Select...</option>
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+</select>
+`,
 
   horizontalRule: `\
 <hr class="bit-hr" />
