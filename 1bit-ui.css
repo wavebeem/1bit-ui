@@ -1,22 +1,11 @@
 :root {
   --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
-  --bit-font-monospace: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas",
-    monospace;
-  --bit-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
 }
 
-html {
+.bit-root {
   background: var(--bit-color-1);
   color: var(--bit-color-0);
-  font-family: var(--bit-font-sans);
-  font-size: 18px;
-  line-height: 1.5;
-  padding: 2rem;
-  max-width: 50rem;
-  margin: 0 auto;
 }
 
 .bit-scrollbar {
@@ -28,7 +17,6 @@ html {
 }
 
 .bit-code {
-  font-family: var(--bit-font-monospace);
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   padding: 2px;
@@ -41,7 +29,6 @@ html {
 }
 
 .bit-pre {
-  font-family: var(--bit-font-monospace);
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   scrollbar-color: var(--bit-color-1) var(--bit-color-0);
