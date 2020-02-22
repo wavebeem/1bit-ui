@@ -19,13 +19,14 @@
 
 .site-nav-menu {
   display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.site-nav-menu > li + li {
-  padding-left: 1rem;
+.site-nav-menu a {
+  display: block;
 }
 
 .site-flex-column {
@@ -37,9 +38,18 @@
   padding: 0.25rem;
 }
 
+.site-toc-container {
+  margin-top: 1rem;
+}
+
 .site-toc {
+  padding: 0;
   margin: 0;
-  padding-left: 1rem;
+  list-style-type: none;
+}
+
+.site-toc a {
+  display: block;
 }
 
 .site-example {
@@ -57,4 +67,26 @@ kbd,
 samp {
   font-family: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas", monospace;
   font-variant-ligatures: none;
+  white-space: pre-wrap;
+}
+
+@media (min-width: 900px) {
+  .site-nav-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .site-nav-menu a {
+    display: inline;
+  }
+
+  .site-nav-menu > li + li {
+    padding-left: 1rem;
+  }
+
+  .site-toc-container {
+    float: right;
+    margin: 1rem;
+    margin-right: 0;
+  }
 }
