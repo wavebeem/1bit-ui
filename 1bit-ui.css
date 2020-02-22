@@ -235,14 +235,16 @@
 
 .bit-link:hover {
   text-decoration: none;
-  box-shadow: 0 0 0 2px var(--bit-color-1), 0 0 0 4px var(--bit-color-0);
+  outline: 2px solid var(--bit-color-0);
+  outline-offset: 2px;
 }
 
 .bit-link:focus {
+  text-decoration: none;
   background: var(--bit-color-0);
   color: var(--bit-color-1);
-  outline: none;
-  box-shadow: 0 0 0 2px var(--bit-color-0);
+  outline: 6px double var(--bit-color-0);
+  outline-offset: 0;
 }
 
 /* -------------------------------------------------------------------------- */
