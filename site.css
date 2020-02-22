@@ -1,7 +1,7 @@
 :root {
-  font-size: 18px;
+  font-size: 16px;
+  padding: 0.5rem;
   line-height: 1.5;
-  padding: 1rem;
   max-width: 50rem;
   margin: 0 auto;
   overflow-y: scroll;
@@ -15,6 +15,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
   grid-gap: var(--grid-gap);
+}
+
+.site-table-responsive {
+  width: 100%;
+  overflow-x: auto;
 }
 
 .site-nav-menu {
@@ -52,11 +57,6 @@
   display: block;
 }
 
-.site-example {
-  border-left: 2px dotted var(--bit-color-0);
-  padding-left: 2rem;
-}
-
 footer {
   margin-top: 1rem;
 }
@@ -67,10 +67,14 @@ kbd,
 samp {
   font-family: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas", monospace;
   font-variant-ligatures: none;
-  white-space: pre-wrap;
 }
 
 @media (min-width: 900px) {
+  :root {
+    font-size: 18px;
+    padding: 1rem;
+  }
+
   .site-nav-menu {
     display: flex;
     flex-direction: row;
@@ -88,5 +92,10 @@ samp {
     float: right;
     margin: 1rem;
     margin-right: 0;
+  }
+
+  .site-example {
+    border-left: 2px dotted var(--bit-color-0);
+    padding-left: 2rem;
   }
 }

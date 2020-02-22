@@ -5,6 +5,7 @@
  * Version 0.1.0
  */
 
+/* TODO: Add version header automatically with build step */
 /* TODO: Configurable padding via custom properties */
 /* TODO: How much padding by default? */
 
@@ -237,18 +238,20 @@
 }
 
 .bit-link:hover {
+  border-radius: var(--bit-border-radius);
   background: var(--bit-color-1);
   text-decoration: none;
-  outline: 2px solid var(--bit-color-0);
-  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bit-color-1), 0 0 0 4px var(--bit-color-0);
 }
 
 .bit-link:focus {
+  border-radius: var(--bit-border-radius);
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   text-decoration: none;
-  outline: 6px double var(--bit-color-0);
-  outline-offset: 0;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bit-color-0), 0 0 0 4px var(--bit-color-1),
+    0 0 0 6px var(--bit-color-0);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -310,6 +313,7 @@
   border: 2px solid var(--bit-color-0);
   box-shadow: 4px 4px 0 var(--bit-color-0);
   padding: 1rem;
+  border-radius: var(--bit-border-radius);
 }
 
 .bit-scrollbar {
