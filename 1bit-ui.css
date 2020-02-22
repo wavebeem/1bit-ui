@@ -1,12 +1,18 @@
-/* --[ 1-bit UI by Brian Mock ]---------------------------------------------- */
+/**
+ * @license
+ * 1-bit UI
+ * Copyright © 2020 Brian Mock
+ * Version 0.1.0
+ */
+
+/* TODO: Configurable padding via custom properties */
+/* TODO: How much padding by default? */
+/* TODO: Fix checked+focus+hover state for radio/checks */
 
 .bit-root {
   --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
   --bit-border-radius: 0px;
-  /* TODO: Configurable padding via custom properties */
-  /* TODO: How much padding by default? */
-  /* TODO: Make an example page using 1-bit UI */
   background: var(--bit-color-1);
   color: var(--bit-color-0);
 }

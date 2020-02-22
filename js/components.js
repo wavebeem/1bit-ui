@@ -20,8 +20,8 @@ export function bindThemeSwitchers() {
 
 export function updateThemeExample(color0, color1) {
   $("#theme-example").textContent = `\
-  .bit-root {
-    --bit-color-0: ${color0};
-    --bit-color-1: ${color1};
-  }`;
+.bit-root {
+  --bit-color-0: ${color0};
+  --bit-color-1: ${color1};
+}`;
 }

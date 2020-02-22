@@ -5,7 +5,7 @@ export function injectExamples() {
     const name = element.dataset.injectExample;
     const example = examples[name];
     if (!example) {
-      console.warn("TODO: [example]", name);
+      console.warn("Missing example", name);
     }
     const div = document.createElement("div");
     div.dataset.exampleName = name;

@@ -37,6 +37,11 @@
   padding: 0.25rem;
 }
 
+.site-toc {
+  margin: 0;
+  padding-left: 1rem;
+}
+
 footer {
   margin-top: 1rem;
 }
