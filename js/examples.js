@@ -172,6 +172,16 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
 }</pre>
 `,
 
+  code: `\
+<p>
+  The <code class="bit-code">flatMap()</code> method first maps each element
+  using a mapping function, then flattens the result into a new array. It is
+  identical to a <code class="bit-code">map()</code> followed by a
+  <code class="bit-code">flat()</code> of depth 1, but
+  <code class="bit-code">flatMap()</code> is often quite useful, as merging both
+  into one method is slightly more efficient.
+</p>`,
+
   select: `\
 <select class="bit-select">
   <option selected disabled>&ndash;</option>
