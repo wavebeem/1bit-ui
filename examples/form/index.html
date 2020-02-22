@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="bit-root bit-scrollbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example | 1bit-ui.css</title>
+    <link rel="stylesheet" href="/1bit-ui.css" />
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <h1><span class="bit-code">1bit-ui.css</span></h1>
+    <a href="/" class="bit-link">&larr; Back to documentation</a>
+    <p>Log In and Register form examples</p>
+    <div class="site-columns-auto" style="--grid-min: 20rem;">
+      <form class="bit-card" action="" onsubmit="event.preventDefault();">
+        <h2 style="margin: 0;">Welcome Back!</h2>
+        <div class="site-flex-column">
+          <label for="l-fake1">Display Name</label>
+          <input type="text" class="bit-input" id="l-fake1" />
+          <div class="site-gap"></div>
+
+          <label for="l-favorite-animal">Favorite Animal</label>
+          <input type="text" class="bit-input" id="l-favorite-animal" />
+          <div class="site-gap"></div>
+
+          <div class="site-gap"></div>
+          <button class="bit-button">Log In</button>
+        </div>
+      </form>
+
+      <form class="bit-card" action="" onsubmit="event.preventDefault();">
+        <h2 style="margin: 0;">Register</h2>
+        <div class="site-flex-column">
+          <label for="r-fake1">Display Name</label>
+          <input type="text" class="bit-input" id="r-fake1" />
+          <div class="site-gap"></div>
+
+          <label for="r-favorite-animal">Favorite Animal</label>
+          <input type="text" class="bit-input" id="r-favorite-animal" />
+          <div class="site-gap"></div>
+
+          <label for="r-state">State</label>
+          <select class="bit-select" id="r-state">
+            <option selected disabled>&ndash;</option>
+            <option>Alabama</option>
+            <option>Alaska</option>
+            <option>Arizona</option>
+            <option>Arkansas</option>
+            <option>California</option>
+            <option>Colorado</option>
+            <option>Connecticut</option>
+            <option>Delaware</option>
+            <option>Florida</option>
+            <option>Georgia</option>
+            <option>Hawaii</option>
+            <option>Idaho</option>
+            <option>Illinois</option>
+            <option>Indiana</option>
+            <option>Iowa</option>
+            <option>Kansas</option>
+            <option>Kentucky</option>
+            <option>Louisiana</option>
+            <option>Maine</option>
+            <option>Maryland</option>
+            <option>Massachusetts</option>
+            <option>Michigan</option>
+            <option>Minnesota</option>
+            <option>Mississippi</option>
+            <option>Missouri</option>
+            <option>Montana</option>
+            <option>Nebraska</option>
+            <option>Nevada</option>
+            <option>New Hampshire</option>
+            <option>New Jersey</option>
+            <option>New Mexico</option>
+            <option>New York</option>
+            <option>North Carolina</option>
+            <option>North Dakota</option>
+            <option>Ohio</option>
+            <option>Oklahoma</option>
+            <option>Oregon</option>
+            <option>Pennsylvania</option>
+            <option>Rhode Island</option>
+            <option>South Carolina</option>
+            <option>South Dakota</option>
+            <option>Tennessee</option>
+            <option>Texas</option>
+            <option>Utah</option>
+            <option>Vermont</option>
+            <option>Virginia</option>
+            <option>Washington</option>
+            <option>West Virginia</option>
+            <option>Wisconsin</option>
+            <option>Wyoming</option>
+          </select>
+          <div class="site-gap"></div>
+
+          <span>Favorite Animal</span>
+          <div class="bit-field">
+            <input
+              type="radio"
+              class="bit-radio"
+              name="r-favorite-animal"
+              value="cat"
+              id="r-favorite-animal-cat"
+            />
+            <label for="r-favorite-animal-cat">Cat</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="radio"
+              class="bit-radio"
+              name="r-favorite-animal"
+              value="dog"
+              id="r-favorite-animal-dog"
+            />
+            <label for="r-favorite-animal-dog">Dog</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="radio"
+              class="bit-radio"
+              name="r-favorite-animal"
+              value="Other"
+              id="r-favorite-animal-other"
+            />
+            <label for="r-favorite-animal-other">Other</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="radio"
+              class="bit-radio"
+              name="r-favorite-animal"
+              value="Disabled"
+              id="r-favorite-animal-disabled"
+              disabled
+            />
+            <label for="r-favorite-animal-disabled">Disabled</label>
+          </div>
+          <div class="site-gap"></div>
+
+          <span>Pizza Toppings</span>
+          <div class="bit-field">
+            <input
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="cat"
+              id="r-pizza-pineapple"
+            />
+            <label for="r-pizza-pineapple">Pineapple</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="dog"
+              id="r-pizza-mushroom"
+            />
+            <label for="r-pizza-mushroom">Mushroom</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="Other"
+              id="r-pizza-olives"
+            />
+            <label for="r-pizza-olives">Olives</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="Disabled"
+              id="r-pizza-disabled"
+              disabled
+            />
+            <label for="r-pizza-disabled">Disabled</label>
+          </div>
+          <div class="site-gap"></div>
+
+          <div class="site-flex-column">
+            <label for="r-delivery-instructions">Delivery Instructions</label>
+            <textarea
+              rows="4"
+              id="r-delivery-instructions"
+              class="bit-input"
+            ></textarea>
+          </div>
+
+          <div class="site-gap"></div>
+          <button class="bit-button">Register</button>
+        </div>
+      </form>
+    </div>
+    <script type="module">
+      import { restoreUserTheme } from "/main.js";
+      restoreUserTheme();
+    </script>
+  </body>
+</html>

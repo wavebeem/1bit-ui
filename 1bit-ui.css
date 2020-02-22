@@ -1,13 +1,17 @@
+/* --[ 1-bit UI by Brian Mock ]---------------------------------------------- */
+
 .bit-root {
   --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
   --bit-border-radius: 0px;
   /* TODO: Configurable padding via custom properties */
   /* TODO: How much padding by default? */
-  /* TODO: Rename bit-field? */
+  /* TODO: Make an example page using 1-bit UI */
   background: var(--bit-color-1);
   color: var(--bit-color-0);
 }
+
+/* -------------------------------------------------------------------------- */
 
 .bit-field {
   display: grid;
@@ -19,6 +23,8 @@
 .bit-field > .bit-checkbox:disabled + * {
   opacity: 0.5;
 }
+
+/* -------------------------------------------------------------------------- */
 
 .bit-checkbox {
   border-radius: var(--bit-border-radius);
@@ -77,13 +83,7 @@
   box-shadow: none;
 }
 
-.bit-card {
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
-  border: 2px solid var(--bit-color-0);
-  box-shadow: 4px 4px 0 var(--bit-color-0);
-  padding: 1rem;
-}
+/* -------------------------------------------------------------------------- */
 
 .bit-table {
   background: var(--bit-color-1);
@@ -117,35 +117,7 @@
   border-bottom: 0;
 }
 
-.bit-scrollbar {
-  scrollbar-color: var(--bit-color-0) var(--bit-color-1);
-}
-
-.bit-svg {
-  fill: var(--bit-color-0);
-}
-
-.bit-code {
-  background: var(--bit-color-0);
-  color: var(--bit-color-1);
-  padding: 2px;
-  border-radius: var(--bit-border-radius);
-}
-
-.bit-hr {
-  box-sizing: border-box;
-  border: 0;
-  border-top: 2px solid var(--bit-color-0);
-}
-
-.bit-pre {
-  background: var(--bit-color-0);
-  color: var(--bit-color-1);
-  scrollbar-color: var(--bit-color-1) var(--bit-color-0);
-  overflow-x: auto;
-  padding: 1rem;
-  border-radius: var(--bit-border-radius);
-}
+/* -------------------------------------------------------------------------- */
 
 .bit-button {
   box-sizing: border-box;
@@ -179,6 +151,8 @@
   box-shadow: none;
   border-style: dotted;
 }
+
+/* -------------------------------------------------------------------------- */
 
 .bit-select {
   box-sizing: border-box;
@@ -233,7 +207,16 @@
 .bit-select:disabled {
   opacity: 0.5;
   border-style: dotted;
+  /* prettier-ignore */
+  box-shadow:
+    inset 0 -2px 0 0 var(--bit-color-1),
+    inset 0 2px 0 0 var(--bit-color-1),
+    inset -2px 0 0 0 var(--bit-color-1),
+    inset -20px 0 0 0 var(--bit-color-0),
+    inset -22px 0 0 0 var(--bit-color-1);
 }
+
+/* -------------------------------------------------------------------------- */
 
 .bit-link {
   background: var(--bit-color-1);
@@ -255,6 +238,8 @@
   outline: none;
   box-shadow: 0 0 0 2px var(--bit-color-0);
 }
+
+/* -------------------------------------------------------------------------- */
 
 .bit-input {
   box-sizing: border-box;
@@ -295,8 +280,50 @@
   color: var(--bit-color-1);
 }
 
+/* -------------------------------------------------------------------------- */
+
 .bit-select::-moz-focus-inner,
 .bit-button::-moz-focus-inner,
 .bit-input::-moz-focus-inner {
   border: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.bit-card {
+  background: var(--bit-color-1);
+  color: var(--bit-color-0);
+  border: 2px solid var(--bit-color-0);
+  box-shadow: 4px 4px 0 var(--bit-color-0);
+  padding: 1rem;
+}
+
+.bit-scrollbar {
+  scrollbar-color: var(--bit-color-0) var(--bit-color-1);
+}
+
+.bit-svg {
+  fill: var(--bit-color-0);
+}
+
+.bit-code {
+  background: var(--bit-color-0);
+  color: var(--bit-color-1);
+  padding: 2px;
+  border-radius: var(--bit-border-radius);
+}
+
+.bit-hr {
+  box-sizing: border-box;
+  border: 0;
+  border-top: 2px solid var(--bit-color-0);
+}
+
+.bit-pre {
+  background: var(--bit-color-0);
+  color: var(--bit-color-1);
+  scrollbar-color: var(--bit-color-1) var(--bit-color-0);
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: var(--bit-border-radius);
 }

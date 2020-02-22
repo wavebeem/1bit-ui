@@ -7,11 +7,15 @@ function $$(selector, element = document) {
 }
 
 export function main() {
-  const userPalette = jsonStorageGet("user-palette", {});
-  const { color0 = "#222323", color1 = "#f0f6f0" } = userPalette;
-  setThemeColors(color0, color1);
+  restoreUserTheme();
   bindThemeSwitchers();
   injectExamples();
+}
+
+export function restoreUserTheme() {
+  const userTheme = jsonStorageGet("user-theme", {});
+  const { color0 = "#222323", color1 = "#f0f6f0" } = userTheme;
+  setThemeColors(color0, color1);
 }
 
 function injectExamples() {
@@ -151,12 +155,6 @@ const examples = {
 </div>`,
 
   inputs: `\
-<style>
-  .site-flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-</style>
 <div class="site-columns-auto">
   <div class="site-flex-column">
     <label for="field-name">Name</label>
@@ -203,16 +201,22 @@ This is an <a href="#" class="bit-link">example link</a> within a sentence.`,
   workplace diversity and empowerment.
 </p>`,
 
+  pre: `\
+<pre class="bit-pre">function sayHello() {
+  console.log("Hello!");
+}</pre>
+`,
+
   select: `\
 <select class="bit-select">
-  <option selected disabled>Select...</option>
+  <option selected disabled>&ndash;</option>
   <option>Option 1</option>
   <option>Option 2</option>
   <option>Option 3</option>
 </select>
 
 <select class="bit-select" disabled>
-  <option selected disabled>Select...</option>
+  <option selected disabled>&ndash;</option>
   <option>Option 1</option>
   <option>Option 2</option>
   <option>Option 3</option>
@@ -406,7 +410,7 @@ function setThemeColors(color0, color1) {
   --bit-color-0: ${color0};
   --bit-color-1: ${color1};
 }`;
-  jsonStorageSet("user-palette", { color0, color1 });
+  jsonStorageSet("user-theme", { color0, color1 });
 }
 
 function jsonStorageGet(key, fallback) {
@@ -420,5 +424,3 @@ function jsonStorageGet(key, fallback) {
 function jsonStorageSet(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
-
-main();
