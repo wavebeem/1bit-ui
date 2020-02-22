@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="bit-root bit-scrollbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs | 1bit-ui.css</title>
+    <script src="/js/auto-theme-script.js"></script>
+    <link rel="stylesheet" href="/1bit-ui.css" />
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <h1><span class="bit-code">1bit-ui.css</span></h1>
+
+    <nav class="bit-card">
+      <ul class="site-nav-menu">
+        <li><a href="/" class="bit-link">About</a></li>
+        <li><a href="/docs" class="bit-link">Documentation</a></li>
+        <li><a href="/examples" class="bit-link">Examples</a></li>
+      </ul>
+    </nav>
+
+    <h2>Basics</h2>
+    <p>
+      All CSS classes from 1-bit UI start with
+      <code class="bit-code">.bit-</code> at the front. This way you're 100%
+      sure where your CSS is coming from. 1-bit UI uses the lowest CSS
+      specificity possible so that you can easily override things as necessary.
+    </p>
+
+    <h2>Links</h2>
+    <div data-inject-example="link"></div>
+
+    <h2>Selects</h2>
+    <div data-inject-example="select"></div>
+
+    <h2>Buttons</h2>
+    <div data-inject-example="buttons"></div>
+
+    <h2>Inputs and Text Areas</h2>
+    <div data-inject-example="inputs"></div>
+
+    <h2>Radio Buttons and Checkboxes</h2>
+    <p>
+      For proper accessibility and apperance, wrap all radio buttons and
+      checkboxes inside a
+      <code class="bit-code">bit-field</code> and put a
+      <code class="bit-code">label</code> after it with correct
+      <code class="bit-code">id</code> and
+      <code class="bit-code">for</code>attributes
+    </p>
+    <div data-inject-example="radios"></div>
+    <div data-inject-example="checkboxes"></div>
+
+    <h2>Inline Tags</h2>
+    <div data-inject-example="inlineTags"></div>
+
+    <h2>Tables</h2>
+    <p>A basic table.</p>
+    <div data-inject-example="tableBasic"></div>
+
+    <p>A table with row headers.</p>
+    <div data-inject-example="tableRowHeaders"></div>
+
+    <p>A table with a footer.</p>
+    <div data-inject-example="tableTfoot"></div>
+
+    <h2>Card</h2>
+    <div data-inject-example="card"></div>
+
+    <h2>Inline SVG</h2>
+    <p>
+      Using the CSS class <code class="bit-code">bit-svg</code> will set the
+      <code class="bit-code">fill</code> property to
+      <code class="bit-code">--bit-color-0</code>, causing inline SVGs to
+      automatically match your 1-bit UI theme.
+    </p>
+    <div data-inject-example="inlineSVG"></div>
+
+    <h2>Horizontal Rule</h2>
+    <div data-inject-example="horizontalRule"></div>
+
+    <h2>Pre (Code Block)</h2>
+    <div data-inject-example="pre"></div>
+
+    <h2>Scrollbars</h2>
+    <p>
+      Firefox has the ability to put custom colors on your scrollbars! Don't
+      forget to put <code class="bit-code">bit-scrollbar</code> on your
+      <code class="bit-code">&lt;html&gt;</code> element if you'd like to opt-in
+      to this feature. You can also put it on only specific elements that you'd
+      like to opt-in to this behavior. Hopefully in the future more browsers
+      besides Firefox will implement this feature.
+    </p>
+
+    <h2>Get Creative!</h2>
+    <p>
+      CSS Custom Properties can be changed on your page at any time! You can use
+      JavaScript, or even CSS selectors to do it! You could apply a
+      <code class="bit-code">:focus</code> style to change
+      <code class="bit-code">--bit-color-0</code> and
+      <code class="bit-code">--bit-color-1</code> to different colors to make
+      the focus state easier to read.
+    </p>
+    <p>
+      Or if you have a super dangerous delete button, you could force the color
+      to bed red so it stands out against your normal color scheme. 1-bit UI
+      encourages your creativity.
+    </p>
+    <div data-inject-example="getCreative"></div>
+
+    <h2>Dark Mode</h2>
+    <p>
+      You can use the
+      <code class="bit-code">prefers-color-scheme: dark</code> CSS media query
+      to set the <code class="bit-code">--bit-color-0</code> and
+      <code class="bit-code">--bit-color-1</code> variables, allowing your users
+      to automatically get Dark Mode with a single block of CSS
+    </p>
+    <pre class="bit-pre">
+.bit-root {
+  --bit-color-0: white;
+  --bit-color-1: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .bit-root {
+    --bit-color-0: white;
+    --bit-color-1: black;
+  }
+}</pre
+    >
+
+    <footer>
+      &copy; 2020
+      <a href="https://www.mockbrian.com" class="bit-link">Brian Mock</a>
+    </footer>
+
+    <script type="module">
+      import { injectExamples } from "/js/examples.js";
+      injectExamples();
+    </script>
+  </body>
+</html>

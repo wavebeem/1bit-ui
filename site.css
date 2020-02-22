@@ -1,9 +1,12 @@
 :root {
   font-size: 18px;
   line-height: 1.5;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 50rem;
   margin: 0 auto;
+  overflow-y: scroll;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .site-columns-auto {
@@ -12,6 +15,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
   grid-gap: var(--grid-gap);
+}
+
+.site-nav-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.site-nav-menu > li + li {
+  padding-left: 1rem;
 }
 
 .site-flex-column {
@@ -23,9 +37,8 @@
   padding: 0.25rem;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+footer {
+  margin-top: 1rem;
 }
 
 pre,

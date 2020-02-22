@@ -1,6 +1,4 @@
-function $$(selector, element = document) {
-  return Array.from(element.querySelectorAll(selector));
-}
+import { $$ } from "./util.js";
 
 export function injectExamples() {
   for (const element of $$("[data-inject-example]")) {

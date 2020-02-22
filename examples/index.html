@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Example | 1bit-ui.css</title>
+    <title>Examples | 1bit-ui.css</title>
+    <script src="/js/auto-theme-script.js"></script>
     <link rel="stylesheet" href="/1bit-ui.css" />
     <link rel="stylesheet" href="/site.css" />
   </head>
   <body>
     <h1><span class="bit-code">1bit-ui.css</span></h1>
-    <a href="/" class="bit-link">&larr; Back to documentation</a>
-    <p>Log In and Register form examples</p>
+
+    <nav class="bit-card">
+      <ul class="site-nav-menu">
+        <li><a href="/" class="bit-link">About</a></li>
+        <li><a href="/docs" class="bit-link">Documentation</a></li>
+        <li><a href="/examples" class="bit-link">Examples</a></li>
+      </ul>
+    </nav>
+
+    <h2>Form Examples</h2>
     <div class="site-columns-auto" style="--grid-min: 20rem;">
       <form class="bit-card" action="" onsubmit="event.preventDefault();">
         <h2 style="margin: 0;">Welcome Back!</h2>
@@ -197,9 +206,10 @@
         </div>
       </form>
     </div>
-    <script type="module">
-      import { restoreUserTheme } from "/main.js";
-      restoreUserTheme();
-    </script>
+
+    <footer>
+      &copy; 2020
+      <a href="https://www.mockbrian.com" class="bit-link">Brian Mock</a>
+    </footer>
   </body>
 </html>
