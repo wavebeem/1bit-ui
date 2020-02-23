@@ -321,7 +321,7 @@
 .bit-code {
   background: var(--bit-color-0);
   color: var(--bit-color-1);
-  padding: 2px;
+  padding: 0.1em 0.2em;
   border-radius: var(--bit-border-radius);
 }
 

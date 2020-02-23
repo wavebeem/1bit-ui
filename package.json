@@ -6,7 +6,8 @@
   "files": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "node bin/build.js"
+    "prepack": "node bin/build.js",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",

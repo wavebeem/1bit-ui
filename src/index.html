@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1bit-ui.css</title>
+    <title>1bit-ui</title>
     <script type="module">
       const { color0, color1 } = JSON.parse(localStorage.getItem("user-theme"));
       const root = document.documentElement;
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/site.css" />
   </head>
   <body>
-    <h1><span class="bit-code">1bit-ui.css</span></h1>
+    <h1><span class="bit-code">1bit-ui</span></h1>
 
     <nav class="bit-card">
       <ul class="site-nav-menu">
@@ -28,16 +28,16 @@
 
     <h2>About</h2>
     <p>
-      1-bit UI is a CSS library for making retro-inpsired web pages using just
+      1bit-ui is a CSS library for making retro-inpsired web pages using just
       two colors. This color palette is completely customizable using CSS Custom
       Properties (also known as CSS Variables).
     </p>
     <p>
-      1-bit UI covers basic form fields (radio button, checkbox, button,
+      1bit-ui covers basic form fields (radio button, checkbox, button,
       select), links, tables, and cards. Most other basic elements look great
-      alongside these. Evertyhing in 1-bit UI requires the use of CSS classes,
-      so you can feel confident that 1-bit UI won't clash with your existing
-      CSS. 1-bit UI also uses the lowest specificity possible for each rule, so
+      alongside these. Evertyhing in 1bit-ui requires the use of CSS classes,
+      so you can feel confident that 1bit-ui won't clash with your existing
+      CSS. 1bit-ui also uses the lowest specificity possible for each rule, so
       it's less difficult to override things.
     </p>
 
@@ -55,9 +55,9 @@
     </p>
     <pre class="bit-pre">npm install 1bit-ui</pre>
     <p>And then load the CSS through your JS:</p>
-    <pre class="bit-pre">import "1bit-ui/1bit-ui.css";</pre>
+    <pre class="bit-pre">import "1bit-ui/dist/1bit-ui.css";</pre>
     <p>Or inside your CSS:</p>
-    <pre class="bit-pre">@import "~1bit-ui/1bit-ui.css";</pre>
+    <pre class="bit-pre">@import "~1bit-ui/dist/1bit-ui.css";</pre>
 
     <h2>Theme Selector</h2>
     <p>
