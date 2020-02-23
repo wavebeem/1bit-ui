@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1bit-ui.css</title>
-    <script src="/js/auto-theme-script.js"></script>
+    <script type="module">
+      const { color0, color1 } = JSON.parse(localStorage.getItem("user-theme"));
+      const root = document.documentElement;
+      root.style.setProperty("--bit-color-0", color0);
+      root.style.setProperty("--bit-color-1", color1);
+    </script>
     <link rel="stylesheet" href="/1bit-ui.css" />
     <link rel="stylesheet" href="/site.css" />
   </head>
@@ -165,11 +170,75 @@
     </footer>
 
     <script type="module">
-      import { getTheme } from "/js/theme.js";
-      import {
-        bindThemeSwitchers,
-        updateThemeExample
-      } from "/js/components.js";
+      function $$(selector, element = document) {
+        return Array.from(element.querySelectorAll(selector));
+      }
+
+      function $(selector, element = document) {
+        return element.querySelector(selector);
+      }
+
+      function bindThemeSwitchers() {
+        for (const element of $$("[data-theme-switcher]")) {
+          element.style.setProperty(
+            "--bit-color-0",
+            element.dataset["bitTheme-0"]
+          );
+          element.style.setProperty(
+            "--bit-color-1",
+            element.dataset["bitTheme-1"]
+          );
+          element.addEventListener(
+            "click",
+            () => {
+              setThemeColors(
+                element.dataset["bitTheme-0"],
+                element.dataset["bitTheme-1"]
+              );
+            },
+            false
+          );
+        }
+      }
+
+      function updateThemeExample(color0, color1) {
+        $("#theme-example").textContent = `\
+.bit-root {
+  --bit-color-0: ${color0};
+  --bit-color-1: ${color1};
+}`;
+      }
+
+      function getTheme() {
+        const userTheme = jsonStorageGet("user-theme", {});
+        const { color0 = "#222323", color1 = "#f0f6f0" } = userTheme;
+        return { color0, color1 };
+      }
+
+      function restoreUserTheme() {
+        const { color0, color1 } = getTheme();
+        setThemeColors(color0, color1);
+      }
+
+      function setThemeColors(color0, color1) {
+        const root = $(":root");
+        root.style.setProperty("--bit-color-0", color0);
+        root.style.setProperty("--bit-color-1", color1);
+        jsonStorageSet("user-theme", { color0, color1 });
+      }
+
+      function jsonStorageGet(key, fallback) {
+        const json = localStorage.getItem(key);
+        if (json === null) {
+          return fallback;
+        }
+        return JSON.parse(json);
+      }
+
+      function jsonStorageSet(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+      }
+
       bindThemeSwitchers();
       const { color0, color1 } = getTheme();
       updateThemeExample(color0, color1);

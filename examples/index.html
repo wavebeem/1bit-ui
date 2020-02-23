@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Examples | 1bit-ui.css</title>
-    <script src="/js/auto-theme-script.js"></script>
+    <script type="module">
+      const { color0, color1 } = JSON.parse(localStorage.getItem("user-theme"));
+      const root = document.documentElement;
+      root.style.setProperty("--bit-color-0", color0);
+      root.style.setProperty("--bit-color-1", color1);
+    </script>
     <link rel="stylesheet" href="/1bit-ui.css" />
     <link rel="stylesheet" href="/site.css" />
   </head>
