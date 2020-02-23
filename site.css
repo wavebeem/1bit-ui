@@ -17,6 +17,16 @@
   grid-gap: var(--grid-gap);
 }
 
+.site-link-header {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-link-header:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
 .site-table-responsive {
   width: 100%;
   overflow-x: auto;

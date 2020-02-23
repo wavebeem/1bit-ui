@@ -25,8 +25,7 @@
     </nav>
 
     <div class="bit-card site-toc-container">
-      <ul class="site-toc" data-toc>
-      </ul>
+      <ul class="site-toc" data-toc></ul>
     </div>
 
     <h2 id="basics">Basics</h2>
@@ -181,6 +180,7 @@
           a.className = "bit-link";
           li.appendChild(a);
           toc.appendChild(li);
+          h2.innerHTML = `<a href="#${h2.id}" class="site-link-header">${h2.innerHTML}</a>`;
         }
       }
 
