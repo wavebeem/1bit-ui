@@ -1,13 +1,14 @@
 /**
  * @license
  * 1-bit UI
- * Copyright © 2020 Brian Mock
+ * Copyright 2020 Brian Mock
  * Version 0.1.0
  */
 
 /* TODO: Add version header automatically with build step */
 /* TODO: Configurable padding via custom properties */
 /* TODO: How much padding by default? */
+/* TODO: Re-order the documentation */
 
 .bit-root {
   --bit-color-1: #f0f6f0;

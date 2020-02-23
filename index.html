@@ -180,21 +180,17 @@
 
       function bindThemeSwitchers() {
         for (const element of $$("[data-theme-switcher]")) {
-          element.style.setProperty(
-            "--bit-color-0",
-            element.dataset["bitTheme-0"]
-          );
-          element.style.setProperty(
-            "--bit-color-1",
-            element.dataset["bitTheme-1"]
-          );
+          const c0 = element.dataset["bitTheme-0"];
+          const c1 = element.dataset["bitTheme-1"];
+          element.style.setProperty("--bit-color-0", c0);
+          element.style.setProperty("--bit-color-1", c1);
           element.addEventListener(
             "click",
             () => {
-              setThemeColors(
-                element.dataset["bitTheme-0"],
-                element.dataset["bitTheme-1"]
-              );
+              const c0 = element.dataset["bitTheme-0"];
+              const c1 = element.dataset["bitTheme-1"];
+              setThemeColors(c0, c1);
+              updateThemeExample(c0, c1);
             },
             false
           );

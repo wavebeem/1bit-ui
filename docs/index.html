@@ -156,6 +156,15 @@
 }</pre
     >
 
+    <h2 id="round">Rounded Corners</h2>
+    <p>
+      Sharp edges not your thing? You can customize that. CSS Custom Properties
+      are inherited, so you can apply this to your whole page by setting
+      <code class="bit-code">--bit-border-radius</code> on any element you want
+      through CSS or even inline styles.
+    </p>
+    <div class="site-example" data-inject-example="round"></div>
+
     <footer>
       &copy; 2020
       <a href="https://www.mockbrian.com" class="bit-link">Brian Mock</a>
@@ -206,6 +215,19 @@
       }
 
       const examples = {
+        round: `\
+<div style="--bit-border-radius: 5px;" class="bit-card site-columns-auto">
+  <button class="bit-button">OK</button>
+  <button class="bit-button">Cancel</button>
+  <input class="bit-input" placeholder="Input" />
+  <select class="bit-select" >
+    <option selected disabled>&ndash;</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+</div>
+`,
         buttons: `\
 <button type="button" class="bit-button">Save</button>
 <button type="button" class="bit-button" disabled>Save</button>
