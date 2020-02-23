@@ -1,3 +1,6 @@
 .vscode
 *.bak
 *~
+*.tgz
+
+dist

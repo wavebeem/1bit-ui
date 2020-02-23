@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Docs | 1bit-ui.css</title>
+    <title>Documentation | 1bit-ui.css</title>
     <script type="module">
       const { color0, color1 } = JSON.parse(localStorage.getItem("user-theme"));
       const root = document.documentElement;
       root.style.setProperty("--bit-color-0", color0);
       root.style.setProperty("--bit-color-1", color1);
     </script>
+    <link rel="icon" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" sizes="32x32" href="/favicon-32.png" />
     <link rel="stylesheet" href="/1bit-ui.css" />
     <link rel="stylesheet" href="/site.css" />
   </head>
@@ -363,9 +365,8 @@
 
         link: `\
 This is an
-<a href="#" class="bit-link">
-  example link
-</a>
+<a href="#" class="bit-link"
+>example link</a>
 within a sentence.`,
 
         inlineTags: `\

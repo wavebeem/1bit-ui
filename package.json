@@ -1,0 +1,27 @@
+{
+  "name": "1bit-ui",
+  "version": "0.0.0",
+  "description": "CSS library for making 1-bit UIs",
+  "browser": "dist/1bit-ui.css",
+  "files": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "node bin/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavebeem/1bit-ui.git"
+  },
+  "keywords": [
+    "css",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "author": "Brian Mock <brian@mockbrian.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wavebeem/1bit-ui/issues"
+  },
+  "homepage": "https://github.com/wavebeem/1bit-ui#readme"
+}
