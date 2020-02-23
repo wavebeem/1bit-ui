@@ -96,6 +96,6 @@ samp {
 
   .site-example {
     border-left: 2px dotted var(--bit-color-0);
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
 }
