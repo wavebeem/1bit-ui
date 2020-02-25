@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Examples | 1bit-ui</title>
     <script type="module">
-      const { color0, color1 } = JSON.parse(localStorage.getItem("user-theme"));
-      const root = document.documentElement;
-      root.style.setProperty("--bit-color-0", color0);
-      root.style.setProperty("--bit-color-1", color1);
+      const userTheme = localStorage.getItem("user-theme");
+      if (userTheme) {
+        const { color0, color1 } = JSON.parse(userTheme);
+        const root = document.documentElement;
+        root.style.setProperty("--bit-color-0", color0);
+        root.style.setProperty("--bit-color-1", color1);
+      }
     </script>
     <link rel="icon" sizes="16x16" href="/favicon-16.png" />
     <link rel="icon" sizes="32x32" href="/favicon-32.png" />
@@ -218,6 +221,6 @@
       &copy; 2020
       <a href="https://www.mockbrian.com" class="bit-link">Brian Mock</a>
     </footer>
-    <script type="module" src="load-ga.js"></script>
+    <script type="module" src="/load-ga.js"></script>
   </body>
 </html>
