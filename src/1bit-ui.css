@@ -1,8 +1,9 @@
 /* TODO: Re-order the documentation */
+/* TODO: Document all these CSS Custom Properties */
 
 .bit-root {
-  --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
+  --bit-color-1: #f0f6f0;
 
   --bit-padding-button-horizontal: 1em;
   --bit-padding-button-vertical: 0.5em;
@@ -24,6 +25,9 @@
 
   --bit-padding-code-horizontal: 0.2em;
   --bit-padding-code-vertical: 0.1em;
+
+  --bit-size-radiocheckbox: 1.25em;
+  --bit-margin-radiocheckbox: 0.25em;
 
   --bit-gap-field: 0.25em;
   --bit-border-radius: 0px;
@@ -66,8 +70,10 @@
 .bit-radio {
   box-sizing: border-box;
   -webkit-appearance: none;
-  width: 2em;
-  height: 2em;
+  font: inherit;
+  width: var(--bit-size-radiocheckbox);
+  height: var(--bit-size-radiocheckbox);
+  margin: var(--bit-margin-radiocheckbox);
   background: var(--bit-color-1);
   color: var(--bit-color-0);
   border: 2px solid var(--bit-color-0);
