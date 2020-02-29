@@ -14,6 +14,7 @@
 /* -------------------------------------------------------------------------- */
 
 .bit-field {
+  box-sizing: border-box;
   display: grid;
   grid-gap: 0.25rem;
   grid-template-columns: min-content 1fr;
@@ -41,6 +42,7 @@
 
 .bit-checkbox,
 .bit-radio {
+  box-sizing: border-box;
   -webkit-appearance: none;
   width: 2em;
   height: 2em;
@@ -91,6 +93,7 @@
 /* -------------------------------------------------------------------------- */
 
 .bit-table {
+  box-sizing: border-box;
   background: var(--bit-color-1);
   color: var(--bit-color-0);
   border-collapse: collapse;
@@ -152,6 +155,7 @@
 
 .bit-button:disabled:hover,
 .bit-button:disabled {
+  transform: none;
   opacity: 0.5;
   box-shadow: none;
   border-style: dotted;
@@ -302,6 +306,7 @@
 /* -------------------------------------------------------------------------- */
 
 .bit-card {
+  box-sizing: border-box;
   background: var(--bit-color-1);
   color: var(--bit-color-0);
   border: 2px solid var(--bit-color-0);
@@ -332,6 +337,7 @@
 }
 
 .bit-pre {
+  box-sizing: border-box;
   background: var(--bit-color-0);
   color: var(--bit-color-1);
   scrollbar-color: var(--bit-color-1) var(--bit-color-0);

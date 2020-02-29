@@ -1,12 +1,27 @@
 :root {
-  font-size: 16px;
+  box-sizing: border-box;
   padding: 0.5rem;
   line-height: 1.5;
-  max-width: 50rem;
-  margin: 0 auto;
   overflow-y: scroll;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas", monospace;
+  font-variant-ligatures: none;
 }
 
 .site-columns-auto {
@@ -67,21 +82,15 @@
   display: block;
 }
 
-footer {
-  margin-top: 1rem;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas", monospace;
-  font-variant-ligatures: none;
+.site-example {
+  border-left: 2px solid var(--bit-color-0);
+  padding-left: 1rem;
+  margin-left: -1rem;
 }
 
 @media (min-width: 900px) {
   :root {
-    font-size: 18px;
+    font-size: 1.1rem;
     padding: 1rem;
   }
 
@@ -102,10 +111,5 @@ samp {
     float: right;
     margin: 1rem;
     margin-right: 0;
-  }
-
-  .site-example {
-    border-left: 2px dotted var(--bit-color-0);
-    padding-left: 1rem;
   }
 }
