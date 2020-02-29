@@ -87,15 +87,20 @@ samp {
 }
 
 .site-example {
+  --site-example-offset: 0.5rem;
   border-left: 2px solid var(--bit-color-0);
-  padding-left: 1rem;
-  margin-left: -1rem;
+  padding-left: var(--site-example-offset);
+  margin-left: calc(-1 * var(--site-example-offset));
 }
 
 @media (min-width: 900px) {
   :root {
     font-size: 1.1rem;
     padding: 1rem;
+  }
+
+  .site-example {
+    --site-example-offset: 1rem;
   }
 
   .site-nav-menu {
