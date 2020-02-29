@@ -1,15 +1,33 @@
-/* TODO: Configurable padding via custom properties */
-/* TODO: How much padding by default? */
 /* TODO: Re-order the documentation */
 
 .bit-root {
   --bit-color-1: #f0f6f0;
   --bit-color-0: #222323;
+
+  --bit-padding-button-horizontal: 1em;
+  --bit-padding-button-vertical: 0.5em;
+
+  --bit-padding-select-horizontal: 1em;
+  --bit-padding-select-vertical: 0.5em;
+
+  --bit-padding-input-horizontal: 0.5em;
+  --bit-padding-input-vertical: 0.5em;
+
+  --bit-padding-table-horizontal: 1em;
+  --bit-padding-table-vertical: 0.5em;
+
+  --bit-padding-card-horizontal: 1em;
+  --bit-padding-card-vertical: 1em;
+
+  --bit-padding-pre-horizontal: 1em;
+  --bit-padding-pre-vertical: 1em;
+
+  --bit-padding-code-horizontal: 0.2em;
+  --bit-padding-code-vertical: 0.1em;
+
+  --bit-gap-field: 0.25em;
   --bit-border-radius: 0px;
-  /* --bit-padding-small: 0.25em;
-  --bit-padding-medium: 0.5em;
-  --bit-padding-large: 1em;
-  --bit-checkbox-size: 2em; */
+
   background: var(--bit-color-1);
   color: var(--bit-color-0);
 }
@@ -19,7 +37,7 @@
 .bit-field {
   box-sizing: border-box;
   display: grid;
-  grid-gap: 0.25em;
+  grid-gap: var(--bit-gap-field);
   grid-template-columns: min-content 1fr;
   align-items: center;
 }
@@ -104,7 +122,7 @@
 }
 
 .bit-table th {
-  padding: 0.5em 0;
+  padding: var(--bit-padding-table-vertical) var(--bit-padding-table-horizontal);
   text-align: left;
 }
 
@@ -116,7 +134,7 @@
 .bit-table td {
   background: var(--bit-color-1);
   color: var(--bit-color-0);
-  padding: 0.5em;
+  padding: var(--bit-padding-table-vertical) var(--bit-padding-table-horizontal);
 }
 
 .bit-table thead {
@@ -135,7 +153,8 @@
   box-sizing: border-box;
   background: var(--bit-color-1);
   color: var(--bit-color-0);
-  padding: 0.5em 1em;
+  padding: var(--bit-padding-button-vertical)
+    var(--bit-padding-button-horizontal);
   font: inherit;
   border: 2px solid var(--bit-color-0);
   box-shadow: inset 0 -2px 0 var(--bit-color-0);
@@ -172,8 +191,9 @@
   -webkit-appearance: none;
   background: var(--bit-color-1);
   color: var(--bit-color-0);
-  padding: 0.5em 1em;
-  padding-right: calc(1em + 20px);
+  padding: var(--bit-padding-select-vertical)
+    var(--bit-padding-select-horizontal);
+  padding-right: calc(var(--bit-padding-select-horizontal) + 20px);
   font: inherit;
   border: 2px solid var(--bit-color-0);
   border-radius: var(--bit-border-radius);
@@ -263,7 +283,7 @@
   background: var(--bit-color-1);
   color: var(--bit-color-0);
   font: inherit;
-  padding: 0.5em 1em;
+  padding: var(--bit-padding-input-vertical) var(--bit-padding-input-horizontal);
   border: 2px solid var(--bit-color-0);
   box-shadow: inset 0 2px 0 var(--bit-color-0);
   border-radius: var(--bit-border-radius);
@@ -315,7 +335,7 @@
   color: var(--bit-color-0);
   border: 2px solid var(--bit-color-0);
   box-shadow: 4px 4px 0 var(--bit-color-0);
-  padding: 1em;
+  padding: var(--bit-padding-card-vertical) var(--bit-padding-card-horizontal);
   border-radius: var(--bit-border-radius);
 }
 
@@ -330,7 +350,7 @@
 .bit-code {
   background: var(--bit-color-0);
   color: var(--bit-color-1);
-  padding: 0.1em 0.2em;
+  padding: var(--bit-padding-code-vertical) var(--bit-padding-code-horizontal);
   border-radius: var(--bit-border-radius);
 }
 
@@ -346,6 +366,6 @@
   color: var(--bit-color-1);
   scrollbar-color: var(--bit-color-1) var(--bit-color-0);
   overflow-x: auto;
-  padding: 1em;
+  padding: var(--bit-padding-pre-vertical) var(--bit-padding-pre-horizontal);
   border-radius: var(--bit-border-radius);
 }

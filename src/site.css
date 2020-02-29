@@ -68,6 +68,10 @@ samp {
   padding: 0.25rem;
 }
 
+.site-example-heading {
+  margin-top: 0;
+}
+
 .site-toc-container {
   margin-top: 1rem;
 }
