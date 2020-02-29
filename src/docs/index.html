@@ -234,8 +234,10 @@
 </div>
 `,
         buttons: `\
-<button type="button" class="bit-button">Save</button>
-<button type="button" class="bit-button" disabled>Save</button>
+<div class="site-flex-row">
+  <button type="button" class="bit-button">Save</button>
+  <button type="button" class="bit-button" disabled>Save</button>
+</div>
 `,
 
         checkboxes: `\
@@ -399,20 +401,21 @@ within a sentence.`,
 </p>`,
 
         select: `\
-<select class="bit-select">
-  <option selected disabled>&ndash;</option>
-  <option>Option 1</option>
-  <option>Option 2</option>
-  <option>Option 3</option>
-</select>
+<div class="site-flex-row">
+  <select class="bit-select">
+    <option selected disabled>&ndash;</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
 
-<select class="bit-select" disabled>
-  <option selected disabled>&ndash;</option>
-  <option>Option 1</option>
-  <option>Option 2</option>
-  <option>Option 3</option>
-</select>
-`,
+  <select class="bit-select" disabled>
+    <option selected disabled>&ndash;</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+</div>`,
 
         horizontalRule: `\
 <hr class="bit-hr" />

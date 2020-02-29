@@ -59,6 +59,15 @@ samp {
   display: block;
 }
 
+.site-flex-row {
+  --site-flex-row-gap: 1rem;
+  display: flex;
+}
+
+.site-flex-row > * + * {
+  margin-left: var(--site-flex-row-gap);
+}
+
 .site-flex-column {
   display: flex;
   flex-direction: column;
