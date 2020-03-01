@@ -4,19 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentation | 1bit-ui</title>
-    <script type="module">
-      const userTheme = localStorage.getItem("user-theme");
-      if (userTheme) {
-        const { color0, color1 } = JSON.parse(userTheme);
-        const root = document.documentElement;
-        root.style.setProperty("--bit-color-0", color0);
-        root.style.setProperty("--bit-color-1", color1);
-      }
-    </script>
     <link rel="icon" sizes="16x16" href="/favicon-16.png" />
     <link rel="icon" sizes="32x32" href="/favicon-32.png" />
     <link rel="stylesheet" href="/1bit-ui.css" />
     <link rel="stylesheet" href="/site.css" />
+    <script type="module" src="/load-theme.js"></script>
+    <script type="module" src="docs.js"></script>
+    <script type="module" src="/load-ga.js"></script>
   </head>
   <body>
     <h1><span class="bit-code">1bit-ui</span></h1>
@@ -591,69 +585,5 @@ Disabled.</textarea
         </div>
       </div>
     </template>
-
-    <script type="module">
-      function $$(selector, element = document) {
-        return Array.from(element.querySelectorAll(selector));
-      }
-
-      function $(selector, element = document) {
-        return element.querySelector(selector);
-      }
-
-      function populateTOC() {
-        const toc = $("[data-toc]");
-        for (const h2 of $$("h2")) {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = `#${h2.id}`;
-          a.textContent = h2.textContent;
-          a.className = "bit-link";
-          li.appendChild(a);
-          toc.appendChild(li);
-          h2.innerHTML = `<a href="#${h2.id}" class="site-link-header">${h2.innerHTML}</a>`;
-        }
-      }
-
-      function htmlToCode(code) {
-        const lines = code
-          .replace(/^\n*/, "")
-          .replace(/\s+$/, "")
-          .split("\n");
-        const match = lines[0].match(/^[ ]*/);
-        if (match) {
-          // TODO: This is dangerous; we should only remove an equivalent amount
-          // of trailing whitespace, not just any arbitrary chunk of `length`
-          // characters...
-          const length = match[0].length;
-          for (const [index, value] of lines.entries()) {
-            lines[index] = value.slice(length);
-          }
-        }
-        return lines.join("\n");
-      }
-
-      function injectExamples() {
-        for (const element of $$("[data-inject-example]")) {
-          const name = element.dataset.injectExample;
-          const template = document.getElementById(`template-${name}`);
-          const div = document.createElement("div");
-          div.dataset.exampleName = name;
-          div.dataset.exampleType = "result";
-          div.appendChild(template.content.cloneNode(true));
-          const pre = document.createElement("pre");
-          pre.className = "bit-pre";
-          pre.textContent = htmlToCode(template.innerHTML);
-          pre.dataset.exampleName = name;
-          pre.dataset.exampleType = "html";
-          element.insertAdjacentElement("beforeend", div);
-          element.insertAdjacentElement("beforeend", pre);
-        }
-      }
-
-      injectExamples();
-      populateTOC();
-    </script>
-    <script type="module" src="/load-ga.js"></script>
   </body>
 </html>
