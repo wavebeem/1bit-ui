@@ -5,6 +5,7 @@
   "browser": "dist/1bit-ui.css",
   "files": [],
   "scripts": {
+    "start": "serve src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "node bin/build.js",
     "postversion": "git push && git push --tags && npm publish"
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/wavebeem/1bit-ui/issues"
   },
-  "homepage": "https://github.com/wavebeem/1bit-ui#readme"
+  "homepage": "https://github.com/wavebeem/1bit-ui#readme",
+  "devDependencies": {
+    "serve": "^11.3.0"
+  }
 }
