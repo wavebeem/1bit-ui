@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/wavebeem/1bit-ui#readme",
   "devDependencies": {
-    "serve": "^11.3.0"
+    "serve": "^11.3.0",
+    "shelljs": "^0.8.3"
   }
 }
