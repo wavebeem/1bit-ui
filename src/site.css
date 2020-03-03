@@ -97,7 +97,7 @@ samp {
 
 .site-example {
   --site-example-offset: 0.5rem;
-  border-left: 2px solid var(--bit-color-0);
+  border-left: 2px solid var(--bit-color0);
   padding-left: var(--site-example-offset);
   margin-left: calc(-1 * var(--site-example-offset));
 }

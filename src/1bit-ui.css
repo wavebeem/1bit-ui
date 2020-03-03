@@ -1,6 +1,6 @@
 .bit-root {
-  --bit-color-0: #222323;
-  --bit-color-1: #f0f6f0;
+  --bit-color0: #222323;
+  --bit-color1: #f0f6f0;
   --bit-button-padding-horizontal: 1em;
   --bit-button-padding-vertical: 0.5em;
   --bit-select-padding-horizontal: 1em;
@@ -15,13 +15,12 @@
   --bit-pre-padding-vertical: 1em;
   --bit-code-padding-horizontal: 0.2em;
   --bit-code-padding-vertical: 0.1em;
-  --bit-radiocheckbox-size: 1.25em;
+  --bit-radiocheckbox-size: 1.5em;
   --bit-border-width: 2px;
-  /* --bit-border-width: calc(1em / 8); */
   --bit-border-radius: 0px;
   --bit-select-handle-width: 1em;
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
 }
 
 /* Checkbox / Radio Button Field Container */
@@ -62,41 +61,41 @@
   width: var(--bit-radiocheckbox-size);
   height: var(--bit-radiocheckbox-size);
   margin: calc(2 * var(--bit-border-width));
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
-  border: var(--bit-border-width) solid var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
+  border: var(--bit-border-width) solid var(--bit-color0);
 }
 
 .bit-checkbox:hover,
 .bit-radio:hover {
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-checkbox:focus,
 .bit-radio:focus {
   outline: 0;
-  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color-1),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-0),
-    inset 0 0 0 var(--bit-border-width) var(--bit-color-1);
+  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
+    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0),
+    inset 0 0 0 var(--bit-border-width) var(--bit-color1);
 }
 
 .bit-checkbox:checked,
 .bit-radio:checked {
-  background: var(--bit-color-0);
-  box-shadow: inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-1);
+  background: var(--bit-color0);
+  box-shadow: inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
 .bit-checkbox:checked:hover,
 .bit-radio:checked:hover {
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0),
-    inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-1);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
 .bit-checkbox:checked:focus,
 .bit-radio:checked:focus {
-  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color-1),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-0),
-    inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-1);
+  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
+    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0),
+    inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
 .bit-checkbox:disabled:hover,
@@ -112,8 +111,8 @@
 
 .bit-table {
   box-sizing: border-box;
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   border-collapse: collapse;
 }
 
@@ -123,23 +122,23 @@
 }
 
 .bit-table tbody tr {
-  border-top: calc(0.5 * var(--bit-border-width)) solid var(--bit-color-0);
+  border-top: calc(0.5 * var(--bit-border-width)) solid var(--bit-color0);
 }
 
 .bit-table th,
 .bit-table td {
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   padding: var(--bit-table-padding-vertical) var(--bit-table-padding-horizontal);
 }
 
 .bit-table thead {
   border-top: 0;
-  border-bottom: var(--bit-border-width) solid var(--bit-color-0);
+  border-bottom: var(--bit-border-width) solid var(--bit-color0);
 }
 
 .bit-table tfoot {
-  border-top: var(--bit-border-width) solid var(--bit-color-0);
+  border-top: var(--bit-border-width) solid var(--bit-color0);
   border-bottom: 0;
 }
 
@@ -147,18 +146,18 @@
 
 .bit-button {
   box-sizing: border-box;
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   padding: var(--bit-button-padding-vertical)
     var(--bit-button-padding-horizontal);
   font: inherit;
-  border: var(--bit-border-width) solid var(--bit-color-0);
-  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 var(--bit-color-0);
+  border: var(--bit-border-width) solid var(--bit-color0);
+  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 var(--bit-color0);
   border-radius: var(--bit-border-radius);
 }
 
 .bit-button:hover {
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-button:active {
@@ -167,10 +166,10 @@
 
 .bit-button:focus {
   outline: none;
-  border-color: var(--bit-color-1);
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0),
-    0 0 0 var(--bit-border-width) var(--bit-color-0),
-    inset 0 calc(-2 * var(--bit-border-width)) 0 var(--bit-color-0);
+  border-color: var(--bit-color1);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 calc(-2 * var(--bit-border-width)) 0 var(--bit-color0);
 }
 
 .bit-button:disabled:hover,
@@ -178,7 +177,7 @@
   transform: none;
   opacity: 0.5;
   box-shadow: none;
-  border-color: var(--bit-color-0);
+  border-color: var(--bit-color0);
   border-style: dotted;
 }
 
@@ -187,73 +186,73 @@
 .bit-select {
   box-sizing: border-box;
   -webkit-appearance: none;
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   padding: var(--bit-select-padding-vertical)
     var(--bit-select-padding-horizontal);
   padding-right: calc(
     var(--bit-select-padding-horizontal) + var(--bit-select-handle-width)
   );
   font: inherit;
-  border: var(--bit-border-width) solid var(--bit-color-0);
+  border: var(--bit-border-width) solid var(--bit-color0);
   border-radius: var(--bit-border-radius);
-  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset 0 var(--bit-border-width) 0 0 var(--bit-color-1),
-    inset calc(-1 * var(--bit-border-width)) 0 0 0 var(--bit-color-1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color-0),
+  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset 0 var(--bit-border-width) 0 0 var(--bit-color1),
+    inset calc(-1 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
-      0 0 var(--bit-color-1);
+      0 0 var(--bit-color1);
 }
 
 .bit-select:hover {
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0),
-    inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset calc(-2 * var(--bit-border-width)) 0 0 0 var(--bit-color-1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color-0),
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset calc(-2 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
-      0 0 var(--bit-color-1);
+      0 0 var(--bit-color1);
 }
 
 .bit-select:focus {
   outline: none;
-  border-color: var(--bit-color-1);
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0),
-    inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset calc(-2 * var(--bit-border-width)) 0 0 0 var(--bit-color-1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color-0),
+  border-color: var(--bit-color1);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset calc(-2 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
-      0 0 var(--bit-color-1),
-    0 0 0 var(--bit-border-width) var(--bit-color-0);
+      0 0 var(--bit-color1),
+    0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 var(--bit-color-0);
+  text-shadow: 0 0 0 var(--bit-color0);
 }
 
 .bit-select:disabled:hover,
 .bit-select:disabled {
   opacity: 0.5;
-  border-color: var(--bit-color-0);
+  border-color: var(--bit-color0);
   border-style: dotted;
-  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset 0 calc(1 * var(--bit-border-width)) 0 0 var(--bit-color-1),
-    inset calc(-1 * var(--bit-border-width)) 0 0 0 var(--bit-color-1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color-0),
+  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset 0 calc(1 * var(--bit-border-width)) 0 0 var(--bit-color1),
+    inset calc(-1 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
-      0 0 var(--bit-color-1);
+      0 0 var(--bit-color1);
 }
 
 /* Link */
 
 .bit-link {
-  color: var(--bit-color-0);
+  color: var(--bit-color0);
   font-weight: bold;
   text-decoration: underline;
   text-decoration-thickness: var(--bit-border-width);
@@ -262,64 +261,64 @@
 
 .bit-link:hover {
   border-radius: var(--bit-border-radius);
-  background: var(--bit-color-1);
+  background: var(--bit-color1);
   text-decoration: none;
-  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color-1),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-0);
+  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
+    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0);
 }
 
 .bit-link:focus {
   border-radius: var(--bit-border-radius);
-  background: var(--bit-color-0);
-  color: var(--bit-color-1);
+  background: var(--bit-color0);
+  color: var(--bit-color1);
   text-decoration: none;
   outline: none;
-  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color-0),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color-1),
-    0 0 0 calc(3 * var(--bit-border-width)) var(--bit-color-0);
+  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color0),
+    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1),
+    0 0 0 calc(3 * var(--bit-border-width)) var(--bit-color0);
 }
 
 /* Input / Text Area */
 
 .bit-input {
   box-sizing: border-box;
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   font: inherit;
   padding: var(--bit-input-padding-vertical) var(--bit-input-padding-horizontal);
-  border: var(--bit-border-width) solid var(--bit-color-0);
-  box-shadow: inset 0 var(--bit-border-width) 0 var(--bit-color-0);
+  border: var(--bit-border-width) solid var(--bit-color0);
+  box-shadow: inset 0 var(--bit-border-width) 0 var(--bit-color0);
   border-radius: var(--bit-border-radius);
 }
 
 .bit-input:hover {
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-input:focus {
   outline: none;
-  border-color: var(--bit-color-1);
-  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color-0),
-    0 0 0 var(--bit-border-width) var(--bit-color-0),
-    inset 0 calc(2 * var(--bit-border-width)) 0 var(--bit-color-0);
+  border-color: var(--bit-color1);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 calc(2 * var(--bit-border-width)) 0 var(--bit-color0);
 }
 
 .bit-input:disabled:hover,
 .bit-input:disabled {
   opacity: 0.5;
   box-shadow: none;
-  border-color: var(--bit-color-0);
+  border-color: var(--bit-color0);
   border-style: dotted;
 }
 
 .bit-input::placeholder {
-  color: var(--bit-color-0);
+  color: var(--bit-color0);
   opacity: 0.5;
 }
 
 .bit-input::selection {
-  background: var(--bit-color-0);
-  color: var(--bit-color-1);
+  background: var(--bit-color0);
+  color: var(--bit-color1);
 }
 
 /* Firefox nonsense */
@@ -336,26 +335,26 @@
 
 .bit-card {
   box-sizing: border-box;
-  background: var(--bit-color-1);
-  color: var(--bit-color-0);
-  border: var(--bit-border-width) solid var(--bit-color-0);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
+  border: var(--bit-border-width) solid var(--bit-color0);
   box-shadow: calc(2 * var(--bit-border-width))
-    calc(2 * var(--bit-border-width)) 0 var(--bit-color-0);
+    calc(2 * var(--bit-border-width)) 0 var(--bit-color0);
   padding: var(--bit-card-padding-vertical) var(--bit-card-padding-horizontal);
   border-radius: var(--bit-border-radius);
 }
 
 .bit-scrollbar {
-  scrollbar-color: var(--bit-color-0) var(--bit-color-1);
+  scrollbar-color: var(--bit-color0) var(--bit-color1);
 }
 
 .bit-svg {
-  fill: var(--bit-color-0);
+  fill: var(--bit-color0);
 }
 
 .bit-code {
-  background: var(--bit-color-0);
-  color: var(--bit-color-1);
+  background: var(--bit-color0);
+  color: var(--bit-color1);
   padding: var(--bit-code-padding-vertical) var(--bit-code-padding-horizontal);
   border-radius: var(--bit-border-radius);
 }
@@ -363,14 +362,14 @@
 .bit-hr {
   box-sizing: border-box;
   border: 0;
-  border-top: var(--bit-border-width) solid var(--bit-color-0);
+  border-top: var(--bit-border-width) solid var(--bit-color0);
 }
 
 .bit-pre {
   box-sizing: border-box;
-  background: var(--bit-color-0);
-  color: var(--bit-color-1);
-  scrollbar-color: var(--bit-color-1) var(--bit-color-0);
+  background: var(--bit-color0);
+  color: var(--bit-color1);
+  scrollbar-color: var(--bit-color1) var(--bit-color0);
   overflow-x: auto;
   padding: var(--bit-pre-padding-vertical) var(--bit-pre-padding-horizontal);
   border-radius: var(--bit-border-radius);

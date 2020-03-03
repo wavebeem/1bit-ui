@@ -87,7 +87,7 @@
     <p>
       Using the CSS class <code class="bit-code">bit-svg</code> will set the
       <code class="bit-code">fill</code> property to
-      <code class="bit-code">--bit-color-0</code>, causing inline SVGs to
+      <code class="bit-code">--bit-color0</code>, causing inline SVGs to
       automatically match your 1bit-ui theme.
     </p>
     <div class="site-example" data-inject-example="inlineSVG"></div>
@@ -122,8 +122,8 @@
       CSS Custom Properties can be changed on your page at any time! You can use
       JavaScript, or even CSS selectors to do it! You could apply a
       <code class="bit-code">:focus</code> style to change
-      <code class="bit-code">--bit-color-0</code> and
-      <code class="bit-code">--bit-color-1</code> to different colors to make
+      <code class="bit-code">--bit-color0</code> and
+      <code class="bit-code">--bit-color1</code> to different colors to make
       the focus state easier to read.
     </p>
     <p>
@@ -137,20 +137,20 @@
     <p>
       You can use the
       <code class="bit-code">prefers-color-scheme: dark</code> CSS media query
-      to set the <code class="bit-code">--bit-color-0</code> and
-      <code class="bit-code">--bit-color-1</code> variables, allowing your users
+      to set the <code class="bit-code">--bit-color0</code> and
+      <code class="bit-code">--bit-color1</code> variables, allowing your users
       to automatically get Dark Mode with a single block of CSS
     </p>
     <pre class="bit-pre">
 .bit-root {
-  --bit-color-0: white;
-  --bit-color-1: black;
+  --bit-color0: white;
+  --bit-color1: black;
 }
 
 @media (prefers-color-scheme: dark) {
   .bit-root {
-    --bit-color-0: white;
-    --bit-color-1: black;
+    --bit-color0: white;
+    --bit-color1: black;
   }
 }</pre
     >
@@ -428,18 +428,18 @@ Disabled.</textarea
     <template id="template-getCreative">
       <style>
         .site-theme-white {
-          --bit-color-0: black;
-          --bit-color-1: white;
+          --bit-color0: black;
+          --bit-color1: white;
         }
 
         .site-theme-blue {
-          --bit-color-0: hsl(200, 100%, 20%);
-          --bit-color-1: hsl(200, 100%, 90%);
+          --bit-color0: hsl(200, 100%, 20%);
+          --bit-color1: hsl(200, 100%, 90%);
         }
 
         .site-theme-red {
-          --bit-color-0: hsl(0, 100%, 20%);
-          --bit-color-1: hsl(0, 100%, 90%);
+          --bit-color0: hsl(0, 100%, 20%);
+          --bit-color1: hsl(0, 100%, 90%);
         }
       </style>
       <div class="bit-card site-columns-auto site-theme-white">
@@ -453,8 +453,8 @@ Disabled.</textarea
           type="button"
           class="bit-button"
           style="
-            --bit-color-0: #222222;
-            --bit-color-1: #eeeeee;
+            --bit-color0: #222222;
+            --bit-color1: #eeeeee;
           "
         >
           Inline Styles
