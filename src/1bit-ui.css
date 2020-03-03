@@ -17,6 +17,7 @@
   --bit-code-padding-vertical: 0.1em;
   --bit-radiocheckbox-size: 1.25em;
   --bit-border-width: 2px;
+  /* --bit-border-width: calc(1em / 8); */
   --bit-border-radius: 0px;
   --bit-select-handle-width: 1em;
   background: var(--bit-color-1);
