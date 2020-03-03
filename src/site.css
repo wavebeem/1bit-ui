@@ -1,6 +1,7 @@
 :root {
   box-sizing: border-box;
-  padding: 0.5rem;
+  font-size: 16px;
+  padding: 1rem;
   line-height: 1.5;
   overflow-y: scroll;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -96,20 +97,15 @@ samp {
 }
 
 .site-example {
-  --site-example-offset: 0.5rem;
-  border-left: 2px solid var(--bit-color0);
+  --site-example-offset: 1rem;
+  border-left: var(--bit-border-width) solid var(--bit-color0);
   padding-left: var(--site-example-offset);
   margin-left: calc(-1 * var(--site-example-offset));
 }
 
 @media (min-width: 900px) {
   :root {
-    font-size: 1.1rem;
-    padding: 1rem;
-  }
-
-  .site-example {
-    --site-example-offset: 1rem;
+    font-size: 18px;
   }
 
   .site-nav-menu {
