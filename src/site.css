@@ -138,7 +138,7 @@ samp {
   .site-property-editor-grid {
     --bit-input-padding-horizontal: 0.5em;
     --bit-input-padding-vertical: 0.25em;
-    font-size: 0.9rem;
+    font-size: 16px;
     grid-template-columns: max-content 10em;
   }
 
