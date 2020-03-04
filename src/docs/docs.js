@@ -38,6 +38,51 @@ function htmlToCode(code) {
   return lines.join("\n");
 }
 
+function cleanCSSPropertyValue(value) {
+  return value.trim();
+}
+
+const bitRoot = $(".bit-root");
+const baseCustomProperties = {};
+const bitRootStyle = getComputedStyle(bitRoot);
+
+for (const value of Object.values(bitRootStyle)) {
+  if (value.startsWith("--bit-")) {
+    baseCustomProperties[value] = cleanCSSPropertyValue(
+      bitRootStyle.getPropertyValue(value)
+    );
+  }
+}
+
+function createCustomPropertyEditor(properties) {
+  const propertyEditor = document.createElement("div");
+  propertyEditor.className = "bit-card site-property-editor";
+  const title = document.createElement("h3");
+  title.className = "site-property-editor-title";
+  title.textContent = "CSS Custom Properties";
+  propertyEditor.appendChild(title);
+  const grid = document.createElement("div");
+  grid.className = "site-property-editor-grid";
+  propertyEditor.appendChild(grid);
+  for (const prop of properties) {
+    const label = document.createElement("label");
+    label.textContent = prop;
+    const input = document.createElement("input");
+    input.className = "bit-input";
+    input.placeholder = baseCustomProperties[prop];
+    input.addEventListener(
+      "input",
+      event => {
+        bitRoot.style.setProperty(prop, event.target.value);
+      },
+      false
+    );
+    grid.appendChild(label);
+    grid.appendChild(input);
+  }
+  return propertyEditor;
+}
+
 function injectExamples() {
   for (const element of $$("[data-inject-example]")) {
     const name = element.dataset.injectExample;
@@ -51,6 +96,14 @@ function injectExamples() {
     pre.textContent = htmlToCode(template.innerHTML);
     pre.dataset.exampleName = name;
     pre.dataset.exampleType = "html";
+    const properties = (element.dataset.injectExampleProperties || "")
+      .trim()
+      .split(/\s+/)
+      .filter(x => x);
+    if (properties.length > 0) {
+      const propertyEditor = createCustomPropertyEditor(properties);
+      element.insertAdjacentElement("beforeend", propertyEditor);
+    }
     element.insertAdjacentElement("beforeend", div);
     element.insertAdjacentElement("beforeend", pre);
   }
