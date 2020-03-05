@@ -7,9 +7,11 @@ function $(selector, element = document) {
 }
 
 function bindThemeSwitchers() {
+  const { color0, color1 } = getTheme();
   for (const element of $$("[data-theme-switcher]")) {
     const c0 = element.dataset.bitTheme0;
     const c1 = element.dataset.bitTheme1;
+    element.disabled = c0 === color0 && c1 === color1;
     element.style.setProperty("--bit-color0", c0);
     element.style.setProperty("--bit-color1", c1);
     element.addEventListener(
