@@ -54,8 +54,18 @@ for (const value of Object.values(bitRootStyle)) {
   }
 }
 
-function createCustomPropertyEditor(properties) {
-  const propertyEditor = document.createElement("div");
+function getCustomProperties(element) {
+  return (
+    element.dataset.injectExampleProperties ||
+    element.dataset.customProperties ||
+    ""
+  )
+    .trim()
+    .split(/\s+/)
+    .filter(x => x);
+}
+
+function initializeCustomPropertyEditor(properties, propertyEditor) {
   propertyEditor.className = "bit-card site-property-editor";
   const title = document.createElement("h3");
   title.className = "site-property-editor-title";
@@ -99,12 +109,10 @@ function injectExample(element) {
   pre.dataset.exampleType = "html";
   const preH3 = document.createElement("h3");
   preH3.textContent = "Code";
-  const properties = (element.dataset.injectExampleProperties || "")
-    .trim()
-    .split(/\s+/)
-    .filter(x => x);
+  const properties = getCustomProperties(element);
   if (properties.length > 0) {
-    const propertyEditor = createCustomPropertyEditor(properties);
+    const propertyEditor = document.createElement("div");
+    initializeCustomPropertyEditor(properties, propertyEditor);
     element.insertAdjacentElement("beforeend", propertyEditor);
   }
   element.insertAdjacentElement("beforeend", divH3);
@@ -116,6 +124,9 @@ function injectExample(element) {
 function main() {
   for (const element of $$("[data-inject-example]")) {
     injectExample(element);
+  }
+  for (const element of $$("[data-custom-properties-editor]")) {
+    initializeCustomPropertyEditor(getCustomProperties(element), element);
   }
   populateTOC();
 }
