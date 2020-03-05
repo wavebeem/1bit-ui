@@ -38,23 +38,97 @@ function htmlToCode(code) {
   return lines.join("\n");
 }
 
-function injectExamples() {
-  for (const element of $$("[data-inject-example]")) {
-    const name = element.dataset.injectExample;
-    const template = document.getElementById(`template-${name}`);
-    const div = document.createElement("div");
-    div.dataset.exampleName = name;
-    div.dataset.exampleType = "result";
-    div.appendChild(template.content.cloneNode(true));
-    const pre = document.createElement("pre");
-    pre.className = "bit-pre";
-    pre.textContent = htmlToCode(template.innerHTML);
-    pre.dataset.exampleName = name;
-    pre.dataset.exampleType = "html";
-    element.insertAdjacentElement("beforeend", div);
-    element.insertAdjacentElement("beforeend", pre);
+function cleanCSSPropertyValue(value) {
+  return value.trim();
+}
+
+const bitRoot = $(".bit-root");
+const baseCustomProperties = {};
+const bitRootStyle = getComputedStyle(bitRoot);
+
+for (const value of Object.values(bitRootStyle)) {
+  if (value.startsWith("--bit-")) {
+    baseCustomProperties[value] = cleanCSSPropertyValue(
+      bitRootStyle.getPropertyValue(value)
+    );
   }
 }
 
-injectExamples();
-populateTOC();
+function getCustomProperties(element) {
+  return (
+    element.dataset.injectExampleProperties ||
+    element.dataset.customProperties ||
+    ""
+  )
+    .trim()
+    .split(/\s+/)
+    .filter(x => x);
+}
+
+function initializeCustomPropertyEditor(properties, propertyEditor) {
+  propertyEditor.className = "bit-card site-property-editor";
+  const title = document.createElement("h3");
+  title.className = "site-property-editor-title";
+  title.textContent = "CSS Custom Properties";
+  propertyEditor.appendChild(title);
+  const grid = document.createElement("div");
+  grid.className = "site-property-editor-grid";
+  propertyEditor.appendChild(grid);
+  for (const prop of properties) {
+    const label = document.createElement("label");
+    label.textContent = prop;
+    const input = document.createElement("input");
+    input.className = "bit-input";
+    input.placeholder = baseCustomProperties[prop];
+    input.addEventListener(
+      "input",
+      event => {
+        bitRoot.style.setProperty(prop, event.target.value);
+      },
+      false
+    );
+    grid.appendChild(label);
+    grid.appendChild(input);
+  }
+  return propertyEditor;
+}
+
+function injectExample(element) {
+  const name = element.dataset.injectExample;
+  const template = document.getElementById(`template-${name}`);
+  const div = document.createElement("div");
+  div.dataset.exampleName = name;
+  div.dataset.exampleType = "result";
+  div.appendChild(template.content.cloneNode(true));
+  const divH3 = document.createElement("h3");
+  divH3.textContent = "Example";
+  const pre = document.createElement("pre");
+  pre.className = "bit-pre";
+  pre.textContent = htmlToCode(template.innerHTML);
+  pre.dataset.exampleName = name;
+  pre.dataset.exampleType = "html";
+  const preH3 = document.createElement("h3");
+  preH3.textContent = "Code";
+  const properties = getCustomProperties(element);
+  if (properties.length > 0) {
+    const propertyEditor = document.createElement("div");
+    initializeCustomPropertyEditor(properties, propertyEditor);
+    element.insertAdjacentElement("beforeend", propertyEditor);
+  }
+  element.insertAdjacentElement("beforeend", divH3);
+  element.insertAdjacentElement("beforeend", div);
+  element.insertAdjacentElement("beforeend", preH3);
+  element.insertAdjacentElement("beforeend", pre);
+}
+
+function main() {
+  for (const element of $$("[data-inject-example]")) {
+    injectExample(element);
+  }
+  for (const element of $$("[data-custom-properties-editor]")) {
+    initializeCustomPropertyEditor(getCustomProperties(element), element);
+  }
+  populateTOC();
+}
+
+main();
