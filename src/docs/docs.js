@@ -49,7 +49,7 @@ const bitRootStyle = getComputedStyle(bitRoot);
 for (const value of Object.values(bitRootStyle)) {
   if (value.startsWith("--bit-")) {
     baseCustomProperties[value] = cleanCSSPropertyValue(
-      bitRootStyle.getPropertyValue(value)
+      bitRootStyle.getPropertyValue(value) || ""
     );
   }
 }

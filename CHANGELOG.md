@@ -1,3 +1,7 @@
+# v0.0.5
+
+- Changes `.bit-card` to use a drop-shadow facing straight down
+
 # v0.0.4
 
 - Changes `--bit-color-0` to `--bit-color0`

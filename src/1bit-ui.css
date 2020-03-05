@@ -338,8 +338,8 @@
   background: var(--bit-color1);
   color: var(--bit-color0);
   border: var(--bit-border-width) solid var(--bit-color0);
-  box-shadow: calc(2 * var(--bit-border-width))
-    calc(2 * var(--bit-border-width)) 0 var(--bit-color0);
+  box-shadow: 0 calc(4 * var(--bit-border-width)) 0
+    calc(-2 * var(--bit-border-width)) var(--bit-color0);
   padding: var(--bit-card-padding-vertical) var(--bit-card-padding-horizontal);
   border-radius: var(--bit-border-radius);
 }

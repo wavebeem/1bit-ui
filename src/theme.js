@@ -33,8 +33,8 @@ function bindThemeSwitchers() {
 function updateThemeExample(color0, color1) {
   $("#theme-example").textContent = `\
 .bit-root {
---bit-color0: ${color0};
---bit-color1: ${color1};
+  --bit-color0: ${color0};
+  --bit-color1: ${color1};
 }`;
 }
 
