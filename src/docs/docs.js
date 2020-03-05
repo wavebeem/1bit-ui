@@ -83,31 +83,41 @@ function createCustomPropertyEditor(properties) {
   return propertyEditor;
 }
 
-function injectExamples() {
-  for (const element of $$("[data-inject-example]")) {
-    const name = element.dataset.injectExample;
-    const template = document.getElementById(`template-${name}`);
-    const div = document.createElement("div");
-    div.dataset.exampleName = name;
-    div.dataset.exampleType = "result";
-    div.appendChild(template.content.cloneNode(true));
-    const pre = document.createElement("pre");
-    pre.className = "bit-pre";
-    pre.textContent = htmlToCode(template.innerHTML);
-    pre.dataset.exampleName = name;
-    pre.dataset.exampleType = "html";
-    const properties = (element.dataset.injectExampleProperties || "")
-      .trim()
-      .split(/\s+/)
-      .filter(x => x);
-    if (properties.length > 0) {
-      const propertyEditor = createCustomPropertyEditor(properties);
-      element.insertAdjacentElement("beforeend", propertyEditor);
-    }
-    element.insertAdjacentElement("beforeend", div);
-    element.insertAdjacentElement("beforeend", pre);
+function injectExample(element) {
+  const name = element.dataset.injectExample;
+  const template = document.getElementById(`template-${name}`);
+  const div = document.createElement("div");
+  div.dataset.exampleName = name;
+  div.dataset.exampleType = "result";
+  div.appendChild(template.content.cloneNode(true));
+  const divH3 = document.createElement("h3");
+  divH3.textContent = "Example";
+  const pre = document.createElement("pre");
+  pre.className = "bit-pre";
+  pre.textContent = htmlToCode(template.innerHTML);
+  pre.dataset.exampleName = name;
+  pre.dataset.exampleType = "html";
+  const preH3 = document.createElement("h3");
+  preH3.textContent = "Code";
+  const properties = (element.dataset.injectExampleProperties || "")
+    .trim()
+    .split(/\s+/)
+    .filter(x => x);
+  if (properties.length > 0) {
+    const propertyEditor = createCustomPropertyEditor(properties);
+    element.insertAdjacentElement("beforeend", propertyEditor);
   }
+  element.insertAdjacentElement("beforeend", divH3);
+  element.insertAdjacentElement("beforeend", div);
+  element.insertAdjacentElement("beforeend", preH3);
+  element.insertAdjacentElement("beforeend", pre);
 }
 
-injectExamples();
-populateTOC();
+function main() {
+  for (const element of $$("[data-inject-example]")) {
+    injectExample(element);
+  }
+  populateTOC();
+}
+
+main();
