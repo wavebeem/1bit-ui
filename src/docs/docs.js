@@ -96,7 +96,7 @@ function initializeCustomPropertyEditor(properties, propertyEditor) {
 }
 
 function injectExample(element) {
-  const name = element.dataset.injectExample;
+  const name = element.dataset.injectExample || element.getAttribute("example");
   const template = document.getElementById(`template-${name}`);
   const div = document.createElement("div");
   div.dataset.exampleName = name;
@@ -122,6 +122,14 @@ function injectExample(element) {
   element.insertAdjacentElement("beforeend", preH3);
   element.insertAdjacentElement("beforeend", pre);
 }
+
+class InjectExampleElement extends HTMLElement {
+  connectedCallback() {
+    injectExample(this);
+  }
+}
+
+customElements.define("inject-example", InjectExampleElement);
 
 function main() {
   for (const element of $$("[data-inject-example]")) {
