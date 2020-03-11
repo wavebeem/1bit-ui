@@ -6,19 +6,21 @@ function $(selector, element = document) {
   return element.querySelector(selector);
 }
 
-function populateTOC() {
-  const toc = $("[data-toc]");
-  for (const h2 of $$("h2")) {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = `#${h2.id}`;
-    a.textContent = h2.textContent;
-    a.className = "bit-link";
-    li.appendChild(a);
-    toc.appendChild(li);
-    h2.innerHTML = `<a href="#${h2.id}" class="site-link-header">${h2.innerHTML}</a>`;
+class TableOfContentsElement extends HTMLElement {
+  connectedCallback() {
+    this.className = "bit-card site-toc";
+    for (const h2 of $$("h2")) {
+      const a = document.createElement("a");
+      a.href = `#${h2.id}`;
+      a.textContent = h2.textContent;
+      a.className = "bit-link";
+      this.appendChild(a);
+      h2.innerHTML = `<a href="#${h2.id}" class="site-link-header">${h2.innerHTML}</a>`;
+    }
   }
 }
+
+customElements.define("table-of-contents", TableOfContentsElement);
 
 function htmlToCode(code) {
   const lines = code
@@ -128,7 +130,6 @@ function main() {
   for (const element of $$("[data-custom-properties-editor]")) {
     initializeCustomPropertyEditor(getCustomProperties(element), element);
   }
-  populateTOC();
 }
 
 main();

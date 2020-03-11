@@ -104,14 +104,12 @@ samp {
   margin-top: 0;
 }
 
-.site-toc-container {
-  margin-top: 1rem;
+table-of-contents {
+  display: block;
 }
 
 .site-toc {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  margin-top: 1rem;
 }
 
 .site-toc a {
@@ -150,7 +148,7 @@ samp {
     padding-left: 1rem;
   }
 
-  .site-toc-container {
+  .site-toc {
     float: right;
     margin: 1rem;
     margin-right: 0;
