@@ -31,12 +31,12 @@ samp {
 
 .site-property-editor {
   margin-bottom: 1rem;
+  max-width: max-content;
 }
 
 .site-property-editor-grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: max-content;
   align-items: center;
   font-family: var(--site-font-monospace);
 }
@@ -128,10 +128,6 @@ samp {
 @media (min-width: 900px) {
   :root {
     font-size: 18px;
-  }
-
-  .site-property-editor {
-    width: max-content;
   }
 
   .site-property-editor-grid {
