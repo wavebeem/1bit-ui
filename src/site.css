@@ -104,6 +104,8 @@ samp {
   margin-top: 0;
 }
 
+custom-properties-editor,
+inject-example,
 table-of-contents {
   display: block;
 }

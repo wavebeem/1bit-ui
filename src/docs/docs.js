@@ -8,7 +8,7 @@ function $(selector, element = document) {
 
 class TableOfContentsElement extends HTMLElement {
   connectedCallback() {
-    this.className = "bit-card site-toc";
+    this.classList.add("bit-card", "site-toc");
     for (const h2 of $$("h2")) {
       const a = document.createElement("a");
       a.href = `#${h2.id}`;
@@ -60,6 +60,7 @@ function getCustomProperties(element) {
   return (
     element.dataset.injectExampleProperties ||
     element.dataset.customProperties ||
+    element.getAttribute("properties") ||
     ""
   )
     .trim()
@@ -95,49 +96,46 @@ function initializeCustomPropertyEditor(properties, propertyEditor) {
   return propertyEditor;
 }
 
-function injectExample(element) {
-  const name = element.dataset.injectExample || element.getAttribute("example");
-  const template = document.getElementById(`template-${name}`);
-  const div = document.createElement("div");
-  div.dataset.exampleName = name;
-  div.dataset.exampleType = "result";
-  div.appendChild(template.content.cloneNode(true));
-  const divH3 = document.createElement("h3");
-  divH3.textContent = "Example";
-  const pre = document.createElement("pre");
-  pre.className = "bit-pre";
-  pre.textContent = htmlToCode(template.innerHTML);
-  pre.dataset.exampleName = name;
-  pre.dataset.exampleType = "html";
-  const preH3 = document.createElement("h3");
-  preH3.textContent = "Code";
-  const properties = getCustomProperties(element);
-  if (properties.length > 0) {
-    const propertyEditor = document.createElement("div");
-    initializeCustomPropertyEditor(properties, propertyEditor);
-    element.insertAdjacentElement("beforeend", propertyEditor);
-  }
-  element.insertAdjacentElement("beforeend", divH3);
-  element.insertAdjacentElement("beforeend", div);
-  element.insertAdjacentElement("beforeend", preH3);
-  element.insertAdjacentElement("beforeend", pre);
-}
-
 class InjectExampleElement extends HTMLElement {
   connectedCallback() {
-    injectExample(this);
+    this.classList.add("site-example");
+    const name = this.dataset.injectExample || this.getAttribute("example");
+    const template = document.getElementById(`template-${name}`);
+    const div = document.createElement("div");
+    div.dataset.exampleName = name;
+    div.dataset.exampleType = "result";
+    div.appendChild(template.content.cloneNode(true));
+    const divH3 = document.createElement("h3");
+    divH3.textContent = "Example";
+    const pre = document.createElement("pre");
+    pre.className = "bit-pre";
+    pre.textContent = htmlToCode(template.innerHTML);
+    pre.dataset.exampleName = name;
+    pre.dataset.exampleType = "html";
+    const preH3 = document.createElement("h3");
+    preH3.textContent = "Code";
+    const properties = getCustomProperties(this);
+    if (properties.length > 0) {
+      const propertyEditor = document.createElement("div");
+      initializeCustomPropertyEditor(properties, propertyEditor);
+      this.insertAdjacentElement("beforeend", propertyEditor);
+    }
+    this.insertAdjacentElement("beforeend", divH3);
+    this.insertAdjacentElement("beforeend", div);
+    this.insertAdjacentElement("beforeend", preH3);
+    this.insertAdjacentElement("beforeend", pre);
   }
 }
 
 customElements.define("inject-example", InjectExampleElement);
 
-function main() {
-  for (const element of $$("[data-inject-example]")) {
-    injectExample(element);
-  }
-  for (const element of $$("[data-custom-properties-editor]")) {
-    initializeCustomPropertyEditor(getCustomProperties(element), element);
+class CustomPropertiesEditorElement extends HTMLElement {
+  connectedCallback() {
+    initializeCustomPropertyEditor(getCustomProperties(this), this);
   }
 }
 
-main();
+customElements.define(
+  "custom-properties-editor",
+  CustomPropertiesEditorElement
+);

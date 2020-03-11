@@ -33,49 +33,45 @@
       specificity possible so that you can easily override things as necessary.
     </p>
 
-    <div
-      data-custom-properties-editor
-      data-custom-properties="
+    <custom-properties-editor
+      properties="
         --bit-color0
         --bit-color1
         --bit-border-width
         --bit-border-radius
       "
-    ></div>
+    ></custom-properties-editor>
 
     <h2 id="links">Links</h2>
     <inject-example example="link"></inject-example>
 
     <h2 id="selects">Selects</h2>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-select-padding-horizontal
         --bit-select-padding-vertical
         --bit-select-handle-width
       "
-      data-inject-example="select"
-    ></div>
+      example="select"
+    ></inject-example>
 
     <h2 id="buttons">Buttons</h2>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-button-padding-horizontal
         --bit-button-padding-vertical
       "
-      data-inject-example="buttons"
-    ></div>
+      example="buttons"
+    ></inject-example>
 
     <h2 id="inputs">Text Inputs</h2>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-input-padding-horizontal
         --bit-input-padding-vertical
       "
-      data-inject-example="inputs"
-    ></div>
+      example="inputs"
+    ></inject-example>
 
     <h2 id="radios">Radio Buttons</h2>
     <p>
@@ -85,11 +81,10 @@
       <code class="bit-code">id</code> and
       <code class="bit-code">for</code>attributes
     </p>
-    <div
-      class="site-example"
-      data-inject-example-properties="--bit-radiocheckbox-size"
-      data-inject-example="radios"
-    ></div>
+    <inject-example
+      properties="--bit-radiocheckbox-size"
+      example="radios"
+    ></inject-example>
 
     <h2 id="checkboxes">Checkboxes</h2>
     <p>
@@ -99,55 +94,50 @@
       <code class="bit-code">id</code> and
       <code class="bit-code">for</code>attributes
     </p>
-    <div
-      class="site-example"
-      data-inject-example-properties="--bit-radiocheckbox-size"
-      data-inject-example="checkboxes"
-    ></div>
+    <inject-example
+      properties="--bit-radiocheckbox-size"
+      example="checkboxes"
+    ></inject-example>
 
     <h2 id="inline">Inline Tags</h2>
-    <div class="site-example" data-inject-example="inlineTags"></div>
+    <inject-example class="site-example" example="inlineTags"></inject-example>
 
     <h2 id="tables">Tables</h2>
     <p>A basic table.</p>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-table-padding-horizontal
         --bit-table-padding-vertical
       "
-      data-inject-example="tableBasic"
-    ></div>
+      example="tableBasic"
+    ></inject-example>
 
     <p>A table with row headers.</p>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-table-padding-horizontal
         --bit-table-padding-vertical
       "
-      data-inject-example="tableRowHeaders"
-    ></div>
+      example="tableRowHeaders"
+    ></inject-example>
 
     <p>A table with a footer.</p>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-table-padding-horizontal
         --bit-table-padding-vertical
       "
-      data-inject-example="tableTfoot"
-    ></div>
+      example="tableTfoot"
+    ></inject-example>
 
     <h2 id="cards">Cards</h2>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-card-padding-horizontal
         --bit-card-padding-vertical
       "
-      data-inject-example="card"
-    ></div>
+      example="card"
+    ></inject-example>
 
     <h2 id="svg">Inline SVG</h2>
     <p>
@@ -156,36 +146,34 @@
       <code class="bit-code">--bit-color0</code>, causing inline SVGs to
       automatically match your 1bit-ui theme.
     </p>
-    <div class="site-example" data-inject-example="inlineSVG"></div>
+    <inject-example example="inlineSVG"></inject-example>
 
     <h2 id="hr">Horizontal Rule</h2>
-    <div class="site-example" data-inject-example="horizontalRule"></div>
+    <inject-example example="horizontalRule"></inject-example>
 
     <h2 id="pre">Code</h2>
     <p>
       The class <code class="bit-code">bit-pre</code> can be used for multiline
       code blocks.
     </p>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-pre-padding-horizontal
         --bit-pre-padding-vertical
       "
-      data-inject-example="pre"
-    ></div>
+      example="pre"
+    ></inject-example>
     <p>
       The class <code class="bit-code">bit-code</code> can be used for inline
       code:
     </p>
-    <div
-      class="site-example"
-      data-inject-example-properties="
+    <inject-example
+      properties="
         --bit-code-padding-horizontal
         --bit-code-padding-vertical
       "
-      data-inject-example="code"
-    ></div>
+      example="code"
+    ></inject-example>
 
     <h2 id="scrollbars">Scrollbars</h2>
     <p>
@@ -211,7 +199,7 @@
       to be red so it stands out against your normal color scheme. 1bit-ui
       encourages your creativity.
     </p>
-    <div class="site-example" data-inject-example="getCreative"></div>
+    <inject-example class="site-example" example="getCreative"></inject-example>
 
     <h2 id="dark">Dark Mode</h2>
     <p>
@@ -242,7 +230,7 @@
       <code class="bit-code">--bit-border-radius</code> on any element you want
       through CSS or even inline styles.
     </p>
-    <div class="site-example" data-inject-example="round"></div>
+    <inject-example class="site-example" example="round"></inject-example>
 
     <footer>
       &copy; 2020
