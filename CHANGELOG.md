@@ -1,3 +1,7 @@
+# v0.0.6
+
+- Changes `.bit-card` to use a double border
+
 # v0.0.5
 
 - Changes `.bit-card` to use a drop-shadow facing straight down
