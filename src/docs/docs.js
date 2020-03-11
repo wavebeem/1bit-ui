@@ -1,11 +1,3 @@
-function $$(selector, element = document) {
-  return Array.from(element.querySelectorAll(selector));
-}
-
-function $(selector, element = document) {
-  return element.querySelector(selector);
-}
-
 function htmlToCode(code) {
   const lines = code
     .replace(/^\n*/, "")
@@ -28,7 +20,7 @@ function cleanCSSPropertyValue(value) {
   return value.trim();
 }
 
-const bitRoot = $(".bit-root");
+const bitRoot = document.querySelector(".bit-root");
 const baseCustomProperties = {};
 const bitRootStyle = getComputedStyle(bitRoot);
 
@@ -113,7 +105,7 @@ customElements.define(
 class TableOfContentsElement extends HTMLElement {
   connectedCallback() {
     this.classList.add("bit-card", "site-toc");
-    for (const h2 of $$("h2")) {
+    for (const h2 of document.querySelectorAll("h2")) {
       const a = document.createElement("a");
       a.href = `#${h2.id}`;
       a.textContent = h2.textContent;
