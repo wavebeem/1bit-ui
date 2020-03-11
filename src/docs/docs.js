@@ -23,13 +23,41 @@ function cleanCSSPropertyValue(value) {
 const bitRoot = document.querySelector(".bit-root");
 const baseCustomProperties = {};
 const bitRootStyle = getComputedStyle(bitRoot);
+// 2020-03-10
+//
+// There's some kind of... issue with getComputedStyle where custom properties
+// don't show up at first? Might be a race condition of this JS file vs the CSS
+// file I'm trying to get the values out of? Does the JS run before the CSS is
+// applied? I have no idea.
+//
+// https://twitter.com/wavebeem/status/1237606557380042752
+const keys = [
+  "--bit-color0",
+  "--bit-color1",
+  "--bit-button-padding-horizontal",
+  "--bit-button-padding-vertical",
+  "--bit-select-padding-horizontal",
+  "--bit-select-padding-vertical",
+  "--bit-input-padding-horizontal",
+  "--bit-input-padding-vertical",
+  "--bit-table-padding-horizontal",
+  "--bit-table-padding-vertical",
+  "--bit-card-padding-horizontal",
+  "--bit-card-padding-vertical",
+  "--bit-pre-padding-horizontal",
+  "--bit-pre-padding-vertical",
+  "--bit-code-padding-horizontal",
+  "--bit-code-padding-vertical",
+  "--bit-radiocheckbox-size",
+  "--bit-border-width",
+  "--bit-border-radius",
+  "--bit-select-handle-width"
+];
 
-for (const value of Object.values(bitRootStyle)) {
-  if (value.startsWith("--bit-")) {
-    baseCustomProperties[value] = cleanCSSPropertyValue(
-      bitRootStyle.getPropertyValue(value) || ""
-    );
-  }
+for (const key of keys) {
+  baseCustomProperties[key] = cleanCSSPropertyValue(
+    bitRootStyle.getPropertyValue(key) || ""
+  );
 }
 
 class InjectExampleElement extends HTMLElement {
@@ -83,6 +111,7 @@ class CustomPropertiesEditorElement extends HTMLElement {
       label.textContent = prop;
       const input = document.createElement("input");
       input.className = "bit-input";
+      console.log(baseCustomProperties);
       input.placeholder = baseCustomProperties[prop];
       input.addEventListener(
         "input",
