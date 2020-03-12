@@ -1,6 +1,5 @@
 :root {
   box-sizing: border-box;
-  font-size: 16px;
   padding: 1rem;
   line-height: 1.5;
   overflow-y: scroll;
@@ -129,14 +128,9 @@ table-of-contents {
 }
 
 @media (min-width: 900px) {
-  :root {
-    font-size: 18px;
-  }
-
   .site-property-editor-grid {
     --bit-input-padding-horizontal: 0.5rem;
     --bit-input-padding-vertical: 0.25rem;
-    font-size: 16px;
     grid-template-columns: max-content 10rem;
   }
 
