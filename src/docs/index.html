@@ -6,7 +6,7 @@
     <title>Documentation | 1bit-ui</title>
     <link rel="icon" sizes="16x16" href="/favicon-16.png" />
     <link rel="icon" sizes="32x32" href="/favicon-32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/1bit-ui.css" />
     <link rel="stylesheet" href="/site.css" />
@@ -291,9 +291,25 @@
     </template>
 
     <template id="template-buttons">
-      <div class="site-flex-row">
+      <div class="site-flex-row-wrap">
         <button type="button" class="bit-button">Save</button>
         <button type="button" class="bit-button" disabled>Save</button>
+        <button type="button" class="bit-button">Delete</button>
+        <button type="button" class="bit-button" disabled>Delete</button>
+        <button type="button" class="bit-button">&minus;</button>
+        <button type="button" class="bit-button">+</button>
+        <button type="button" class="bit-button" disabled>
+          +
+        </button>
+        <button type="button" class="bit-button" disabled>
+          &minus;
+        </button>
+        <button type="button" class="bit-button">
+          Create from template...
+        </button>
+        <button type="button" class="bit-button" disabled>
+          Create from template...
+        </button>
       </div>
     </template>
 
@@ -457,7 +473,33 @@ Disabled.</textarea
     </template>
 
     <template id="template-select">
-      <div class="site-flex-row">
+      <div class="site-flex-row-wrap">
+        <select class="bit-select">
+          <option selected disabled>Choose a country...</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
+        <select class="bit-select" disabled>
+          <option selected disabled>Choose a country...</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
+        <select class="bit-select">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
+        <select class="bit-select" disabled>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
         <select class="bit-select">
           <option selected disabled>&ndash;</option>
           <option>Option 1</option>
@@ -467,18 +509,6 @@ Disabled.</textarea
 
         <select class="bit-select" disabled>
           <option selected disabled>&ndash;</option>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-
-        <select class="bit-select">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-
-        <select class="bit-select" disabled>
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>

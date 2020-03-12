@@ -82,13 +82,15 @@ samp {
   display: block;
 }
 
-.site-flex-row {
-  --site-flex-row-gap: 1rem;
+.site-flex-row-wrap {
+  margin: -0.5rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.site-flex-row > * + * {
-  margin-left: var(--site-flex-row-gap);
+.site-flex-row-wrap > * {
+  margin: 0.5rem;
 }
 
 .site-flex-column {
@@ -132,10 +134,10 @@ table-of-contents {
   }
 
   .site-property-editor-grid {
-    --bit-input-padding-horizontal: 0.5em;
-    --bit-input-padding-vertical: 0.25em;
+    --bit-input-padding-horizontal: 0.5rem;
+    --bit-input-padding-vertical: 0.25rem;
     font-size: 16px;
-    grid-template-columns: max-content 10em;
+    grid-template-columns: max-content 10rem;
   }
 
   .site-nav-menu {

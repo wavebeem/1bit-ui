@@ -111,7 +111,6 @@ class CustomPropertiesEditorElement extends HTMLElement {
       label.textContent = prop;
       const input = document.createElement("input");
       input.className = "bit-input";
-      console.log(baseCustomProperties);
       input.placeholder = baseCustomProperties[prop];
       input.addEventListener(
         "input",
