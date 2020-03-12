@@ -1,3 +1,7 @@
+# v0.0.7
+
+- `.bit-link` isn't bold by default any more
+
 # v0.0.6
 
 - Changes `.bit-card` to use a double border

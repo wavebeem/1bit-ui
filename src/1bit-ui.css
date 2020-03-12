@@ -253,9 +253,7 @@
 
 .bit-link {
   color: var(--bit-color0);
-  font-weight: bold;
   text-decoration: underline;
-  text-decoration-thickness: var(--bit-border-width);
   border-radius: var(--bit-border-radius);
 }
 
