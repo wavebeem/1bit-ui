@@ -1,3 +1,7 @@
+# v0.0.8
+
+- Use `rem` for most default padding nows for more consistent padding
+
 # v0.0.7
 
 - `.bit-link` isn't bold by default any more
