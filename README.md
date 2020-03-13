@@ -15,7 +15,7 @@ $ npm start
 
 Edit `src/1bit-ui.css`. It's the only file that gets published to npm. Open your browser to <http://localhost:5000/>.
 
-> If you're unfamiliar with npm, you can [download the npm installer here](https://www.npmjs.com/get-npm) and read more about [how to use npm here](https://docs.npmjs.com/about-npm/).
+> If you're unfamiliar with npm, you can [download the Node.js installer here](https://nodejs.org/en/download/) to get started with npm. Read more about [how to use npm here](https://docs.npmjs.com/about-npm/).
 
 ## Publishing
 
