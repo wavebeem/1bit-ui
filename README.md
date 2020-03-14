@@ -1,8 +1,12 @@
 # 1bit-ui
 
-See [1bit-ui.com](https://1bit-ui.com) for documentation and usage.
+1bit-ui is a CSS library for making retro-inspired web pages using just two colors.
+
+Go to [1bit-ui.com](https://1bit-ui.com) for examples, documentation, and usage.
 
 ## Development
+
+You can use npm to load 1bit-ui on a local server.
 
 ```
 $ npm install
@@ -11,7 +15,11 @@ $ npm start
 
 Edit `src/1bit-ui.css`. It's the only file that gets published to npm. Open your browser to <http://localhost:5000/>.
 
+> If you're unfamiliar with npm, you can [download the Node.js installer here](https://nodejs.org/en/download/) to get started with npm. Read more about [how to use npm here](https://docs.npmjs.com/about-npm/).
+
 ## Publishing
+
+You can use npm to publish a new version of 1bit-ui.
 
 ```
 npm version X.Y.Z
