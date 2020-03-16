@@ -34,52 +34,16 @@
       </ul>
     </nav>
 
-    <h2>About</h2>
+    <h2>Introduction</h2>
+
     <p>
-      1bit-ui is a CSS library for making retro-inspired web pages using just
-      two colors. This color palette is completely customizable using CSS Custom
-      Properties (also known as CSS Variables).
-    </p>
-    <p>
-      1bit-ui covers basic form fields (radio button, checkbox, button, select),
-      links, tables, and cards. Most other basic elements look great alongside
-      these. Everything in 1bit-ui requires the use of CSS classes, so you can
-      feel confident that 1bit-ui won't clash with your existing CSS. 1bit-ui
-      also uses the lowest specificity possible for each rule, so it's less
-      difficult to override things.
-    </p>
-    <p>
-      1bit-ui is about 10 KB of unminified CSS, and compresses to about 1.5 KB
-      via gzip compression.
+      1bit-ui is a small CSS library for making retro-inspired web pages using two colors. Its color palette is completely customizable using CSS Custom
+      Properties (or CSS Variables).
     </p>
 
-    <h2>Standard Installation</h2>
+    <h2>1bit-ui Examples</h2>
     <p>
-      Download
-      <a href="https://unpkg.com/1bit-ui/dist/1bit-ui.css" class="bit-link"
-        >1-bit-ui.css</a
-      >
-      and use a <code class="bit-code">link</code> tag:
-    </p>
-    <pre class="bit-pre">
-&lt;link rel="stylesheet" href="1bit-ui.css" /&gt;</pre
-    >
-
-    <h2>Webpack Installation</h2>
-    <p>
-      If you are using webpack with css-loader, you can install it through npm:
-    </p>
-    <pre class="bit-pre">npm install 1bit-ui</pre>
-    <p>And then load the CSS through your JS:</p>
-    <pre class="bit-pre">import "1bit-ui/dist/1bit-ui.css";</pre>
-
-    <h2>Theme Selector</h2>
-    <p>
-      You will need to add the following CSS to your page to use a custom theme:
-    </p>
-    <pre id="theme-example" class="bit-pre"></pre>
-    <p>
-      Click any of the buttons below to select a theme:
+      Click the buttons to see 1bit-ui in action.
     </p>
     <theme-switchers>
       <button
@@ -179,6 +143,43 @@
         1bit Monitor Glow
       </button>
     </theme-switchers>
+
+
+
+    <h2>More Detail</h2>
+    <p>
+      You can use 1bit-ui with basic form fields and other elements. 1bit-ui requires the use of CSS classes, so it won't clash with your existing CSS. 1bit-ui also uses the lowest specificity for each rule, making it much less likely to override your existing CSS.
+    </p>
+    <p>
+      1bit-ui is about 10 KB of unminified CSS and compresses to about 1.5 KB
+      via gzip compression.
+    </p>
+
+    <h2>Standard Installation</h2>
+    <p>
+      Download
+      <a href="https://unpkg.com/1bit-ui/dist/1bit-ui.css" class="bit-link"
+        >1-bit-ui.css</a
+      >
+      and use a <code class="bit-code">link</code> tag:
+    </p>
+    <pre class="bit-pre">
+&lt;link rel="stylesheet" href="1bit-ui.css" /&gt;</pre
+    >
+
+    <h2>Webpack Installation</h2>
+    <p>
+      If you're using <a href="https://webpack.js.org/loaders/css-loader/" class="bit-link">webpack with css-loader</a>, you can install it through npm:
+    </p>
+    <pre class="bit-pre">npm install 1bit-ui</pre>
+    <p>Then load the CSS through your JavaScript:</p>
+    <pre class="bit-pre">import "1bit-ui/dist/1bit-ui.css";</pre>
+
+    <p>
+      To use one of the custom themes at the top, add the following CSS to your page:
+    </p>
+
+      <pre id="theme-example" class="bit-pre"></pre>
 
     <footer>
       &copy; 2020
