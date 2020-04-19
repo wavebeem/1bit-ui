@@ -43,14 +43,21 @@
   opacity: 0.5;
 }
 
+.bit-auto input[type="radio"] + label,
+.bit-auto input[type="checkbox"] + label {
+  padding: calc(2 * var(--bit-border-width));
+  display: inline-block;
+  align-self: start;
+}
+
 /* Checkbox / Radio Button */
 
 .bit-auto input[type="checkbox"],
-.bit-auto input[type="radio"],
 .bit-checkbox {
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto input[type="radio"],
 .bit-radio {
   border-radius: 9999px;
 }
@@ -59,6 +66,8 @@
 .bit-auto input[type="radio"],
 .bit-checkbox,
 .bit-radio {
+  align-self: start;
+  vertical-align: top;
   box-sizing: border-box;
   -webkit-appearance: none;
   font: inherit;

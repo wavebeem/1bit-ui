@@ -33,31 +33,31 @@
         <li><a href="/examples/" class="bit-link">Examples</a></li>
       </ul>
     </nav>
-<table-of-contents></table-of-contents>
+    <table-of-contents></table-of-contents>
 
-<!-- I think it might be valuable to put some or all of the example buttons at
+    <!-- I think it might be valuable to put some or all of the example buttons at
 the top of this page or change the custom properties to dropdowns. Funky stuff
 happens when you start typing in those fields. SK -->
 
+    <h2>Introduction</h2>
 
-<h2>Introduction</h2>
+    <p>
+      This page demonstrates some of the ways 1bit-ui can be used, as well as
+      code for its examples.
+    </p>
 
-<p>
-  This page demonstrates some of the ways 1bit-ui can be used, as well as code
-  for its examples.
-</p>
+    <h2 id="basics">Basics</h2>
+    <p>
+      All CSS classes from 1bit-ui start with
+      <code class="bit-code">.bit-</code>. This way you'll always know when
+      you're using 1bit-ui CSS. 1bit-ui uses the lowest CSS specificity
+      possible, if you need to override it.
+    </p>
 
-<h2 id="basics">Basics</h2>
-<p>
-  All CSS classes from 1bit-ui start with <code class="bit-code">.bit-</code>.
-  This way you'll always know when you're using 1bit-ui CSS. 1bit-ui uses the
-  lowest CSS specificity possible, if you need to override it.
-</p>
-
-<p>
-  Change the custom properties to try different values. Refresh the page to
-  reset it.
-</p>
+    <p>
+      Change the custom properties to try different values. Refresh the page to
+      reset it.
+    </p>
 
     <custom-properties-editor
       data-properties="
@@ -70,13 +70,13 @@ happens when you start typing in those fields. SK -->
 
     <h2 id="links">Links</h2>
 
-  <p>
-  The underlined links make them easy to see within a sentence or a paragraph
-  text. The mouse hover border provides a visual cue when you're about to click
-  a link.
-</p>
+    <p>
+      The underlined links make them easy to see within a sentence or a
+      paragraph text. The mouse hover border provides a visual cue when you're
+      about to click a link.
+    </p>
 
-<!-- I was trying to think of an alternative to lorem ipsum. As it is, I think
+    <!-- I was trying to think of an alternative to lorem ipsum. As it is, I think
 you may have about two sentences more than you need. SK -->
 
     <inject-example data-example="link"></inject-example>
@@ -274,10 +274,156 @@ you may have about two sentences more than you need. SK -->
     </p>
     <inject-example class="site-example" data-example="round"></inject-example>
 
+    <h2 id="auto-mode">Auto Mode</h2>
+
+    <p>
+      The suggested way to use <code class="bit-code">1bit-ui</code> is
+      exclusively by adding CSS classes to elements you want to style. But
+      sometimes your HTML is constrained to be entirely
+      <code class="bit-code">class</code> free.
+    </p>
+
+    <p>
+      In order to use auto mode, put the class
+      <code class="bit-code">bit-auto</code> on whichever tag you want class
+      free markup inside of (e.g. on the main element of your blog post, or even
+      the entire document if you want to work quicker, or use Markdown or
+      something).
+    </p>
+
+    <inject-example data-example="auto"></inject-example>
+
     <footer>
       &copy; 2020
       <a href="https://www.mockbrian.com" class="bit-link">Brian Mock</a>
     </footer>
+
+    <template id="template-auto">
+      <div class="bit-auto">
+        <button type="button">Button</button>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div>
+          <label>Input</label>
+        </div>
+        <input type="text" value="input tag" />
+        <br />
+        <br />
+        <div>
+          <label>Text Area</label>
+        </div>
+        <textarea>Example text here</textarea>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11</td>
+              <td>21</td>
+              <td>31</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>22</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>23</td>
+              <td>33</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <hr />
+        <br />
+        <div>
+          <label>Select</label>
+        </div>
+        <select>
+          <option disabled selected>&ndash;</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div>
+          <div>
+            <input type="checkbox" checked id="auto-a1" />
+            <label for="auto-a1">Checked checkbox</label>
+          </div>
+          <div>
+            <input type="checkbox" id="auto-a2" />
+            <label for="auto-a2">Unchecked checkbox</label>
+          </div>
+          <div>
+            <input type="checkbox" id="auto-a3" />
+            <label for="auto-a3"
+              >Checkbox with<br />line that wraps<br />because it's long</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" disabled id="auto-a4" />
+            <label for="auto-a4">Disabled checkbox</label>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div>
+            <input
+              type="radio"
+              checked
+              id="auto-b1"
+              name="auto-b"
+              value="auto-b1"
+            />
+            <label for="auto-b1">Checked radio button</label>
+          </div>
+          <div>
+            <input type="radio" id="auto-b2" name="auto-b" value="auto-b2" />
+            <label for="auto-b2">Unchecked radio button</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              disabled
+              id="auto-b3"
+              name="auto-b"
+              value="auto-b3"
+            />
+            <label for="auto-b3">Disabled radio button</label>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div>
+            This is a <code>code</code>, this is a <kbd>kbd</kbd>, this is a
+            <samp>samp</samp>.
+          </div>
+          <br />
+          <hr />
+          <br />
+          <pre>
+// JavaScript example
+console.log("Hello, world!");</pre
+          >
+        </div>
+      </div>
+    </template>
 
     <template id="template-link">
       <p>
@@ -375,6 +521,16 @@ you may have about two sentences more than you need. SK -->
           <input
             class="bit-checkbox"
             type="checkbox"
+            id="toppings-multiline"
+            name="toppings"
+            value="multiline"
+          />
+          <label for="toppings-olives">Multiline<br />text</label>
+        </div>
+        <div class="bit-field">
+          <input
+            class="bit-checkbox"
+            type="checkbox"
             id="toppings-disabled"
             name="toppings"
             value="disabled"
@@ -417,6 +573,16 @@ you may have about two sentences more than you need. SK -->
             value="blue"
           />
           <label for="color-blue">Blue</label>
+        </div>
+        <div class="bit-field">
+          <input
+            class="bit-radio"
+            type="radio"
+            id="color-multiline"
+            name="color"
+            value="multiline"
+          />
+          <label for="color-blue">Multiline<br />text</label>
         </div>
         <div class="bit-field">
           <input
@@ -620,10 +786,7 @@ Disabled.</textarea
         <button
           type="button"
           class="bit-button"
-          style="
-            --bit-color0: #222222;
-            --bit-color1: #eeeeee;
-          "
+          style="--bit-color0: #222222; --bit-color1: #eeeeee;"
         >
           Inline Styles
         </button>
