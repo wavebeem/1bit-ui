@@ -1,3 +1,7 @@
+# v0.9.0
+
+- Adds `.bit-auto` for class-free styling scoped to that element's children
+
 # v0.0.8
 
 - Use `rem` for most default padding nows for more consistent padding
