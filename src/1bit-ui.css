@@ -1,3 +1,4 @@
+.bit-auto,
 .bit-root {
   --bit-color0: #222323;
   --bit-color1: #f0f6f0;
@@ -43,18 +44,31 @@
   opacity: 0.5;
 }
 
+.bit-auto input[type="radio"] + label,
+.bit-auto input[type="checkbox"] + label {
+  padding: calc(2 * var(--bit-border-width));
+  display: inline-block;
+  align-self: start;
+}
+
 /* Checkbox / Radio Button */
 
+.bit-auto input[type="checkbox"],
 .bit-checkbox {
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto input[type="radio"],
 .bit-radio {
   border-radius: 9999px;
 }
 
+.bit-auto input[type="checkbox"],
+.bit-auto input[type="radio"],
 .bit-checkbox,
 .bit-radio {
+  align-self: start;
+  vertical-align: top;
   box-sizing: border-box;
   -webkit-appearance: none;
   font: inherit;
@@ -66,11 +80,15 @@
   border: var(--bit-border-width) solid var(--bit-color0);
 }
 
+.bit-auto input[type="checkbox"]:hover,
+.bit-auto input[type="radio"]:hover,
 .bit-checkbox:hover,
 .bit-radio:hover {
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
+.bit-auto input[type="checkbox"]:focus,
+.bit-auto input[type="radio"]:focus,
 .bit-checkbox:focus,
 .bit-radio:focus {
   outline: 0;
@@ -79,18 +97,24 @@
     inset 0 0 0 var(--bit-border-width) var(--bit-color1);
 }
 
+.bit-auto input[type="checkbox"]:checked,
+.bit-auto input[type="radio"]:checked,
 .bit-checkbox:checked,
 .bit-radio:checked {
   background: var(--bit-color0);
   box-shadow: inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
+.bit-auto input[type="checkbox"]:checked:hover,
+.bit-auto input[type="radio"]:checked:hover,
 .bit-checkbox:checked:hover,
 .bit-radio:checked:hover {
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
+.bit-auto input[type="checkbox"]:checked:focus,
+.bit-auto input[type="radio"]:checked:focus,
 .bit-checkbox:checked:focus,
 .bit-radio:checked:focus {
   box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
@@ -98,6 +122,10 @@
     inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
+.bit-auto input[type="checkbox"]:disabled:hover,
+.bit-auto input[type="radio"]:disabled:hover,
+.bit-auto input[type="checkbox"]:disabled,
+.bit-auto input[type="radio"]:disabled,
 .bit-checkbox:disabled:hover,
 .bit-radio:disabled:hover,
 .bit-checkbox:disabled,
@@ -109,6 +137,7 @@
 
 /* Table */
 
+.bit-auto table,
 .bit-table {
   box-sizing: border-box;
   background: var(--bit-color1);
@@ -116,15 +145,19 @@
   border-collapse: collapse;
 }
 
+.bit-auto table th,
 .bit-table th {
   padding: var(--bit-table-padding-vertical) var(--bit-table-padding-horizontal);
   text-align: left;
 }
 
+.bit-auto table tbody tr,
 .bit-table tbody tr {
   border-top: calc(0.5 * var(--bit-border-width)) solid var(--bit-color0);
 }
 
+.bit-auto table th,
+.bit-auto table td,
 .bit-table th,
 .bit-table td {
   background: var(--bit-color1);
@@ -132,11 +165,13 @@
   padding: var(--bit-table-padding-vertical) var(--bit-table-padding-horizontal);
 }
 
+.bit-auto table thead,
 .bit-table thead {
   border-top: 0;
   border-bottom: var(--bit-border-width) solid var(--bit-color0);
 }
 
+.bit-auto table tfoot,
 .bit-table tfoot {
   border-top: var(--bit-border-width) solid var(--bit-color0);
   border-bottom: 0;
@@ -144,6 +179,10 @@
 
 /* Button */
 
+.bit-auto button,
+.bit-auto input[type="button"],
+.bit-auto input[type="submit"],
+.bit-auto input[type="color"],
 .bit-button {
   box-sizing: border-box;
   background: var(--bit-color1);
@@ -156,14 +195,26 @@
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto button:hover,
+.bit-auto input[type="button"]:hover,
+.bit-auto input[type="submit"]:hover,
+.bit-auto input[type="color"]:hover,
 .bit-button:hover {
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
+.bit-auto button:active,
+.bit-auto input[type="button"]:active,
+.bit-auto input[type="submit"]:active,
+.bit-auto input[type="color"]:active,
 .bit-button:active {
   transform: translateY(var(--bit-border-width));
 }
 
+.bit-auto button:focus,
+.bit-auto input[type="button"]:focus,
+.bit-auto input[type="submit"]:focus,
+.bit-auto input[type="color"]:focus,
 .bit-button:focus {
   outline: none;
   border-color: var(--bit-color1);
@@ -172,7 +223,10 @@
     inset 0 calc(-2 * var(--bit-border-width)) 0 var(--bit-color0);
 }
 
-.bit-button:disabled:hover,
+.bit-auto button:disabled,
+.bit-auto input[type="button"]:disabled,
+.bit-auto input[type="submit"]:disabled,
+.bit-auto input[type="color"]:disabled,
 .bit-button:disabled {
   transform: none;
   opacity: 0.5;
@@ -183,6 +237,7 @@
 
 /* Select */
 
+.bit-auto select,
 .bit-select {
   box-sizing: border-box;
   -webkit-appearance: none;
@@ -205,6 +260,7 @@
       0 0 var(--bit-color1);
 }
 
+.bit-auto select:hover,
 .bit-select:hover {
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color1),
@@ -216,6 +272,7 @@
       0 0 var(--bit-color1);
 }
 
+.bit-auto select:focus,
 .bit-select:focus {
   outline: none;
   border-color: var(--bit-color1);
@@ -230,12 +287,13 @@
     0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
+.bit-auto select:-moz-focusring,
 .bit-select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 var(--bit-color0);
 }
 
-.bit-select:disabled:hover,
+.bit-auto select:disabled,
 .bit-select:disabled {
   opacity: 0.5;
   border-color: var(--bit-color0);
@@ -251,12 +309,14 @@
 
 /* Link */
 
+.bit-auto a,
 .bit-link {
   color: var(--bit-color0);
   text-decoration: underline;
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto a:hover,
 .bit-link:hover {
   border-radius: var(--bit-border-radius);
   background: var(--bit-color1);
@@ -265,6 +325,7 @@
     0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0);
 }
 
+.bit-auto a:focus,
 .bit-link:focus {
   border-radius: var(--bit-border-radius);
   background: var(--bit-color0);
@@ -278,6 +339,14 @@
 
 /* Input / Text Area */
 
+.bit-auto input[type="tel"],
+.bit-auto input[type="url"],
+.bit-auto input[type="text"],
+.bit-auto input[type="email"],
+.bit-auto input[type="search"],
+.bit-auto input[type="number"],
+.bit-auto input[type="password"],
+.bit-auto textarea,
 .bit-input {
   box-sizing: border-box;
   background: var(--bit-color1);
@@ -289,10 +358,26 @@
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto input[type="tel"]:hover,
+.bit-auto input[type="url"]:hover,
+.bit-auto input[type="text"]:hover,
+.bit-auto input[type="email"]:hover,
+.bit-auto input[type="search"]:hover,
+.bit-auto input[type="number"]:hover,
+.bit-auto input[type="password"]:hover,
+.bit-auto textarea:hover,
 .bit-input:hover {
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
+.bit-auto input[type="tel"]:focus,
+.bit-auto input[type="url"]:focus,
+.bit-auto input[type="text"]:focus,
+.bit-auto input[type="email"]:focus,
+.bit-auto input[type="search"]:focus,
+.bit-auto input[type="number"]:focus,
+.bit-auto input[type="password"]:focus,
+.bit-auto textarea:focus,
 .bit-input:focus {
   outline: none;
   border-color: var(--bit-color1);
@@ -301,7 +386,14 @@
     inset 0 calc(2 * var(--bit-border-width)) 0 var(--bit-color0);
 }
 
-.bit-input:disabled:hover,
+.bit-auto input[type="tel"]:disabled,
+.bit-auto input[type="url"]:disabled,
+.bit-auto input[type="text"]:disabled,
+.bit-auto input[type="email"]:disabled,
+.bit-auto input[type="search"]:disabled,
+.bit-auto input[type="number"]:disabled,
+.bit-auto input[type="password"]:disabled,
+.bit-auto textarea:disabled,
 .bit-input:disabled {
   opacity: 0.5;
   box-shadow: none;
@@ -309,11 +401,27 @@
   border-style: dotted;
 }
 
+.bit-auto input[type="tel"]::placeholder,
+.bit-auto input[type="url"]::placeholder,
+.bit-auto input[type="text"]::placeholder,
+.bit-auto input[type="email"]::placeholder,
+.bit-auto input[type="search"]::placeholder,
+.bit-auto input[type="number"]::placeholder,
+.bit-auto input[type="password"]::placeholder,
+.bit-auto textarea::placeholder,
 .bit-input::placeholder {
   color: var(--bit-color0);
   opacity: 0.5;
 }
 
+.bit-auto input[type="tel"]::selection,
+.bit-auto input[type="url"]::selection,
+.bit-auto input[type="text"]::selection,
+.bit-auto input[type="email"]::selection,
+.bit-auto input[type="search"]::selection,
+.bit-auto input[type="number"]::selection,
+.bit-auto input[type="password"]::selection,
+.bit-auto textarea::selection,
 .bit-input::selection {
   background: var(--bit-color0);
   color: var(--bit-color1);
@@ -321,6 +429,7 @@
 
 /* Firefox nonsense */
 
+.bit-auto ::-moz-focus-inner,
 .bit-checkbox::-moz-focus-inner,
 .bit-radio::-moz-focus-inner,
 .bit-select::-moz-focus-inner,
@@ -342,6 +451,7 @@
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto,
 .bit-scrollbar {
   scrollbar-color: var(--bit-color0) var(--bit-color1);
 }
@@ -350,6 +460,9 @@
   fill: var(--bit-color0);
 }
 
+.bit-auto code,
+.bit-auto kbd,
+.bit-auto samp,
 .bit-code {
   background: var(--bit-color0);
   color: var(--bit-color1);
@@ -357,12 +470,14 @@
   border-radius: var(--bit-border-radius);
 }
 
+.bit-auto hr,
 .bit-hr {
   box-sizing: border-box;
   border: 0;
   border-top: var(--bit-border-width) solid var(--bit-color0);
 }
 
+.bit-auto pre,
 .bit-pre {
   box-sizing: border-box;
   background: var(--bit-color0);
