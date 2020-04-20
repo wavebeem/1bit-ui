@@ -5,6 +5,7 @@
   "browser": "dist/1bit-ui.css",
   "files": [],
   "scripts": {
+    "upgrade": "npm-check -u",
     "start": "serve src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "node bin/build.js",
@@ -27,6 +28,8 @@
   },
   "homepage": "https://github.com/wavebeem/1bit-ui#readme",
   "devDependencies": {
+    "npm-check": "^5.9.2",
+    "prettier": "^2.0.4",
     "serve": "^11.3.0",
     "shelljs": "^0.8.3"
   }
