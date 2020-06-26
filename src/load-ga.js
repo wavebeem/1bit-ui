@@ -1,10 +1,13 @@
 // Don't track analytics on localhost or development sites.
-if (window.location.hostname === "1bit-ui.com") {
-  (function(i, s, o, g, r, a, m) {
+if (
+  window.location.hostname === "1bit-ui.com" ||
+  window.location.hostname === "www.1bit-ui.com"
+) {
+  (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
     (i[r] =
       i[r] ||
-      function() {
+      function () {
         (i[r].q = i[r].q || []).push(arguments);
       }),
       (i[r].l = 1 * new Date());
@@ -23,7 +26,7 @@ if (window.location.hostname === "1bit-ui.com") {
   ga("create", "UA-52704502-9", "auto");
   ga("send", "pageview");
 } else {
-  window.ga = function(...args) {
+  window.ga = function (...args) {
     console.log(...args);
   };
 }
