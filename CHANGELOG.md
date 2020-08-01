@@ -1,3 +1,10 @@
+# v0.10.0
+
+- Switches `.bit-auto code` selector to `.bit-auto :not(pre) > code` so we don't
+  accidentally style `code` tags nested within `pre` tags, which are very common
+  with syntax highlighting libraries
+- `.bit-hr` elements now get a dotted line instead of a solid line
+
 # v0.9.0
 
 - Adds `.bit-auto` for class-free styling scoped to that element's children
