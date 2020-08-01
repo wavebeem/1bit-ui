@@ -1,0 +1,1 @@
+- Switch `.bit-hr` to use dotted lines by default
