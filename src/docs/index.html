@@ -252,12 +252,14 @@ you may have about two sentences more than you need. SK -->
       to automatically get Dark Mode with a single block of CSS
     </p>
     <pre class="bit-pre">
+.bit-auto,
 .bit-root {
   --bit-color0: white;
   --bit-color1: black;
 }
 
 @media (prefers-color-scheme: dark) {
+  .bit-auto,
   .bit-root {
     --bit-color0: white;
     --bit-color1: black;

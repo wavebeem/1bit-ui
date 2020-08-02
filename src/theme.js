@@ -29,6 +29,7 @@ customElements.define("theme-switchers", ThemeSwitchersElement);
 
 function updateThemeExample(color0, color1) {
   document.querySelector("#theme-example").textContent = `\
+.bit-auto,
 .bit-root {
   --bit-color0: ${color0};
   --bit-color1: ${color1};
