@@ -44,6 +44,12 @@
   opacity: 0.5;
 }
 
+.bit-auto label {
+  display: flex;
+}
+
+.bit-auto label > input[type="radio"] + *,
+.bit-auto label > input[type="checkbox"] + *,
 .bit-auto input[type="radio"] + label,
 .bit-auto input[type="checkbox"] + label {
   padding: calc(2 * var(--bit-border-width));

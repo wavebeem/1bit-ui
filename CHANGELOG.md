@@ -1,3 +1,9 @@
+# v0.11.0
+
+- Improves support for checkboxes and radio buttons that use `.bit-auto` and are
+  nested inside a `<label>` tag rather than being side-by-side and using HTML
+  IDs to associate with each other
+
 # v0.10.0
 
 - Switches `.bit-auto code` selector to `.bit-auto :not(pre) > code` so we don't
