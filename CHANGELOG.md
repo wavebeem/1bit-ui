@@ -1,3 +1,8 @@
+# v0.12.0
+
+- Fixes misaligned label for `.bit-auto` mode radiochecks nested inside a
+  `<label>` tag
+
 # v0.11.0
 
 - Improves support for checkboxes and radio buttons that use `.bit-auto` and are

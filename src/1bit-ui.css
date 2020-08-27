@@ -57,6 +57,11 @@
   align-self: start;
 }
 
+.bit-auto label > input[type="radio"] + *,
+.bit-auto label > input[type="checkbox"] + * {
+  padding-left: calc(4 * var(--bit-border-width));
+}
+
 /* Checkbox / Radio Button */
 
 .bit-auto input[type="checkbox"],
