@@ -1,3 +1,10 @@
+# v0.13.0
+
+- Improves `.bit-card` box shadow with additional depth to better mimic retro
+  monochrome UIs
+- Switches `.bit-link` to use outline instead of box- shadow for crisper
+  rendering across browsers
+
 # v0.12.0
 
 - Fixes misaligned label for `.bit-auto` mode radiochecks nested inside a

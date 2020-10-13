@@ -332,8 +332,8 @@
   border-radius: var(--bit-border-radius);
   background: var(--bit-color1);
   text-decoration: none;
-  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0);
+  outline: var(--bit-border-width) solid var(--bit-color0);
+  outline-offset: var(--bit-border-width);
 }
 
 .bit-auto a:focus,
@@ -343,9 +343,8 @@
   color: var(--bit-color1);
   text-decoration: none;
   outline: none;
-  box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color0),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1),
-    0 0 0 calc(3 * var(--bit-border-width)) var(--bit-color0);
+  outline: var(--bit-border-width) solid var(--bit-color0);
+  outline-offset: var(--bit-border-width);
 }
 
 /* Input / Text Area */
@@ -456,9 +455,9 @@
   background: var(--bit-color1);
   color: var(--bit-color0);
   border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
-  box-shadow: 0 calc(4 * var(--bit-border-width)) 0
-    calc(-2 * var(--bit-border-width)) var(--bit-color0);
   padding: var(--bit-card-padding-vertical) var(--bit-card-padding-horizontal);
+  box-shadow: inset 0 var(--bit-border-width) 0 0 var(--bit-color0),
+    0 var(--bit-border-width) 0 0 var(--bit-color0);
   border-radius: var(--bit-border-radius);
 }
 

@@ -30,7 +30,7 @@
   "devDependencies": {
     "npm-check": "^5.9.2",
     "prettier": "^2.0.4",
-    "serve": "^11.3.0",
+    "serve": "^11.3.2",
     "shelljs": "^0.8.3"
   }
 }
