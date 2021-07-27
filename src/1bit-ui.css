@@ -325,6 +325,7 @@
   color: var(--bit-color0);
   text-decoration: underline;
   border-radius: var(--bit-border-radius);
+  text-decoration-thickness: var(--bit-border-width);
 }
 
 .bit-auto a:hover,

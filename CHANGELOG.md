@@ -1,3 +1,7 @@
+# v0.14.0
+
+- Set `text-decoration-thickness` for anchors to match `--bit-border-width`
+
 # v0.13.0
 
 - Improves `.bit-card` box shadow with additional depth to better mimic retro
