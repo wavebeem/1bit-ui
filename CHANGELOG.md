@@ -1,3 +1,8 @@
+# v0.15.0
+
+- Focused links use a double outline instead of outline offset, to give more
+  padding around the focused link for better readability
+
 # v0.14.0
 
 - Set `text-decoration-thickness` for anchors to match `--bit-border-width`

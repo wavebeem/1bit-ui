@@ -344,8 +344,8 @@
   color: var(--bit-color1);
   text-decoration: none;
   outline: none;
-  outline: var(--bit-border-width) solid var(--bit-color0);
-  outline-offset: var(--bit-border-width);
+  outline: calc(3 * var(--bit-border-width)) double var(--bit-color0);
+  outline-offset: 0;
 }
 
 /* Input / Text Area */
