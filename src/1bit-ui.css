@@ -93,7 +93,7 @@
   margin: calc(2 * var(--bit-border-width));
   background: var(--bit-color1);
   color: var(--bit-color3, var(--bit-color0));
-  border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border: var(--bit-border-width) solid var(--bit-color0);
 }
 
 .bit-auto input[type="checkbox"]:hover,
@@ -173,8 +173,7 @@
 
 .bit-auto table tbody tr,
 .bit-table tbody tr {
-  border-top: calc(0.5 * var(--bit-border-width)) solid
-    var(--bit-color2, var(--bit-color0));
+  border-top: calc(0.5 * var(--bit-border-width)) solid var(--bit-color0);
 }
 
 .bit-auto table th,
@@ -189,13 +188,12 @@
 .bit-auto table thead,
 .bit-table thead {
   border-top: 0;
-  border-bottom: var(--bit-border-width) solid
-    var(--bit-color2, var(--bit-color0));
+  border-bottom: var(--bit-border-width) solid var(--bit-color0);
 }
 
 .bit-auto table tfoot,
 .bit-table tfoot {
-  border-top: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border-top: var(--bit-border-width) solid var(--bit-color0);
   border-bottom: 0;
 }
 
@@ -212,7 +210,7 @@
   padding: var(--bit-button-padding-vertical)
     var(--bit-button-padding-horizontal);
   font: inherit;
-  border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border: var(--bit-border-width) solid var(--bit-color0);
   box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0
     var(--bit-color2, var(--bit-color0));
   border-radius: var(--bit-border-radius);
@@ -258,7 +256,7 @@
   transform: none;
   opacity: 0.5;
   box-shadow: none;
-  border-color: var(--bit-color2, var(--bit-color0));
+  border-color: var(--bit-color0);
   border-style: dotted;
 }
 
@@ -276,13 +274,12 @@
     var(--bit-select-padding-horizontal) + var(--bit-select-handle-width)
   );
   font: inherit;
-  border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border: var(--bit-border-width) solid var(--bit-color0);
   border-radius: var(--bit-border-radius);
   box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset 0 var(--bit-border-width) 0 0 var(--bit-color1),
     inset calc(-1 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0
-      var(--bit-color2, var(--bit-color0)),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
       0 0 var(--bit-color1);
@@ -329,13 +326,12 @@
 .bit-auto select:disabled,
 .bit-select:disabled {
   opacity: 0.5;
-  border-color: var(--bit-color2, var(--bit-color0));
+  border-color: var(--bit-color0);
   border-style: dotted;
   box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset 0 calc(1 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset calc(-1 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0
-      var(--bit-color2, var(--bit-color0)),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
       0 0 var(--bit-color1);
@@ -354,10 +350,10 @@
 .bit-auto a:hover,
 .bit-link:hover {
   border-radius: var(--bit-border-radius);
-  color: var(--bit-color0);
+  color: var(--bit-color3, var(--bit-color0));
   background: var(--bit-color1);
   text-decoration: none;
-  outline: var(--bit-border-width) solid var(--bit-color0);
+  outline: var(--bit-border-width) solid var(--bit-color3, var(--bit-color0));
   outline-offset: var(--bit-border-width);
 }
 
@@ -389,7 +385,9 @@
   color: var(--bit-color0);
   font: inherit;
   padding: var(--bit-input-padding-vertical) var(--bit-input-padding-horizontal);
-  border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border: var(--bit-border-width) solid var(--bit-color0);
+  border-right-color: var(--bit-color0);
+  border-bottom-color: var(--bit-color0);
   box-shadow: inset 0 var(--bit-border-width) 0
     var(--bit-color2, var(--bit-color0));
   border-radius: var(--bit-border-radius);
@@ -438,7 +436,7 @@
 .bit-input:disabled {
   opacity: 0.5;
   box-shadow: none;
-  border-color: var(--bit-color2, var(--bit-color0));
+  border-color: var(--bit-color0);
   border-style: dotted;
 }
 
@@ -472,7 +470,7 @@
 
 .bit-auto fieldset,
 .bit-fieldset {
-  border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border: var(--bit-border-width) solid var(--bit-color0);
   padding: var(--bit-fieldset-padding-vertical)
     var(--bit-fieldset-padding-horizontal);
   margin: 0;
@@ -480,7 +478,7 @@
 
 .bit-auto legend,
 .bit-legend {
-  border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  border: var(--bit-border-width) solid var(--bit-color0);
   padding: var(--bit-legend-padding-vertical)
     var(--bit-legend-padding-horizontal);
   margin: 0;
@@ -503,8 +501,7 @@
   box-sizing: border-box;
   background: var(--bit-color1);
   color: var(--bit-color0);
-  border: calc(3 * var(--bit-border-width)) double
-    var(--bit-color2, var(--bit-color0));
+  border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
   padding: var(--bit-card-padding-vertical) var(--bit-card-padding-horizontal);
   box-shadow: inset 0 var(--bit-border-width) 0 0
       var(--bit-color2, var(--bit-color0)),
@@ -514,7 +511,7 @@
 
 .bit-auto,
 .bit-scrollbar {
-  scrollbar-color: var(--bit-color2, var(--bit-color0)) var(--bit-color1);
+  scrollbar-color: var(--bit-color0) var(--bit-color1);
 }
 
 .bit-svg {
@@ -535,7 +532,8 @@
 .bit-hr {
   box-sizing: border-box;
   border: 0;
-  border-top: var(--bit-border-width) dotted var(--bit-color0);
+  border-top: var(--bit-border-width) dotted
+    var(--bit-color2, var(--bit-color0));
 }
 
 .bit-auto pre,
