@@ -1,3 +1,7 @@
+# v0.17.0
+
+- Added 2bit mode (`--bit-color2` and `--bit-color3`)
+
 # v0.16.0
 
 - Added `.bit-fieldset` and `.bit-legend`

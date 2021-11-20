@@ -1,0 +1,3 @@
+- Fix hover border colors to be color3 when possible
+- Document 2bit mode
+- Fix code snippet generator on the home page
