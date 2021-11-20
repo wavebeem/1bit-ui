@@ -100,7 +100,6 @@
 .bit-auto input[type="radio"]:hover,
 .bit-checkbox:hover,
 .bit-radio:hover {
-  border-color: var(--bit-color0);
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
@@ -126,7 +125,6 @@
 .bit-auto input[type="radio"]:checked:hover,
 .bit-checkbox:checked:hover,
 .bit-radio:checked:hover {
-  border-color: var(--bit-color0);
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
@@ -218,7 +216,6 @@
 .bit-auto input[type="submit"]:hover,
 .bit-auto input[type="color"]:hover,
 .bit-button:hover {
-  border-color: var(--bit-color0);
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
@@ -281,7 +278,6 @@
 
 .bit-auto select:hover,
 .bit-select:hover {
-  border-color: var(--bit-color0);
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color1),
@@ -340,7 +336,6 @@
 .bit-auto a:hover,
 .bit-link:hover {
   border-radius: var(--bit-border-radius);
-  color: var(--bit-color0);
   background: var(--bit-color1);
   text-decoration: none;
   outline: var(--bit-border-width) solid var(--bit-color0);
@@ -390,7 +385,6 @@
 .bit-auto input[type="password"]:hover,
 .bit-auto textarea:hover,
 .bit-input:hover {
-  border-color: var(--bit-color0);
   box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
