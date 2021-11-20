@@ -1,6 +1,5 @@
 # v0.17.0
 
-- Added 2bit mode (`--bit-color2` and `--bit-color3`)
 - Auto mode now sets `display: block` on `label` tags, not `flex`
 
 # v0.16.0

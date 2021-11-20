@@ -92,7 +92,7 @@
   height: var(--bit-radiocheckbox-size);
   margin: calc(2 * var(--bit-border-width));
   background: var(--bit-color1);
-  color: var(--bit-color3, var(--bit-color0));
+  color: var(--bit-color0);
   border: var(--bit-border-width) solid var(--bit-color0);
 }
 
@@ -100,9 +100,8 @@
 .bit-auto input[type="radio"]:hover,
 .bit-checkbox:hover,
 .bit-radio:hover {
-  border-color: var(--bit-color3, var(--bit-color0));
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-    var(--bit-color3, var(--bit-color0));
+  border-color: var(--bit-color0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-auto input[type="checkbox"]:focus,
@@ -111,7 +110,7 @@
 .bit-radio:focus {
   outline: 0;
   box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color3, var(--bit-color0)),
+    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0),
     inset 0 0 0 var(--bit-border-width) var(--bit-color1);
 }
 
@@ -119,7 +118,7 @@
 .bit-auto input[type="radio"]:checked,
 .bit-checkbox:checked,
 .bit-radio:checked {
-  background: var(--bit-color3, var(--bit-color0));
+  background: var(--bit-color0);
   box-shadow: inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
@@ -127,9 +126,8 @@
 .bit-auto input[type="radio"]:checked:hover,
 .bit-checkbox:checked:hover,
 .bit-radio:checked:hover {
-  border-color: var(--bit-color3, var(--bit-color0));
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-      var(--bit-color3, var(--bit-color0)),
+  border-color: var(--bit-color0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
@@ -138,7 +136,7 @@
 .bit-checkbox:checked:focus,
 .bit-radio:checked:focus {
   box-shadow: 0 0 0 var(--bit-border-width) var(--bit-color1),
-    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color3, var(--bit-color0)),
+    0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color0),
     inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
@@ -211,8 +209,7 @@
     var(--bit-button-padding-horizontal);
   font: inherit;
   border: var(--bit-border-width) solid var(--bit-color0);
-  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0
-    var(--bit-color2, var(--bit-color0));
+  box-shadow: inset 0 calc(-1 * var(--bit-border-width)) 0 var(--bit-color0);
   border-radius: var(--bit-border-radius);
 }
 
@@ -221,9 +218,8 @@
 .bit-auto input[type="submit"]:hover,
 .bit-auto input[type="color"]:hover,
 .bit-button:hover {
-  border-color: var(--bit-color3, var(--bit-color0));
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-    var(--bit-color3, var(--bit-color0));
+  border-color: var(--bit-color0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-auto button:active,
@@ -241,11 +237,9 @@
 .bit-button:focus {
   outline: none;
   border-color: var(--bit-color1);
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-      var(--bit-color3, var(--bit-color0)),
-    0 0 0 var(--bit-border-width) var(--bit-color3, var(--bit-color0)),
-    inset 0 calc(-2 * var(--bit-border-width)) 0
-      var(--bit-color3, var(--bit-color0));
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 calc(-2 * var(--bit-border-width)) 0 var(--bit-color0);
 }
 
 .bit-auto button:disabled,
@@ -287,14 +281,12 @@
 
 .bit-auto select:hover,
 .bit-select:hover {
-  border-color: var(--bit-color3, var(--bit-color0));
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-      var(--bit-color3, var(--bit-color0)),
+  border-color: var(--bit-color0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset calc(-2 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0
-      var(--bit-color3, var(--bit-color0)),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
       0 0 var(--bit-color1);
@@ -304,17 +296,15 @@
 .bit-select:focus {
   outline: none;
   border-color: var(--bit-color1);
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-      var(--bit-color3, var(--bit-color0)),
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
     inset 0 calc(-2 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset 0 calc(2 * var(--bit-border-width)) 0 0 var(--bit-color1),
     inset calc(-2 * var(--bit-border-width)) 0 0 0 var(--bit-color1),
-    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0
-      var(--bit-color3, var(--bit-color0)),
+    inset calc(-1 * var(--bit-select-handle-width)) 0 0 0 var(--bit-color0),
     inset
       calc(-1 * var(--bit-select-handle-width) + -1 * var(--bit-border-width)) 0
       0 0 var(--bit-color1),
-    0 0 0 var(--bit-border-width) var(--bit-color3, var(--bit-color0));
+    0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-auto select:-moz-focusring,
@@ -341,7 +331,7 @@
 
 .bit-auto a,
 .bit-link {
-  color: var(--bit-color3, var(--bit-color0));
+  color: var(--bit-color0);
   text-decoration: underline;
   border-radius: var(--bit-border-radius);
   text-decoration-thickness: var(--bit-underline-thickness);
@@ -350,22 +340,21 @@
 .bit-auto a:hover,
 .bit-link:hover {
   border-radius: var(--bit-border-radius);
-  color: var(--bit-color3, var(--bit-color0));
+  color: var(--bit-color0);
   background: var(--bit-color1);
   text-decoration: none;
-  outline: var(--bit-border-width) solid var(--bit-color3, var(--bit-color0));
+  outline: var(--bit-border-width) solid var(--bit-color0);
   outline-offset: var(--bit-border-width);
 }
 
 .bit-auto a:focus,
 .bit-link:focus {
   border-radius: var(--bit-border-radius);
-  background: var(--bit-color3, var(--bit-color0));
+  background: var(--bit-color0);
   color: var(--bit-color1);
   text-decoration: none;
   outline: none;
-  outline: calc(3 * var(--bit-border-width)) double
-    var(--bit-color3, var(--bit-color0));
+  outline: calc(3 * var(--bit-border-width)) double var(--bit-color0);
   outline-offset: 0;
 }
 
@@ -388,8 +377,7 @@
   border: var(--bit-border-width) solid var(--bit-color0);
   border-right-color: var(--bit-color0);
   border-bottom-color: var(--bit-color0);
-  box-shadow: inset 0 var(--bit-border-width) 0
-    var(--bit-color2, var(--bit-color0));
+  box-shadow: inset 0 var(--bit-border-width) 0 var(--bit-color0);
   border-radius: var(--bit-border-radius);
 }
 
@@ -402,9 +390,8 @@
 .bit-auto input[type="password"]:hover,
 .bit-auto textarea:hover,
 .bit-input:hover {
-  border-color: var(--bit-color3, var(--bit-color0));
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-    var(--bit-color3, var(--bit-color0));
+  border-color: var(--bit-color0);
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0);
 }
 
 .bit-auto input[type="tel"]:focus,
@@ -418,11 +405,9 @@
 .bit-input:focus {
   outline: none;
   border-color: var(--bit-color1);
-  box-shadow: inset 0 0 0 var(--bit-border-width)
-      var(--bit-color3, var(--bit-color0)),
-    0 0 0 var(--bit-border-width) var(--bit-color3, var(--bit-color0)),
-    inset 0 calc(2 * var(--bit-border-width)) 0
-      var(--bit-color3, var(--bit-color0));
+  box-shadow: inset 0 0 0 var(--bit-border-width) var(--bit-color0),
+    0 0 0 var(--bit-border-width) var(--bit-color0),
+    inset 0 calc(2 * var(--bit-border-width)) 0 var(--bit-color0);
 }
 
 .bit-auto input[type="tel"]:disabled,
@@ -503,9 +488,8 @@
   color: var(--bit-color0);
   border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
   padding: var(--bit-card-padding-vertical) var(--bit-card-padding-horizontal);
-  box-shadow: inset 0 var(--bit-border-width) 0 0
-      var(--bit-color2, var(--bit-color0)),
-    0 var(--bit-border-width) 0 0 var(--bit-color2, var(--bit-color0));
+  box-shadow: inset 0 var(--bit-border-width) 0 0 var(--bit-color0),
+    0 var(--bit-border-width) 0 0 var(--bit-color0);
   border-radius: var(--bit-border-radius);
 }
 
@@ -532,8 +516,7 @@
 .bit-hr {
   box-sizing: border-box;
   border: 0;
-  border-top: var(--bit-border-width) dotted
-    var(--bit-color2, var(--bit-color0));
+  border-top: var(--bit-border-width) dotted var(--bit-color0);
 }
 
 .bit-auto pre,

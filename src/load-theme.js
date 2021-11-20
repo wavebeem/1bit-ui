@@ -1,16 +1,12 @@
-const css = String.raw;
 const userTheme = localStorage.getItem("user-theme");
 if (userTheme) {
-  const { color0, color1, color2 = color0, color3 = color0 } = JSON.parse(
-    userTheme
-  );
-  const colors = [color0, color1, color2, color3].filter((x) => x);
-  const properties = colors
+  const { color0, color1 } = JSON.parse(userTheme);
+  const properties = [color0, color1]
     .map((c, i) => {
       return `--bit-color${i}: ${c};`;
     })
     .join("\n");
-  const content = css`
+  const content = `
     .bit-root,
     .bit-auto {
       ${properties}
@@ -23,8 +19,6 @@ if (userTheme) {
   for (const button of switchers) {
     button.disabled =
       button.dataset.bitTheme0 === color0 &&
-      button.dataset.bitTheme1 === color1 &&
-      button.dataset.bitTheme2 === color2 &&
-      button.dataset.bitTheme3 === color3;
+      button.dataset.bitTheme1 === color1;
   }
 }
