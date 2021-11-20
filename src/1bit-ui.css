@@ -344,9 +344,10 @@
 .bit-auto a:hover,
 .bit-link:hover {
   border-radius: var(--bit-border-radius);
+  color: var(--bit-color0);
   background: var(--bit-color1);
   text-decoration: none;
-  outline: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
+  outline: var(--bit-border-width) solid var(--bit-color0);
   outline-offset: var(--bit-border-width);
 }
 
