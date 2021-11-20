@@ -290,6 +290,15 @@ you may have about two sentences more than you need. SK -->
     </p>
     <inject-example class="site-example" data-example="round"></inject-example>
 
+    <h2 id="round">2bit Mode</h2>
+    <p>
+      Nostalgic for the Game Boy? By defining <code>--bit-color2</code> (border color) and <code>--bit-color3</code> (accent color), you can use up to 4 colors with 1bit-ui. Yeah, it's not 1bit any more, but it looks great.
+    </p>
+    <p>
+      <b>NOTE:</b> 1bit-ui uses <code>var</code> fallback syntax to default <code>--bit-color2</code> and <code>--bit-color3</code> to <code>--bit-color0</code> when not defined. This means that if you do ever redefine <code>--bit-color0</code>, you'll want to set <code>--bit-color2</code> and <code>--bit-color3</code> also. Or else your palettes will get mixed together.
+    </p>
+    <inject-example class="site-example" data-example="2bit"></inject-example>
+
     <h2 id="auto-mode">Auto Mode</h2>
 
     <p>
@@ -509,6 +518,41 @@ console.log("Hello, world!");</pre
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
+      </div>
+    </template>
+
+
+    <template id="template-2bit">
+      <div style="--bit-color0: #eee; --bit-color1: #222; --bit-color2: #888; --bit-color3: #00ffff;" class="bit-card site-columns-auto">
+        <button class="bit-button">OK</button>
+        <button class="bit-button">Cancel</button>
+        <input class="bit-input" placeholder="Input" />
+        <select class="bit-select">
+          <option selected disabled>Select</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <a class="bit-link">Example link #1</a>
+        <a class="bit-link">Example link #2</a>
+        <a class="bit-link">Example link #3</a>
+        <a class="bit-link">Example link #4</a>
+        <label class="bit-field">
+          <input class="bit-checkbox" type="checkbox" checked />
+          <span>Checkbox</span>
+        </label>
+        <label class="bit-field">
+          <input class="bit-checkbox" type="checkbox" />
+          <span>Checkbox</span>
+        </label>
+        <label class="bit-field">
+          <input class="bit-radio" type="radio" checked />
+          <span>Radio</span>
+        </label>
+        <label class="bit-field">
+          <input class="bit-radio" type="radio" />
+          <span>Radio</span>
+        </label>
       </div>
     </template>
 
