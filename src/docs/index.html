@@ -292,10 +292,17 @@ you may have about two sentences more than you need. SK -->
 
     <h2 id="round">2bit Mode</h2>
     <p>
-      Nostalgic for the Game Boy? By defining <code>--bit-color2</code> (border color) and <code>--bit-color3</code> (accent color), you can use up to 4 colors with 1bit-ui. Yeah, it's not 1bit any more, but it looks great.
+      Nostalgic for the Game Boy? By defining <code>--bit-color2</code> (border
+      color) and <code>--bit-color3</code> (accent color), you can use up to 4
+      colors with 1bit-ui. Yeah, it's not 1bit any more, but it looks great.
     </p>
     <p>
-      <b>NOTE:</b> 1bit-ui uses <code>var</code> fallback syntax to default <code>--bit-color2</code> and <code>--bit-color3</code> to <code>--bit-color0</code> when not defined. This means that if you do ever redefine <code>--bit-color0</code>, you'll want to set <code>--bit-color2</code> and <code>--bit-color3</code> also. Or else your palettes will get mixed together.
+      <b>NOTE:</b> 1bit-ui uses <code>var</code> fallback syntax to default
+      <code>--bit-color2</code> and <code>--bit-color3</code> to
+      <code>--bit-color0</code> when not defined. This means that if you do ever
+      redefine <code>--bit-color0</code>, you'll want to set
+      <code>--bit-color2</code> and <code>--bit-color3</code> also. Or else your
+      palettes will get mixed together.
     </p>
     <inject-example class="site-example" data-example="2bit"></inject-example>
 
@@ -416,19 +423,19 @@ you may have about two sentences more than you need. SK -->
           </label>
           <label>
             <input type="checkbox" />
-            <span>Unchecked checkbox</label>
+            <span>Unchecked checkbox</span>
           </label>
           <label>
             <input type="checkbox" />
             <span
-              >Checkbox with<br />line that wraps<br />because it's long</label
+              >Checkbox with<br />line that wraps<br />because it's long</span
             >
           </label>
           <label>
             <input type="checkbox" />
-            <div
+            <span
               >Checkbox with<br />line that wraps<br />because it's long<br />and
-              no HMTL ID</div
+              no HMTL ID</span
             >
           </label>
           <div>
@@ -443,25 +450,15 @@ you may have about two sentences more than you need. SK -->
           <hr />
           <br />
           <label>
-            <input
-              type="radio"
-              checked
-              name="auto-b"
-              value="auto-b1"
-            />
+            <input type="radio" checked name="auto-b" value="auto-b1" />
             <span>Checked radio button</span>
           </label>
           <label>
-            <input type="radio"name="auto-b" value="auto-b2" />
+            <input type="radio" name="auto-b" value="auto-b2" />
             <span>Unchecked radio button</span>
           </label>
           <label>
-            <input
-              type="radio"
-              disabled
-              name="auto-b"
-              value="auto-b3"
-            />
+            <input type="radio" disabled name="auto-b" value="auto-b3" />
             <span>Disabled radio button</span>
           </label>
           <br />
@@ -483,9 +480,9 @@ console.log("Hello, world!");</pre
     </template>
 
     <template id="template-link">
-        <custom-properties-editor
-      data-properties="--bit-underline-thickness"
-    ></custom-properties-editor>
+      <custom-properties-editor
+        data-properties="--bit-underline-thickness"
+      ></custom-properties-editor>
       <p>
         This is an
         <a href="#" class="bit-link">example link</a>
@@ -521,9 +518,16 @@ console.log("Hello, world!");</pre
       </div>
     </template>
 
-
     <template id="template-2bit">
-      <div style="--bit-color0: #eee; --bit-color1: #222; --bit-color2: #888; --bit-color3: #00ffff;" class="bit-card site-columns-auto">
+      <div
+        style="
+          --bit-color0: #eee;
+          --bit-color1: #222;
+          --bit-color2: #888;
+          --bit-color3: #00ffff;
+        "
+        class="bit-card site-columns-auto"
+      >
         <button class="bit-button">OK</button>
         <button class="bit-button">Cancel</button>
         <input class="bit-input" placeholder="Input" />
