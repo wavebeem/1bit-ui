@@ -50,7 +50,7 @@
 }
 
 .bit-auto label {
-  display: flex;
+  display: block;
 }
 
 .bit-auto label > input[type="radio"] + *,

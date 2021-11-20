@@ -292,17 +292,23 @@ you may have about two sentences more than you need. SK -->
 
     <h2 id="round">2bit Mode</h2>
     <p>
-      Nostalgic for the Game Boy? By defining <code>--bit-color2</code> (border
-      color) and <code>--bit-color3</code> (accent color), you can use up to 4
-      colors with 1bit-ui. Yeah, it's not 1bit any more, but it looks great.
+      Nostalgic for the Game Boy? By defining
+      <code class="bit-code">--bit-color2</code> (border color) and
+      <code class="bit-code">--bit-color3</code> (accent color), you can use up
+      to 4 colors with 1bit-ui. Yeah, it's not 1bit any more, but it looks
+      great.
     </p>
     <p>
-      <b>NOTE:</b> 1bit-ui uses <code>var</code> fallback syntax to default
-      <code>--bit-color2</code> and <code>--bit-color3</code> to
-      <code>--bit-color0</code> when not defined. This means that if you do ever
-      redefine <code>--bit-color0</code>, you'll want to set
-      <code>--bit-color2</code> and <code>--bit-color3</code> also. Or else your
-      palettes will get mixed together.
+      <b>NOTE:</b> 1bit-ui uses
+      <code class="bit-code">var(--bit-color2, var(--bit-color0))</code> and
+      <code class="bit-code">var(--bit-color3, var(--bit-color0))</code>
+      to default <code class="bit-code">--bit-color2</code> and
+      <code class="bit-code">--bit-color3</code> to
+      <code class="bit-code">--bit-color0</code> when not defined. This means
+      that if you do ever define <code class="bit-code">--bit-color0</code>,
+      you'll want to set <code class="bit-code">--bit-color2</code> and
+      <code class="bit-code">--bit-color3</code> also. Or else your palettes
+      will get mixed together.
     </p>
     <inject-example class="site-example" data-example="2bit"></inject-example>
 
@@ -337,17 +343,15 @@ you may have about two sentences more than you need. SK -->
         <br />
         <hr />
         <br />
-        <div>
-          <label>Input</label>
-        </div>
-        <input type="text" value="input tag" />
+        <label>
+          <div>Input</div>
+          <input type="text" value="Example text here" />
+        </label>
         <br />
-        <br />
-        <div>
-          <label>Text area</label>
-        </div>
-        <textarea>Example text here</textarea>
-        <br />
+        <label>
+          <div>Text area</div>
+          <textarea>Example text here</textarea>
+        </label>
         <br />
         <hr />
         <br />
@@ -403,16 +407,15 @@ you may have about two sentences more than you need. SK -->
         <br />
         <hr />
         <br />
-        <div>
-          <label>Select</label>
-        </div>
-        <select>
-          <option disabled selected>&ndash;</option>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        <br />
+        <label>
+          <span>Select</span>
+          <select>
+            <option disabled selected>&ndash;</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </label>
         <br />
         <hr />
         <br />
