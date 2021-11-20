@@ -402,63 +402,60 @@ you may have about two sentences more than you need. SK -->
         <hr />
         <br />
         <div>
-          <div>
-            <input type="checkbox" checked id="auto-a1" />
-            <label for="auto-a1">Checked checkbox</label>
-          </div>
-          <div>
-            <input type="checkbox" id="auto-a2" />
-            <label for="auto-a2">Unchecked checkbox</label>
-          </div>
-          <div>
-            <input type="checkbox" id="auto-a3" />
-            <label for="auto-a3"
-              >Checkbox with<br />line that wraps<br />because it's long</label
-            >
-          </div>
+          <label>
+            <input type="checkbox" checked />
+            <span>Checked checkbox</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span>Unchecked checkbox</label>
+          </label>
           <label>
             <input type="checkbox" />
             <span
-              >Checkbox with<br />line that wraps<br />because it's long<br />and
-              no HMTL ID</span
+              >Checkbox with<br />line that wraps<br />because it's long</label
             >
           </label>
           <label>
             <input type="checkbox" />
-            <!-- <span>Checkbox with no HTML ID</span> -->
-            <span>Checkbox with no HTML ID</span>
+            <div
+              >Checkbox with<br />line that wraps<br />because it's long<br />and
+              no HMTL ID</div
+            >
           </label>
           <div>
-            <input type="checkbox" disabled id="auto-a4" />
-            <label for="auto-a4">Disabled checkbox</label>
+            <input type="checkbox" />
+            <label>Checkbox label sibling</label>
           </div>
+          <label>
+            <input type="checkbox" disabled />
+            <span>Disabled checkbox</span>
+          </label>
           <br />
           <hr />
           <br />
-          <div>
+          <label>
             <input
               type="radio"
               checked
-              id="auto-b1"
               name="auto-b"
               value="auto-b1"
             />
-            <label for="auto-b1">Checked radio button</label>
-          </div>
-          <div>
-            <input type="radio" id="auto-b2" name="auto-b" value="auto-b2" />
-            <label for="auto-b2">Unchecked radio button</label>
-          </div>
-          <div>
+            <span>Checked radio button</span>
+          </label>
+          <label>
+            <input type="radio"name="auto-b" value="auto-b2" />
+            <span>Unchecked radio button</span>
+          </label>
+          <label>
             <input
               type="radio"
               disabled
-              id="auto-b3"
               name="auto-b"
               value="auto-b3"
             />
-            <label for="auto-b3">Disabled radio button</label>
-          </div>
+            <span>Disabled radio button</span>
+          </label>
           <br />
           <hr />
           <br />
