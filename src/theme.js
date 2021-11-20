@@ -35,18 +35,21 @@ class ThemeSwitchersElement extends HTMLElement {
 customElements.define("theme-switchers", ThemeSwitchersElement);
 
 function updateThemeExample(color0, color1, color2, color3) {
+  if (color2 === color0 && color3 === color0) {
+    color2 = "";
+    color3 = "";
+  }
   const colors = [color0, color1, color2, color3].filter((x) => x);
   const properties = colors
     .map((c, i) => {
-      return `--bit-color${i}: ${c};`;
+      return `  --bit-color${i}: ${c};`;
     })
     .join("\n");
-  document.querySelector("#theme-example").textContent = css`
-    .bit-root,
-    .bit-auto {
-      ${properties}
-    }
-  `;
+  document.querySelector("#theme-example").textContent = `\
+.bit-root,
+.bit-auto {
+${properties}
+}`;
 }
 
 function getTheme() {
