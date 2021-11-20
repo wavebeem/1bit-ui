@@ -12,6 +12,10 @@
   --bit-table-padding-vertical: 0.5rem;
   --bit-card-padding-horizontal: 1rem;
   --bit-card-padding-vertical: 1rem;
+  --bit-fieldset-padding-horizontal: 0.5rem;
+  --bit-fieldset-padding-vertical: 0.5rem;
+  --bit-legend-padding-horizontal: 0.5rem;
+  --bit-legend-padding-vertical: 0rem;
   --bit-pre-padding-horizontal: 1rem;
   --bit-pre-padding-vertical: 1rem;
   --bit-code-padding-horizontal: 0.2em;
@@ -436,6 +440,24 @@
 .bit-input::selection {
   background: var(--bit-color0);
   color: var(--bit-color1);
+}
+
+/* Fieldset and legend */
+
+.bit-auto fieldset,
+.bit-fieldset {
+  border: var(--bit-border-width) solid var(--bit-color0);
+  padding: var(--bit-fieldset-padding-vertical)
+    var(--bit-fieldset-padding-horizontal);
+  margin: 0;
+}
+
+.bit-auto legend,
+.bit-legend {
+  border: var(--bit-border-width) solid var(--bit-color0);
+  padding: var(--bit-legend-padding-vertical)
+    var(--bit-legend-padding-horizontal);
+  margin: 0;
 }
 
 /* Firefox nonsense */

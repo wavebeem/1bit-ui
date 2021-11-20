@@ -1,3 +1,7 @@
+# v0.16.0
+
+- Added `.bit-fieldset` and `.bit-legend`
+
 # v0.15.0
 
 - Focused links use a double outline instead of outline offset, to give more

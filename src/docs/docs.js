@@ -1,8 +1,5 @@
 function htmlToCode(code) {
-  const lines = code
-    .replace(/^\n*/, "")
-    .replace(/\s+$/, "")
-    .split("\n");
+  const lines = code.replace(/^\n*/, "").replace(/\s+$/, "").split("\n");
   const match = lines[0].match(/^[ ]*/);
   if (match) {
     // TODO: This is dangerous; we should only remove an equivalent amount
@@ -42,6 +39,10 @@ const keys = [
   "--bit-input-padding-vertical",
   "--bit-table-padding-horizontal",
   "--bit-table-padding-vertical",
+  "--bit-fieldset-padding-horizontal",
+  "--bit-fieldset-padding-vertical",
+  "--bit-legend-padding-horizontal",
+  "--bit-legend-padding-vertical",
   "--bit-card-padding-horizontal",
   "--bit-card-padding-vertical",
   "--bit-pre-padding-horizontal",
@@ -51,7 +52,7 @@ const keys = [
   "--bit-radiocheckbox-size",
   "--bit-border-width",
   "--bit-border-radius",
-  "--bit-select-handle-width"
+  "--bit-select-handle-width",
 ];
 
 for (const key of keys) {
@@ -97,7 +98,7 @@ class CustomPropertiesEditorElement extends HTMLElement {
     const properties = (this.dataset.properties || "")
       .trim()
       .split(/\s+/)
-      .filter(x => x);
+      .filter((x) => x);
     this.classList.add("bit-card", "site-property-editor");
     const title = document.createElement("h3");
     title.className = "site-property-editor-title";
@@ -114,7 +115,7 @@ class CustomPropertiesEditorElement extends HTMLElement {
       input.placeholder = baseCustomProperties[prop];
       input.addEventListener(
         "input",
-        event => {
+        (event) => {
           bitRoot.style.setProperty(prop, event.target.value);
         },
         false

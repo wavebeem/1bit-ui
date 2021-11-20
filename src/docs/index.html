@@ -40,10 +40,6 @@
     </nav>
     <table-of-contents></table-of-contents>
 
-    <!-- I think it might be valuable to put some or all of the example buttons at
-the top of this page or change the custom properties to dropdowns. Funky stuff
-happens when you start typing in those fields. SK -->
-
     <h2>Introduction</h2>
 
     <p>
@@ -183,6 +179,17 @@ you may have about two sentences more than you need. SK -->
       data-example="card"
     ></inject-example>
 
+    <h2 id="fieldsets">Fieldsets</h2>
+    <inject-example
+      data-properties="
+        --bit-fieldset-padding-horizontal
+        --bit-fieldset-padding-vertical
+        --bit-legend-padding-horizontal
+        --bit-legend-padding-vertical
+      "
+      data-example="fieldsetLegend"
+    ></inject-example>
+
     <h2 id="svg">Inline SVG</h2>
     <p>
       Using the CSS class <code class="bit-code">bit-svg</code> will set the
@@ -302,7 +309,7 @@ you may have about two sentences more than you need. SK -->
 
     <footer>
       &copy; 2020
-      <a href="https://www.mockbrian.com" class="bit-link">Brian Mock</a>
+      <a href="https://www.wavebeem.com" class="bit-link">Brian Mock</a>
     </footer>
 
     <template id="template-auto">
@@ -322,6 +329,29 @@ you may have about two sentences more than you need. SK -->
           <label>Text Area</label>
         </div>
         <textarea>Example text here</textarea>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <fieldset>
+          <legend>Pizza toppings</legend>
+          <label>
+            <input type="checkbox" />
+            <span>Pineapple</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span>Mushroom</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span>Olives</span>
+          </label>
+          <label>
+            <input type="checkbox" disabled />
+            <span>Disabled</span>
+          </label>
+        </fieldset>
         <br />
         <br />
         <hr />
@@ -922,6 +952,54 @@ Disabled.</textarea
           </tfoot>
         </table>
       </div>
+    </template>
+
+    <template id="template-fieldsetLegend">
+      <fieldset class="bit-fieldset">
+        <legend class="bit-legend">Pizza Toppings</legend>
+        <div class="bit-field">
+          <input
+            checked
+            type="checkbox"
+            class="bit-checkbox"
+            name="small-pizza"
+            value="cat"
+            id="small-pizza-pineapple"
+          />
+          <label for="small-pizza-pineapple">Pineapple</label>
+        </div>
+        <div class="bit-field">
+          <input
+            type="checkbox"
+            class="bit-checkbox"
+            name="small-pizza"
+            value="dog"
+            id="small-pizza-mushroom"
+          />
+          <label for="small-pizza-mushroom">Mushroom</label>
+        </div>
+        <div class="bit-field">
+          <input
+            type="checkbox"
+            class="bit-checkbox"
+            name="small-pizza"
+            value="Other"
+            id="small-pizza-olives"
+          />
+          <label for="small-pizza-olives">Olives</label>
+        </div>
+        <div class="bit-field">
+          <input
+            type="checkbox"
+            class="bit-checkbox"
+            name="small-pizza"
+            value="Disabled"
+            id="small-pizza-disabled"
+            disabled
+          />
+          <label for="small-pizza-disabled">Disabled</label>
+        </div>
+      </fieldset>
     </template>
 
     <template id="template-card">
