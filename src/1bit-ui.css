@@ -22,6 +22,7 @@
   --bit-code-padding-vertical: 0.1em;
   --bit-radiocheckbox-size: 1.5em;
   --bit-border-width: 2px;
+  --bit-underline-thickness: 2px;
   --bit-border-radius: 0px;
   --bit-select-handle-width: 1em;
   background: var(--bit-color1);
@@ -49,7 +50,7 @@
 }
 
 .bit-auto label {
-  display: flex;
+  display: block;
 }
 
 .bit-auto label > input[type="radio"] + *,
@@ -329,7 +330,7 @@
   color: var(--bit-color0);
   text-decoration: underline;
   border-radius: var(--bit-border-radius);
-  text-decoration-thickness: var(--bit-border-width);
+  text-decoration-thickness: var(--bit-underline-thickness);
 }
 
 .bit-auto a:hover,

@@ -1,12 +1,15 @@
-const css = String.raw;
 const userTheme = localStorage.getItem("user-theme");
 if (userTheme) {
   const { color0, color1 } = JSON.parse(userTheme);
-  const content = css`
+  const properties = [color0, color1]
+    .map((c, i) => {
+      return `--bit-color${i}: ${c};`;
+    })
+    .join("\n");
+  const content = `
     .bit-root,
     .bit-auto {
-      --bit-color0: ${color0};
-      --bit-color1: ${color1};
+      ${properties}
     }
   `;
   const sheet = document.createElement("style");

@@ -319,22 +319,20 @@ you may have about two sentences more than you need. SK -->
         <br />
         <hr />
         <br />
-        <div>
-          <label>Input</label>
-        </div>
-        <input type="text" value="input tag" />
+        <label>
+          <div>Input</div>
+          <input type="text" value="Example text here" />
+        </label>
         <br />
-        <br />
-        <div>
-          <label>Text Area</label>
-        </div>
-        <textarea>Example text here</textarea>
-        <br />
+        <label>
+          <div>Text area</div>
+          <textarea>Example text here</textarea>
+        </label>
         <br />
         <hr />
         <br />
         <fieldset>
-          <legend>Pizza toppings</legend>
+          <legend>Fieldset &amp; legend</legend>
           <label>
             <input type="checkbox" />
             <span>Pineapple</span>
@@ -385,34 +383,33 @@ you may have about two sentences more than you need. SK -->
         <br />
         <hr />
         <br />
-        <div>
-          <label>Select</label>
-        </div>
-        <select>
-          <option disabled selected>&ndash;</option>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        <br />
+        <label>
+          <span>Select</span>
+          <select>
+            <option disabled selected>&ndash;</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </label>
         <br />
         <hr />
         <br />
         <div>
-          <div>
-            <input type="checkbox" checked id="auto-a1" />
-            <label for="auto-a1">Checked checkbox</label>
-          </div>
-          <div>
-            <input type="checkbox" id="auto-a2" />
-            <label for="auto-a2">Unchecked checkbox</label>
-          </div>
-          <div>
-            <input type="checkbox" id="auto-a3" />
-            <label for="auto-a3"
-              >Checkbox with<br />line that wraps<br />because it's long</label
+          <label>
+            <input type="checkbox" checked />
+            <span>Checked checkbox</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span>Unchecked checkbox</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span
+              >Checkbox with<br />line that wraps<br />because it's long</span
             >
-          </div>
+          </label>
           <label>
             <input type="checkbox" />
             <span
@@ -420,42 +417,29 @@ you may have about two sentences more than you need. SK -->
               no HMTL ID</span
             >
           </label>
-          <label>
-            <input type="checkbox" />
-            <!-- <span>Checkbox with no HTML ID</span> -->
-            <span>Checkbox with no HTML ID</span>
-          </label>
           <div>
-            <input type="checkbox" disabled id="auto-a4" />
-            <label for="auto-a4">Disabled checkbox</label>
+            <input type="checkbox" />
+            <label>Checkbox label sibling</label>
           </div>
+          <label>
+            <input type="checkbox" disabled />
+            <span>Disabled checkbox</span>
+          </label>
           <br />
           <hr />
           <br />
-          <div>
-            <input
-              type="radio"
-              checked
-              id="auto-b1"
-              name="auto-b"
-              value="auto-b1"
-            />
-            <label for="auto-b1">Checked radio button</label>
-          </div>
-          <div>
-            <input type="radio" id="auto-b2" name="auto-b" value="auto-b2" />
-            <label for="auto-b2">Unchecked radio button</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              disabled
-              id="auto-b3"
-              name="auto-b"
-              value="auto-b3"
-            />
-            <label for="auto-b3">Disabled radio button</label>
-          </div>
+          <label>
+            <input type="radio" checked name="auto-b" value="auto-b1" />
+            <span>Checked radio button</span>
+          </label>
+          <label>
+            <input type="radio" name="auto-b" value="auto-b2" />
+            <span>Unchecked radio button</span>
+          </label>
+          <label>
+            <input type="radio" disabled name="auto-b" value="auto-b3" />
+            <span>Disabled radio button</span>
+          </label>
           <br />
           <hr />
           <br />
@@ -475,6 +459,9 @@ console.log("Hello, world!");</pre
     </template>
 
     <template id="template-link">
+      <custom-properties-editor
+        data-properties="--bit-underline-thickness"
+      ></custom-properties-editor>
       <p>
         This is an
         <a href="#" class="bit-link">example link</a>

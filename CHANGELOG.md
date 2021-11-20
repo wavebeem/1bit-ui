@@ -1,3 +1,8 @@
+# v0.17.0
+
+- Auto mode now sets `display: block` on `label` tags, not `flex`
+- Added `--bit-underline-thickness` property
+
 # v0.16.0
 
 - Added `.bit-fieldset` and `.bit-legend`
