@@ -22,6 +22,7 @@
   --bit-code-padding-vertical: 0.1em;
   --bit-radiocheckbox-size: 1.5em;
   --bit-border-width: 2px;
+  --bit-underline-thickness: 2px;
   --bit-border-radius: 0px;
   --bit-select-handle-width: 1em;
   background: var(--bit-color1);
@@ -91,7 +92,7 @@
   height: var(--bit-radiocheckbox-size);
   margin: calc(2 * var(--bit-border-width));
   background: var(--bit-color1);
-  color: var(--bit-color0);
+  color: var(--bit-color3, var(--bit-color0));
   border: var(--bit-border-width) solid var(--bit-color2, var(--bit-color0));
 }
 
@@ -116,7 +117,7 @@
 .bit-auto input[type="radio"]:checked,
 .bit-checkbox:checked,
 .bit-radio:checked {
-  background: var(--bit-color0);
+  background: var(--bit-color3, var(--bit-color0));
   box-shadow: inset 0 0 0 calc(2 * var(--bit-border-width)) var(--bit-color1);
 }
 
@@ -338,7 +339,7 @@
   color: var(--bit-color3, var(--bit-color0));
   text-decoration: underline;
   border-radius: var(--bit-border-radius);
-  text-decoration-thickness: var(--bit-border-width);
+  text-decoration-thickness: var(--bit-underline-thickness);
 }
 
 .bit-auto a:hover,

@@ -51,6 +51,7 @@ const keys = [
   "--bit-code-padding-vertical",
   "--bit-radiocheckbox-size",
   "--bit-border-width",
+  "--bit-underline-thickness",
   "--bit-border-radius",
   "--bit-select-handle-width",
 ];
@@ -112,7 +113,7 @@ class CustomPropertiesEditorElement extends HTMLElement {
       label.textContent = prop;
       const input = document.createElement("input");
       input.className = "bit-input";
-      input.placeholder = baseCustomProperties[prop];
+      input.placeholder = baseCustomProperties[prop] || "";
       input.addEventListener(
         "input",
         (event) => {
