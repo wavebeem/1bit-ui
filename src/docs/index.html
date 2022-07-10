@@ -179,6 +179,15 @@ you may have about two sentences more than you need. SK -->
       data-example="card"
     ></inject-example>
 
+    <h2 id="box">Box</h2>
+    <inject-example
+      data-properties="
+        --bit-box-padding-horizontal
+        --bit-box-padding-vertical
+      "
+      data-example="box"
+    ></inject-example>
+
     <h2 id="fieldsets">Fieldsets</h2>
     <inject-example
       data-properties="
@@ -1006,6 +1015,35 @@ Disabled.</textarea
         <div class="bit-card">
           This is a 1bit-ui Card. It has a 3D shadow effect, as well as some
           padding on the inside.
+        </div>
+      </div>
+    </template>
+
+    <template id="template-box">
+      <div class="site-flex-column site-gap">
+        <div class="site-flex-row-wrap">
+          <div class="bit-box">
+            <div style="width: 50px; height: 50px; background: red;"></div>
+          </div>
+          <div class="bit-box">
+            <div style="width: 50px; height: 50px; background: blue;"></div>
+          </div>
+          <div class="bit-box">
+            <div style="width: 50px; height: 50px; background: green;"></div>
+          </div>
+          <div class="bit-box">
+            <div style="width: 50px; height: 50px; background: magenta;"></div>
+          </div>
+        </div>
+        <div class="site-columns-auto">
+          <div class="bit-box">
+            This is a 1bit-ui Box. It has a simple border and just enough
+            padding to offset your content for a bit of contrast.
+          </div>
+          <div class="bit-box">
+            This is a 1bit-ui Box. It has a simple border and just enough
+            padding to offset your content for a bit of contrast.
+          </div>
         </div>
       </div>
     </template>

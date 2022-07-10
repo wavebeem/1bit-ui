@@ -35,7 +35,7 @@ samp {
 
 .site-property-editor-grid {
   display: grid;
-  grid-gap: 1rem;
+  gap: 1rem;
   align-items: center;
   font-family: var(--site-font-monospace);
 }
@@ -47,11 +47,11 @@ samp {
 }
 
 .site-columns-auto {
-  --grid-gap: 1rem;
+  --gap: 1rem;
   --grid-min: 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
-  grid-gap: var(--grid-gap);
+  gap: var(--gap);
 }
 
 .site-link-header {
@@ -82,14 +82,10 @@ samp {
 }
 
 .site-flex-row-wrap {
-  margin: -0.5rem;
+  gap: 0.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.site-flex-row-wrap > * {
-  margin: 0.5rem;
 }
 
 .site-flex-column {
@@ -98,6 +94,10 @@ samp {
 }
 
 .site-gap {
+  gap: 1rem;
+}
+
+.site-spacer {
   padding: 0.25rem;
 }
 

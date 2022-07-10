@@ -12,6 +12,8 @@
   --bit-table-padding-vertical: 0.5rem;
   --bit-card-padding-horizontal: 1rem;
   --bit-card-padding-vertical: 1rem;
+  --bit-box-padding-horizontal: 2px;
+  --bit-box-padding-vertical: 2px;
   --bit-fieldset-padding-horizontal: 0.5rem;
   --bit-fieldset-padding-vertical: 0.5rem;
   --bit-legend-padding-horizontal: 0.5rem;
@@ -451,6 +453,7 @@
   padding: var(--bit-fieldset-padding-vertical)
     var(--bit-fieldset-padding-horizontal);
   margin: 0;
+  border-radius: var(--bit-border-radius);
 }
 
 .bit-auto legend,
@@ -459,6 +462,7 @@
   padding: var(--bit-legend-padding-vertical)
     var(--bit-legend-padding-horizontal);
   margin: 0;
+  border-radius: var(--bit-border-radius);
 }
 
 /* Firefox nonsense */
@@ -482,6 +486,15 @@
   padding: var(--bit-card-padding-vertical) var(--bit-card-padding-horizontal);
   box-shadow: inset 0 var(--bit-border-width) 0 0 var(--bit-color0),
     0 var(--bit-border-width) 0 0 var(--bit-color0);
+  border-radius: var(--bit-border-radius);
+}
+
+.bit-box {
+  box-sizing: border-box;
+  background: var(--bit-color1);
+  color: var(--bit-color0);
+  border: var(--bit-border-width) solid var(--bit-color0);
+  padding: var(--bit-box-padding-vertical) var(--bit-box-padding-horizontal);
   border-radius: var(--bit-border-radius);
 }
 
