@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.18.1 (2022-07-09)
+
+- Updated all references to new site URL
+
 ## v0.18.0 (2022-07-09)
 
 - Added `.bit-box`

@@ -2,7 +2,7 @@
 
 1bit-ui is a CSS library for making retro-inspired web pages using just two colors.
 
-Go to [1bit-ui.com](https://1bit-ui.com) for examples, documentation, and usage.
+Go to [1bit-ui.wavebeem.com](https://1bit-ui.wavebeem.comcom) for examples, documentation, and usage.
 
 ## Development
 
