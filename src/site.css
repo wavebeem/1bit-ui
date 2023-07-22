@@ -3,17 +3,16 @@
   padding: 1rem;
   line-height: 1.5;
   overflow-y: scroll;
-  --site-font-monospace: "JetBrains Mono", "Cascadia Code", "Menlo", "Consolas",
-    monospace;
-  --site-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  --site-font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+    Consolas, "DejaVu Sans Mono", monospace;
+  --site-font-sans: system-ui, sans-serif;
   font-family: var(--site-font-sans);
 }
 
 body {
   max-width: 50rem;
   margin: 0 auto;
+  background: var(--bit-color1);
 }
 
 footer {
@@ -120,14 +119,23 @@ table-of-contents {
   display: block;
 }
 
-.site-example {
-  --site-example-offset: 1rem;
-  border-left: var(--bit-border-width) solid var(--bit-color0);
-  padding-left: var(--site-example-offset);
-  margin-left: calc(-1 * var(--site-example-offset));
-}
-
 @media (min-width: 900px) {
+  :root {
+    padding: 2rem;
+    background: repeating-linear-gradient(
+          to bottom,
+          transparent 0 1px,
+          var(--bit-color1) 1px 2px
+        )
+        fixed,
+      var(--bit-color0);
+  }
+
+  body {
+    padding: 2rem;
+    border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
+  }
+
   .site-property-editor-grid {
     --bit-input-padding-horizontal: 0.5rem;
     --bit-input-padding-vertical: 0.25rem;
