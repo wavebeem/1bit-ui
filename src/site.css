@@ -140,6 +140,7 @@ table-of-contents {
   body {
     padding: 2rem;
     border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
+    box-shadow: inset 0 2px 0 0 var(--bit-color0), 0 2px 0 0 var(--bit-color0);
   }
 
   .site-property-editor-grid {
