@@ -121,17 +121,12 @@ table-of-contents {
 
 @media (min-width: 900px) {
   :root {
+    --w: calc(100vw / 3);
     padding: 2rem;
     background: repeating-linear-gradient(
-          to bottom,
-          transparent 0 1px,
-          var(--bit-color1) 1px 2px
-        )
-        fixed,
-      repeating-linear-gradient(
-          to right,
-          transparent 0 1px,
-          var(--bit-color1) 1px 2px
+          45deg,
+          transparent 0 var(--w),
+          var(--bit-color1) var(--w) calc(2 * var(--w))
         )
         fixed,
       var(--bit-color0);
